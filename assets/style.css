@@ -1,47 +1,282 @@
-/* Design system variables */
+/* style.css */
+/* 1. Simple reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+body {
+  font-family: var(--font-family);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: 1.33;
+}
+
+/* 2. Design system tokens */
 :root {
-    --spacing-1: 8px;
-    --side-padding: 24px;
-    --container-width: 900px;
-    --color-background: #F8F8F8;
-    --color-text-primary: #000000;
-    --color-text-secondary: #727272;
-    --color-accent: #004AAD;
-    --border-light: #CCCCCC;
+  --color-bg: #F8F8F8;
+  --color-text-primary: #000000;
+  --color-text-secondary: #727272;
+  --color-border-light: #CCCCCC;
+  --color-accent: #004AAD;
+  --spacing-unit: 8px;
+  --side-padding: 24px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --shadow-light: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-medium: 0 4px 8px rgba(0,0,0,0.15);
+  --font-family: 'Inter', sans-serif;
+}
+
+/* 3. Containers and layout */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--side-padding);
+}
+
+/* 4. Header/nav */
+.site-header {
+  background: var(--color-bg);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;                        /* h-14 (56px) */
+  padding: var(--spacing-unit) var(--side-padding); /* 8px top/bottom, 24px left/right */
+}
+
+.site-nav ul {
+  list-style: none;
+  display: none;
+}
+
+.site-nav a {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Base nav link styles */
+.site-header .site-nav a {
+  display: inline-block;  
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform .15s ease-in-out,
+              color .15s ease-in-out;
+}
+
+/* Active (current page) link */
+.site-header .site-nav a.active {
+  font-family: 'Inter-Regular', sans-serif;
+  font-weight: 400;
+  color: var(--color-text-primary);
+  transform: none;
+}
+
+/* All other links default */
+.site-header .site-nav a:not(.active) {
+  font-family: 'Inter-Light', sans-serif;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+}
+
+/* Hover only on non-active links */
+.site-header .site-nav a:not(.active):hover {
+  color: var(--color-text-primary);
+  transform: scale(1.00);
+}
+
+
+/* 5. Hero */
+.hero {
+  padding: 72px 0 108px;               /* pt-[72px] pb-[108px] */
+  background: var(--color-bg);
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;                           /* gap-3 */
+  width: 100%;
+}
+
+/* “Wilson Skinner.” + tagline */
+.hero h1 {
+  position: relative;
+  width: 100%;
+  max-width: 600px;                    /* w-[600px] */
+  margin-top: -1px;                    /* mt-[-1px] */
+  font-family: 'Inter-SemiBold', sans-serif;
+  font-weight: 400;                    /* uses the SemiBold face at normal weight */
+  font-size: 24px;                     /* text-2xl */
+  letter-spacing: 0.24px;              /* tracking-[0.24px] */
+  color: var(--color-text-primary);
+}
+
+/* “Wilson Skinner.” span only */
+.hero h1 strong {
+  font-weight: 600;                    /* font-semibold */
+  letter-spacing: 0.06px;              /* tracking-[0.06px] */
+}
+
+/* Subtext paragraph */
+.subtext {
+  position: relative;
+  width: 100%;
+  max-width: 600px;                    /* w-[600px] */
+  font-family: 'Inter-Light', sans-serif;
+  font-weight: 300;                    /* font-light */
+  font-size: 16px;                     /* text-base */
+  letter-spacing: 0;                   /* tracking-0 */
+  line-height: 24px;                   /* leading-6 */
+  color: var(--color-text-secondary);
+}
+
+/* Status pill + icons row */
+.hero-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;                            /* gap-2 */
+  padding: 4px 0 0;                    /* pt-1 */
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #DDDDDD;
+  border-radius: var(--radius-lg);
+  padding: 4px 12px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--color-text-secondary);
+}
+.status-indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #D0F0CF;
+  border-radius: 50%;
+  margin-right: 7px;
+  border: .5px solid #82E27E;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #DDDDDD;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-unit);
+  height: 32px;
+}
+.icon-link img {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+.icon-link .hover-icon {
+  display: none;
+}
+.icon-link:hover .hover-icon {
+  display: inline-block;
+}
+.icon-link:hover .default-icon {
+  display: none;
+}
+
+/* 6. Work selector */
+.work-selector h2 {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: calc(var(--spacing-unit) * 4);
+}
+
+/* 7. Work card */
+.work-card {
+  margin-top: calc(var(--spacing-unit) * 3);
+}
+.work-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.work-title {
+  display: flex;
+  align-items: center;
+}
+.work-logo {
+  width: 32px;
+  height: 32px;
+}
+.work-title h3 {
+  margin-left: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.present-label {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 400;
+}
+.work-description {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  margin-top: var(--spacing-unit);
+  font-weight: 400;
+}
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-unit);
+  margin-top: var(--spacing-unit);
+}
+.tag-pill {
+  border: 1px solid #A5A5A5;
+  background-color: #F3F3F3;
+  border-radius: var(--radius-md);
+  padding: 4px 10px;
+  font-size: 14px;
+  font-weight: 200;
+  height: 28px;
+  color: var(--color-text-secondary);
+}
+.work-preview {
+  margin-top: calc(var(--spacing-unit) * 3);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+}
+.work-preview img {
+  width: 100%;
+  display: block;
+}
+
+/* 8. Breakpoints */
+@media (min-width: 480px) {
+  .hero h1 { font-size: 18px; }
+  .site-nav ul {
+    display: flex;
+    gap: calc(var(--spacing-unit) * 6); /* 48px between links */
   }
-  
-  /* Reset */
-  *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  .hamburger {
+    display: none;
   }
-  
-  html {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.33;
-    background-color: var(--color-background);
-    color: var(--color-text-primary);
+}
+
+@media (min-width: 768px) {
+  .hero .container > * {
+    max-width: 600px;
   }
-  
-  body {
-    padding: var(--side-padding);
+  .hero h1 {
+    font-size: 24px; /* you already had this in your 768px breakpoint */
   }
-  
-  .container {
-    max-width: var(--container-width);
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--side-padding);
-    padding-right: var(--side-padding);
-  }
-  
-  a {
-    color: var(--color-accent);
-    text-decoration: none;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+}

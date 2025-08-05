@@ -1,15 +1,93 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home</title>
   <link rel="stylesheet" href="../assets/style.css">
-  <script src="../js/index.js" defer></script>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" 
+    rel="stylesheet"
+  />
 </head>
 <body>
-  <div class="container">
-    <!-- Home page content -->
-  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- header/logo -->
+      <a href="#" class="logo" aria-label="Home">
+      <img src="../assets/media/Logo.svg" alt="Wilson Skinner logo"/>
+      </a>
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#" class="active">Work</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Resume</a></li>
+        </ul>
+      </nav>
+      <!-- mobile menu button -->
+      <button class="hamburger" aria-label="Menu">
+      <img src="../assets/media/hamburger.svg" alt="Menu icon"/>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>
+          <strong>Wilson Skinner.</strong> Product Designer transforming complexity into UX that fuels business impact
+        </h1>
+        <p class="subtext">
+          Currently freelancing and building side projects with Cursor. Previously head of design at JumboCode and design intern at Reality AI.
+        </p>
+        <div class="hero-actions">
+          <span class="status-pill">
+            <span class="status-indicator"></span>
+            Open to full-time
+          </span>
+            <!-- send icon -->
+            <a href="#" class="icon-link telegram" aria-label="Email">
+              <img src="../assets/media/Send.svg"            alt="" class="default-icon"/>
+              <img src="../assets/media/filled_send.svg"     alt="" class="hover-icon"/>
+            </a>
+            <!-- linkedin icon -->
+            <a href="#" class="icon-link linkedin" aria-label="LinkedIn">
+              <img src="../assets/media/linkedin.svg"        alt="" class="default-icon"/>
+              <img src="../assets/media/filled_linkedin.svg" alt="" class="hover-icon"/>
+            </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-selector">
+      <div class="container">
+        <h2>Select Work –</h2>
+      </div>
+    </section>
+
+    <section class="work-card">
+      <div class="container">
+        <div class="work-card-header">
+          <div class="work-title">
+            <img src="../assets/media/JC.svg" alt="JumboCode logo" class="work-logo"/>
+            <h3>JumboCode</h3>
+          </div>
+          <span class="present-label">Present</span>
+        </div>
+        <p class="work-description">
+          Leading the JumboCode Website Redesign from end to end, optimizing navigation and brand identity
+        </p>
+        <div class="tag-list">
+          <span class="tag-pill">Product Design</span>
+          <span class="tag-pill">Design system</span>
+          <span class="tag-pill">0–1</span>
+        </div>
+        <div class="work-preview">
+          <img src="../assets/jumbocode-preview.png" alt="Screenshot of JumboCode redesign"/>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
