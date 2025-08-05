@@ -1,0 +1,47 @@
+/* Design system variables */
+:root {
+    --spacing-1: 8px;
+    --side-padding: 24px;
+    --container-width: 900px;
+    --color-background: #F8F8F8;
+    --color-text-primary: #000000;
+    --color-text-secondary: #727272;
+    --color-accent: #004AAD;
+    --border-light: #CCCCCC;
+  }
+  
+  /* Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.33;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+  
+  body {
+    padding: var(--side-padding);
+  }
+  
+  .container {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
+  }
+  
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
