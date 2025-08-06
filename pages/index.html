@@ -16,8 +16,10 @@
     <div class="container header-inner">
       <!-- header/logo -->
       <a href="#" class="logo" aria-label="Home">
-      <img src="../assets/media/Logo.svg" alt="Wilson Skinner logo"/>
+        <img src="../assets/media/Logo.svg" alt="Wilson Skinner logo"/>
       </a>
+
+      <!-- desktop nav -->
       <nav class="site-nav">
         <ul>
           <li><a href="#" class="active">Work</a></li>
@@ -25,18 +27,33 @@
           <li><a href="#">Resume</a></li>
         </ul>
       </nav>
+
       <!-- mobile menu button -->
-      <button class="hamburger" aria-label="Menu">
-      <img src="../assets/media/hamburger.svg" alt="Menu icon"/>
+      <button class="hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
+        <img src="../assets/media/hamburger.svg" alt="Menu icon"/>
       </button>
     </div>
   </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-content">
+      <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu"></button>
+      <nav>
+        <ul class="mobile-menu-nav">
+          <li><a href="#" class="active" onclick="closeMobileMenu()">Work</a></li>
+          <li><a href="#" onclick="closeMobileMenu()">About</a></li>
+          <li><a href="#" onclick="closeMobileMenu()">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
   <main>
     <section class="hero">
       <div class="container">
         <h1>
-          <strong>Wilson Skinner.</strong> Product Designer transforming complexity into UX that fuels business impact
+          <strong>Wilson Skinner.</strong> Product Designer using code, empathy, and AI to create crisp digital experiences
         </h1>
         <p class="subtext">
           Currently freelancing and building side projects with Cursor. Previously head of design at JumboCode and design intern at Reality AI.
@@ -46,16 +63,16 @@
             <span class="status-indicator"></span>
             Open to full-time
           </span>
-            <!-- send icon -->
-            <a href="#" class="icon-link telegram" aria-label="Email">
-              <img src="../assets/media/Send.svg"            alt="" class="default-icon"/>
-              <img src="../assets/media/filled_send.svg"     alt="" class="hover-icon"/>
-            </a>
-            <!-- linkedin icon -->
-            <a href="#" class="icon-link linkedin" aria-label="LinkedIn">
-              <img src="../assets/media/linkedin.svg"        alt="" class="default-icon"/>
-              <img src="../assets/media/filled_linkedin.svg" alt="" class="hover-icon"/>
-            </a>
+          <!-- send icon -->
+          <a href="#" class="icon-link telegram" aria-label="Email">
+            <img src="../assets/media/Send.svg" class="default-icon" alt="Send"/>
+            <img src="../assets/media/filled_send.svg" class="hover-icon" alt="Send filled"/>
+          </a>
+          <!-- linkedin icon -->
+          <a href="#" class="icon-link linkedin" aria-label="LinkedIn">
+            <img src="../assets/media/linkedin.svg" class="default-icon" alt="LinkedIn"/>
+            <img src="../assets/media/filled_linkedin.svg" class="hover-icon" alt="LinkedIn filled"/>
+          </a>
         </div>
       </div>
     </section>
@@ -66,6 +83,7 @@
       </div>
     </section>
 
+    <!-- Existing case study -->
     <section class="work-card">
       <div class="container">
         <div class="work-card-header">
@@ -84,10 +102,81 @@
           <span class="tag-pill">0–1</span>
         </div>
         <div class="work-preview">
-          <img src="../assets/jumbocode-preview.png" alt="Screenshot of JumboCode redesign"/>
+          <img src="../assets/media/JC-thumbnail.png" alt="Screenshot of JumboCode redesign"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Placeholder case study 1 -->
+    <section class="work-card" style="margin-top: 72px;">
+      <div class="container">
+        <div class="work-card-header">
+          <div class="work-title">
+            <div class="work-logo"></div>
+            <h3>Case Study Title</h3>
+          </div>
+          <span class="present-label">Year</span>
+        </div>
+        <p class="work-description">
+          Brief description of the case study goes here.
+        </p>
+        <div class="tag-list">
+          <span class="tag-pill">Tag 1</span>
+          <span class="tag-pill">Tag 2</span>
+          <span class="tag-pill">Tag 3</span>
+        </div>
+        <div class="work-preview">
+          <div class="work-preview-placeholder"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Placeholder case study 2 -->
+    <section class="work-card" style="margin-top: 72px;">
+      <div class="container">
+        <div class="work-card-header">
+          <div class="work-title">
+            <div class="work-logo"></div>
+            <h3>Case Study Title</h3>
+          </div>
+          <span class="present-label">Year</span>
+        </div>
+        <p class="work-description">
+          Brief description of the case study goes here.
+        </p>
+        <div class="tag-list">
+          <span class="tag-pill">Tag 1</span>
+          <span class="tag-pill">Tag 2</span>
+          <span class="tag-pill">Tag 3</span>
+        </div>
+        <div class="work-preview">
+          <div class="work-preview-placeholder"></div>
         </div>
       </div>
     </section>
   </main>
+
+  <script>
+    function toggleMobileMenu() {
+      const overlay = document.getElementById('mobileMenuOverlay');
+      const hamburger = document.querySelector('.hamburger');
+      overlay.classList.toggle('active');
+      hamburger.classList.toggle('active');
+      document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
+    }
+
+    function closeMobileMenu() {
+      const overlay = document.getElementById('mobileMenuOverlay');
+      const hamburger = document.querySelector('.hamburger');
+      overlay.classList.remove('active');
+      hamburger.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('mobileMenuOverlay')
+      .addEventListener('click', e => { if (e.target === e.currentTarget) closeMobileMenu(); });
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
+  </script>
 </body>
 </html>

@@ -43,35 +43,31 @@ body {
 .site-header {
   background: var(--color-bg);
 }
-
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 56px;                        /* h-14 (56px) */
-  padding: var(--spacing-unit) var(--side-padding); /* 8px top/bottom, 24px left/right */
+  height: 56px;
+  padding: var(--spacing-unit) var(--side-padding);
 }
 
+/* Desktop nav hidden on mobile */
 .site-nav ul {
   list-style: none;
   display: none;
 }
 
-.site-nav a {
-  font-size: 14px;
-  text-decoration: none;
-}
-
-/* Base nav link styles */
+/* Base nav link styles with text-shadow transition */
 .site-header .site-nav a {
-  display: inline-block;  
+  display: inline-block;
   font-size: 14px;
   text-decoration: none;
   transition: transform .15s ease-in-out,
-              color .15s ease-in-out;
+              color .15s ease-in-out,
+              text-shadow .15s ease-in-out;
 }
 
-/* Active (current page) link */
+/* Active link */
 .site-header .site-nav a.active {
   font-family: 'Inter-Regular', sans-serif;
   font-weight: 400;
@@ -79,74 +75,163 @@ body {
   transform: none;
 }
 
-/* All other links default */
+/* Inactive links */
 .site-header .site-nav a:not(.active) {
   font-family: 'Inter-Light', sans-serif;
   font-weight: 300;
   color: var(--color-text-secondary);
 }
 
-/* Hover only on non-active links */
+/* Hover on non-active */
 .site-header .site-nav a:not(.active):hover {
   color: var(--color-text-primary);
+  text-shadow: 0.5px 0 0 currentColor;
   transform: scale(1.00);
 }
 
-
-/* 5. Hero */
-.hero {
-  padding: 72px 0 108px;               /* pt-[72px] pb-[108px] */
-  background: var(--color-bg);
+/* 5. Mobile hamburger menu */
+.hamburger {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.3s ease;
+}
+.hamburger img {
+  width: 20px;
+  height: 20px;
+}
+.hamburger.active {
+  transform: rotate(90deg);
 }
 
+/* Mobile menu overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--color-bg);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile menu content */
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+/* Close button */
+.mobile-menu-close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  width: 36px;
+  height: 36px;
+}
+.mobile-menu-close::before,
+.mobile-menu-close::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #000;
+}
+.mobile-menu-close::before { transform: rotate(45deg); }
+.mobile-menu-close::after { transform: rotate(-45deg); }
+
+/* Mobile nav links */
+.mobile-menu-nav {
+  list-style: none;
+}
+.mobile-menu-nav li {
+  margin-bottom: 32px;
+}
+.mobile-menu-nav a {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: block;
+  padding: 12px 24px;
+}
+.mobile-menu-nav a.active {
+  color: var(--color-text-primary);
+  font-weight: 400;
+}
+.mobile-menu-nav a:hover {
+  color: var(--color-text-primary);
+  transform: scale(1.05);
+}
+
+/* 6. Hero */
+.hero {
+  padding: 72px 0 108px;
+  background: var(--color-bg);
+}
 .hero .container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;                           /* gap-3 */
+  gap: 12px;
   width: 100%;
 }
 
-/* “Wilson Skinner.” + tagline */
+/* Headline */
 .hero h1 {
   position: relative;
   width: 100%;
-  max-width: 600px;                    /* w-[600px] */
-  margin-top: -1px;                    /* mt-[-1px] */
+  max-width: 600px;
+  margin-top: -1px;
   font-family: 'Inter-SemiBold', sans-serif;
-  font-weight: 400;                    /* uses the SemiBold face at normal weight */
-  font-size: 24px;                     /* text-2xl */
-  letter-spacing: 0.24px;              /* tracking-[0.24px] */
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.24px;
   color: var(--color-text-primary);
 }
-
-/* “Wilson Skinner.” span only */
 .hero h1 strong {
-  font-weight: 600;                    /* font-semibold */
-  letter-spacing: 0.06px;              /* tracking-[0.06px] */
+  font-weight: 600;
+  letter-spacing: 0.06px;
 }
 
-/* Subtext paragraph */
+/* Subtext */
 .subtext {
-  position: relative;
   width: 100%;
-  max-width: 600px;                    /* w-[600px] */
+  max-width: 600px;
   font-family: 'Inter-Light', sans-serif;
-  font-weight: 300;                    /* font-light */
-  font-size: 16px;                     /* text-base */
-  letter-spacing: 0;                   /* tracking-0 */
-  line-height: 24px;                   /* leading-6 */
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
   color: var(--color-text-secondary);
 }
 
-/* Status pill + icons row */
+/* Actions row */
 .hero-actions {
   display: inline-flex;
   align-items: center;
-  gap: 8px;                            /* gap-2 */
-  padding: 4px 0 0;                    /* pt-1 */
+  gap: 8px;
+  padding: 4px 0 0;
 }
 
+/* Status pill */
 .status-pill {
   display: inline-flex;
   align-items: center;
@@ -157,9 +242,9 @@ body {
   font-size: 14px;
   font-weight: 200;
   color: var(--color-text-secondary);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .status-indicator {
-  display: inline-block;
   width: 8px;
   height: 8px;
   background: #D0F0CF;
@@ -168,6 +253,7 @@ body {
   border: .5px solid #82E27E;
 }
 
+/* Icon links */
 .icon-link {
   display: inline-flex;
   align-items: center;
@@ -176,23 +262,25 @@ body {
   border-radius: var(--radius-lg);
   padding: var(--spacing-unit);
   height: 32px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 .icon-link img {
-  display: block;
   width: 16px;
   height: 16px;
 }
-.icon-link .hover-icon {
-  display: none;
-}
-.icon-link:hover .hover-icon {
-  display: inline-block;
-}
-.icon-link:hover .default-icon {
-  display: none;
+.icon-link .hover-icon { display: none; }
+.icon-link:hover .hover-icon { display: inline-block; }
+.icon-link:hover .default-icon { display: none; }
+
+/* toned-down shadow + 5px lift */
+.status-pill:hover,
+.icon-link:hover {
+  box-shadow: var(--shadow-light);
+  transform: translateY(-2px);
 }
 
-/* 6. Work selector */
+
+/* 7. Work selector */
 .work-selector h2 {
   color: var(--color-text-secondary);
   font-size: 14px;
@@ -200,45 +288,55 @@ body {
   margin-top: calc(var(--spacing-unit) * 4);
 }
 
-/* 7. Work card */
+/* 8. Work cards + animation */
 .work-card {
   margin-top: calc(var(--spacing-unit) * 3);
 }
+
 .work-card-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .work-title {
   display: flex;
   align-items: center;
 }
+
 .work-logo {
   width: 32px;
   height: 32px;
+  background: #ddd;
+  border-radius: var(--radius-sm);
 }
+
 .work-title h3 {
   margin-left: 12px;
   font-size: 16px;
   font-weight: 600;
 }
+
 .present-label {
   color: var(--color-text-secondary);
   font-size: 14px;
   font-weight: 400;
 }
+
 .work-description {
   color: var(--color-text-secondary);
   font-size: 16px;
   margin-top: var(--spacing-unit);
   font-weight: 400;
 }
+
 .tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-unit);
   margin-top: var(--spacing-unit);
 }
+
 .tag-pill {
   border: 1px solid #A5A5A5;
   background-color: #F3F3F3;
@@ -249,34 +347,73 @@ body {
   height: 28px;
   color: var(--color-text-secondary);
 }
+
+/* enhanced preview + hover animation */
 .work-preview {
   margin-top: calc(var(--spacing-unit) * 3);
+  border: 2px solid var(--color-border-light);
   border-radius: var(--radius-md);
+  padding: 48px;                     /* increased padding */
   overflow: hidden;
-  box-shadow: var(--shadow-light);
-}
-.work-preview img {
-  width: 100%;
-  display: block;
+  background: var(--color-bg);       /* fill extra space */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 450px;                     /* fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* 8. Breakpoints */
+.work-preview:hover {
+  border-color: var(--color-accent);
+  background: #F0F0F0;
+  box-shadow: var(--shadow-medium);
+}
+
+/* real images fill height, width auto, no pattern */
+.work-preview img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  background: var(--color-bg);
+  transition: transform 0.3s ease;
+}
+
+/* placeholders keep the pattern */
+.work-preview-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-sm);
+  background: #E0E0E0;
+  background-image:
+    linear-gradient(45deg, #F5F5F5 25%, transparent 25%),
+    linear-gradient(-45deg, #F5F5F5 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #F5F5F5 75%),
+    linear-gradient(-45deg, transparent 75%, #F5F5F5 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  transition: transform 0.3s ease;
+}
+
+.work-preview:hover .work-preview-placeholder,
+.work-preview:hover img {
+  transform: scale(1.02);
+}
+
+/* 9. Breakpoints */
 @media (min-width: 480px) {
   .hero h1 { font-size: 18px; }
   .site-nav ul {
     display: flex;
-    gap: calc(var(--spacing-unit) * 6); /* 48px between links */
+    gap: calc(var(--spacing-unit) * 6);
   }
-  .hamburger {
-    display: none;
-  }
+  .hamburger { display: none; }
+  .mobile-menu-overlay { display: none; }
 }
 
 @media (min-width: 768px) {
   .hero .container > * {
     max-width: 600px;
   }
-  .hero h1 {
-    font-size: 24px; /* you already had this in your 768px breakpoint */
-  }
+  .hero h1 { font-size: 24px; }
 }
