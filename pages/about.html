@@ -5,11 +5,247 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About</title>
   <link rel="stylesheet" href="../assets/style.css">
-  <script src="../js/index.js" defer></script>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" 
+    rel="stylesheet"
+  />
+  <script src="../assets/index.js" defer></script>
+  <style>
+    /* Page-specific minimal tweaks if needed */
+  </style>
+  
 </head>
 <body>
-  <div class="container">
-    <!-- About page content -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="logo" aria-label="Home">
+        <img src="../assets/media/large/logo.png" alt="Wilson Skinner logo"/>
+      </a>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="./index.html">Work</a></li>
+          <li><a href="#" class="active">About</a></li>
+          <li><a href="#">Resume</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
+        <img src="../assets/media/hamburger.svg" alt="Menu icon"/>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-content">
+      <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu"></button>
+      <nav>
+        <ul class="mobile-menu-nav">
+          <li><a href="./index.html" onclick="closeMobileMenu()">Work</a></li>
+          <li><a href="#" class="active" onclick="closeMobileMenu()">About</a></li>
+          <li><a href="#" onclick="closeMobileMenu()">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
+
+  <main class="about-page">
+    <section class="about-hero">
+      <div class="container about-hero-inner">
+        <img class="about-avatar" src="../assets/media/large/about-avatar.png" alt="Portrait of Wilson Skinner" />
+        <h1 class="about-greeting">Hey, I’m Wilson!</h1>
+      </div>
+    </section>
+
+    <section class="about-badges">
+      <div class="container">
+        <div class="about-badges-row">
+          <span class="tag-pill">🎨 Product Designer</span>
+          <span class="tag-pill">🏔️ Outdoor Enthusiast</span>
+          <span class="tag-pill">👨‍🍳 Average Cook</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-summary">
+      <div class="container">
+        <h3>Summary</h3>
+        <p class="about-summary-text">
+          I graduated from <strong>Tufts</strong> in 2025 with a B.S. in Engineering Psychology, combining user empathy with
+          technical feasibility to create clean, engaging digital products. Currently I’m redesigning
+          <strong>bodegabaylavender.com</strong> and building with AI tools.
+        </p>
+        <br>
+        <p class="about-summary-text">
+          I specialize in end to end software design, wearing multiple hats throughout the development cycle. Rapid
+          iteration and wireframing in Figma is where I shine.
+        </p>
+      </div>
+    </section>
+
+    <section class="about-skills">
+      <div class="container">
+        <h3>Skills</h3>
+        <div class="about-skills-grid">
+          <article class="about-skill-card">
+            <img class="about-skill-icon" src="../assets/media/icon-rapid.svg" alt="Rapid prototyping icon" />
+            <h4>Rapid Prototyping</h4>
+            <p>Designed 12+ software projects on Figma across mobile and desktop</p>
+          </article>
+          <article class="about-skill-card">
+            <img class="about-skill-icon" src="../assets/media/icon-front.svg" alt="Front-end development icon" />
+            <h4>Front End Development</h4>
+            <p>Built 5+ responsive websites using HTML/CSS and JS (including this one!)</p>
+          </article>
+          <article class="about-skill-card">
+            <img class="about-skill-icon" src="../assets/media/icon-product.svg" alt="Product management icon" />
+            <h4>Product Management</h4>
+            <p>Led the creation of jumbocode.org and oversaw 12 UX design projects</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-experience">
+      <div class="container">
+        <h3>Experience</h3>
+
+        <div class="about-exp-entry">
+          <div class="about-exp-header">
+            <div class="about-exp-left">
+              <img class="about-exp-logo" src="../assets/media/large/logo-bodegabay.png" alt="Bodega Bay Lavender logo" />
+              <div class="about-exp-title">
+                <strong>Bodega Bay Lavender</strong>
+                <span>/ Web Designer</span>
+              </div>
+            </div>
+            <div class="about-exp-year">2025</div>
+          </div>
+          <p class="about-exp-desc">Revamping Shopify e‑commerce site by tightening the design system and optimizing checkout flows</p>
+        </div>
+
+        <div class="about-exp-entry">
+          <div class="about-exp-header">
+            <div class="about-exp-left">
+              <img class="about-exp-logo" src="../assets/media/large/logo-cargurus.png" alt="CarGurus logo" />
+              <div class="about-exp-title">
+                <strong>CarGurus</strong>
+                <span>/ Design Engineer</span>
+              </div>
+            </div>
+            <div class="about-exp-year">2025</div>
+          </div>
+          <p class="about-exp-desc">Prototyped a new mobile finance calculator in Figma and Lovable to boost car buyer confidence on‑site</p>
+        </div>
+
+        <div class="about-exp-entry">
+          <div class="about-exp-header">
+            <div class="about-exp-left">
+              <img class="about-exp-logo" src="../assets/media/large/JC.png" alt="JumboCode logo" />
+              <div class="about-exp-title">
+                <strong>JumboCode</strong>
+                <span>/ Head of Design</span>
+              </div>
+            </div>
+            <div class="about-exp-year">2024/25</div>
+          </div>
+          <p class="about-exp-desc">Led the end‑to‑end redesign of the JumboCode website, increasing student applications by 35%</p>
+        </div>
+
+        <div class="about-exp-entry">
+          <div class="about-exp-header">
+            <div class="about-exp-left">
+              <img class="about-exp-logo" src="../assets/media/large/logo-realityai.png" alt="Reality AI logo" />
+              <div class="about-exp-title">
+                <strong>Reality AI</strong>
+                <span>/ Product Design Intern</span>
+              </div>
+            </div>
+            <div class="about-exp-year">2024</div>
+          </div>
+          <p class="about-exp-desc">Designed a discovery section encouraging educators to explore 15+ AI teaching tools</p>
+        </div>
+
+        <div class="about-exp-entry">
+          <div class="about-exp-header">
+            <div class="about-exp-left">
+              <img class="about-exp-logo" src="../assets/media/large/icon-homestart.png" alt="HomeStart logo" />
+              <div class="about-exp-title">
+                <strong>HomeStart</strong>
+                <span>/ User Experience Designer</span>
+              </div>
+            </div>
+            <div class="about-exp-year">2023/24</div>
+          </div>
+          <p class="about-exp-desc">Built a custom survey management web application to collect data from 1,000+ annual clients</p>
+        </div>
+
+        <div class="about-exp-entry">
+          <div class="about-exp-header">
+            <div class="about-exp-left">
+              <img class="about-exp-logo" src="../assets/media/large/logo-slg.png" alt="Sustainable Living Guide logo" />
+              <div class="about-exp-title">
+                <strong>Sustainable Living Guide</strong>
+                <span>/ Website &amp; UI/UX Intern</span>
+              </div>
+            </div>
+            <div class="about-exp-year">2023</div>
+          </div>
+          <p class="about-exp-desc">Optimized homepage experience and user journeys for youth‑focused web sections</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about-interests">
+      <div class="container about-interests-inner">
+        <div class="about-interests-text">
+          <h3>Interests</h3>
+          <div class="about-interests-sub">Outside of design, I love the outdoors</div>
+          <p>I enjoy skiing fresh powder, camping under the stars, and backpacking national parks.</p>
+        </div>
+        <img class="about-interests-media" src="../assets/media/large/about-interests.png" alt="Wilson standing by a lake in the mountains" />
+      </div>
+    </section>
+
+    <footer class="site-footer about-footer">
+      <div class="container footer-inner about-footer-inner">
+        <div class="footer-left">© 2025 Wilson Skinner</div>
+        <div class="footer-right">
+          <a href="#" class="icon-link" aria-label="Email">
+            <img src="../assets/media/send.svg" class="default-icon" alt="Send"/>
+            <img src="../assets/media/filled_send.svg" class="hover-icon" alt="Send filled"/>
+          </a>
+          <a href="#" class="icon-link" aria-label="LinkedIn">
+            <img src="../assets/media/linkedin.svg" class="default-icon" alt="LinkedIn"/>
+            <img src="../assets/media/filled_linkedin.svg" class="hover-icon" alt="LinkedIn filled"/>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    function toggleMobileMenu() {
+      const overlay = document.getElementById('mobileMenuOverlay');
+      const hamburger = document.querySelector('.hamburger');
+      overlay.classList.toggle('active');
+      hamburger.classList.toggle('active');
+      document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
+    }
+
+    function closeMobileMenu() {
+      const overlay = document.getElementById('mobileMenuOverlay');
+      const hamburger = document.querySelector('.hamburger');
+      overlay.classList.remove('active');
+      hamburger.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('mobileMenuOverlay')
+      .addEventListener('click', e => { if (e.target === e.currentTarget) closeMobileMenu(); });
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
+  </script>
 </body>
 </html>

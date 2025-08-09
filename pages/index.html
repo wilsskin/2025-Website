@@ -16,14 +16,14 @@
     <div class="container header-inner">
       <!-- header/logo -->
       <a href="#" class="logo" aria-label="Home">
-        <img src="../assets/media/Logo.svg" alt="Wilson Skinner logo"/>
+        <img src="../assets/media/large/logo.png" alt="Wilson Skinner logo"/>
       </a>
 
       <!-- desktop nav -->
       <nav class="site-nav">
         <ul>
           <li><a href="#" class="active">Work</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="#">Resume</a></li>
         </ul>
       </nav>
@@ -59,13 +59,22 @@
           Currently freelancing and building side projects with Cursor. Previously head of design at JumboCode and design intern at Reality AI.
         </p>
         <div class="hero-actions">
-          <span class="status-pill">
+          <span class="status-pill" aria-haspopup="true">
             <span class="status-indicator"></span>
-            Open to full-time
+            <span class="status-text-wrap">
+              <span class="status-text">Open to full-time</span>
+              <span class="status-text status-text--measure" aria-hidden="true">Open to full-time</span>
+            </span>
+            <div class="status-tooltip" role="tooltip">
+              <div class="status-tooltip-inner">
+                <div class="status-tooltip-text">I love new projects</div>
+                <a href="#" class="status-tooltip-link" aria-label="Calendar link">Let's chat!</a>
+              </div>
+            </div>
           </span>
           <!-- send icon -->
           <a href="#" class="icon-link telegram" aria-label="Email">
-            <img src="../assets/media/Send.svg" class="default-icon" alt="Send"/>
+            <img src="../assets/media/send.svg" class="default-icon" alt="Send"/>
             <img src="../assets/media/filled_send.svg" class="hover-icon" alt="Send filled"/>
           </a>
           <!-- linkedin icon -->
@@ -88,7 +97,7 @@
       <div class="container">
         <div class="work-card-header">
           <div class="work-title">
-            <img src="../assets/media/JC.svg" alt="JumboCode logo" class="work-logo"/>
+            <img src="../assets/media/large/JC.png" alt="JumboCode logo" class="work-logo"/>
             <h3>JumboCode</h3>
           </div>
           <span class="present-label">Present</span>
@@ -102,7 +111,7 @@
           <span class="tag-pill">0–1</span>
         </div>
         <div class="work-preview">
-          <img src="../assets/media/JC-thumbnail.png" alt="Screenshot of JumboCode redesign"/>
+          <img src="../assets/media/large/JC-thumbnail.png" alt="Screenshot of JumboCode redesign"/>
         </div>
       </div>
     </section>
@@ -154,7 +163,73 @@
         </div>
       </div>
     </section>
+
+    <!-- See More Work Link -->
+    <section class="see-more-work">
+      <div class="container">
+        <a href="#" class="see-more-link" onclick="toggleMoreWork(event)">
+         <div class="arrow-icon arrow-down"></div>
+          More Work
+        </a>
+      </div>
+    </section>
+
+    <!-- Additional Work Grid (Hidden by default) -->
+<section class="work-grid" id="workGrid">
+  <div class="container">
+    <div class="work-grid-container">
+      <!-- Small Work Card 1 -->
+      <div class="small-work-card">
+        <div class="small-work-preview"></div>
+        <div class="small-work-header">
+          <div class="small-work-logo"></div>
+          <h4 class="small-work-title">Google Nest</h4>
+        </div>
+        <p class="small-work-description">
+          Redesigned Nest Thermostat UI Across 50+ Screens
+        </p>
+        <div class="small-tag-list">
+          <span class="small-tag-pill">Product Design</span>
+          <span class="small-tag-pill">Paired System</span>
+        </div>
+      </div>
+
+      <!-- Small Work Card 2 -->
+      <div class="small-work-card">
+        <div class="small-work-preview"></div>
+        <div class="small-work-header">
+          <div class="small-work-logo"></div>
+          <h4 class="small-work-title">CarGurus</h4>
+        </div>
+        <p class="small-work-description">
+          Built a mobile finance calculator for 45M+ monthly users
+        </p>
+        <div class="small-tag-list">
+          <span class="small-tag-pill">Mobile App Design</span>
+          <span class="small-tag-pill">Business to Consumer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">© 2025 Wilson Skinner</div>
+      <div class="footer-right">
+        <a href="#" class="icon-link" aria-label="Email">
+          <img src="../assets/media/send.svg" class="default-icon" alt="Send"/>
+          <img src="../assets/media/filled_send.svg" class="hover-icon" alt="Send filled"/>
+        </a>
+        <a href="#" class="icon-link" aria-label="LinkedIn">
+          <img src="../assets/media/linkedin.svg" class="default-icon" alt="LinkedIn"/>
+          <img src="../assets/media/filled_linkedin.svg" class="hover-icon" alt="LinkedIn filled"/>
+        </a>
+      </div>
+    </div>
+  </footer>
 
   <script>
     function toggleMobileMenu() {
@@ -172,6 +247,38 @@
       hamburger.classList.remove('active');
       document.body.style.overflow = '';
     }
+
+    function toggleMoreWork(event) {
+  event.preventDefault();
+
+  const workGrid   = document.getElementById('workGrid');
+  const seeMoreLink= event.target.closest('.see-more-link');
+  const arrowIcon  = seeMoreLink.querySelector('.arrow-icon');
+  const linkText   = seeMoreLink.childNodes[2]; // the text node after the arrow
+
+  if (workGrid.classList.contains('show')) {
+    // hide
+    workGrid.classList.remove('show');
+    arrowIcon.className = 'arrow-icon arrow-down';
+    linkText.textContent = 'More Work';
+
+    // scroll back up
+    setTimeout(() => {
+      seeMoreLink.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  } else {
+    // show
+    workGrid.classList.add('show');
+    arrowIcon.className = 'arrow-icon arrow-up';
+    linkText.textContent = 'Less Work';
+
+    // scroll to new content
+    setTimeout(() => {
+      workGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 300);
+  }
+}
+
 
     document.getElementById('mobileMenuOverlay')
       .addEventListener('click', e => { if (e.target === e.currentTarget) closeMobileMenu(); });
