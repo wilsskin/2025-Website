@@ -359,6 +359,7 @@ body {
   height: 32px;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
+.icon-link:hover { box-shadow: var(--shadow-light); transform: translateY(-2px); }
 .icon-link img {
   width: 16px;
   height: 16px;
@@ -443,9 +444,8 @@ body {
   text-decoration: none;
   cursor: pointer; /* pointer on link */
   letter-spacing: 0;
-  transition: font-weight 0.2s ease, letter-spacing 0.2s ease;
 }
-.status-tooltip-link:hover { font-weight: 400; letter-spacing: 0.02px;}
+.status-tooltip-link:hover { font-weight: 400; letter-spacing: 0.01px;}
 
 .status-pill:hover .status-tooltip,
 .status-pill .status-tooltip:hover {
