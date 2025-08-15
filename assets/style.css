@@ -523,14 +523,12 @@ img.work-logo {
 }
 
 .tag-pill {
-  border: 1px solid #A5A5A5;
-  background-color: #F3F3F3;
-  border-radius: var(--radius-md);
+  border: 1px solid #CCCCCC;
+  border-radius: 10px;
   padding: 4px 10px;
   font-size: 14px;
   font-weight: 200;
-  height: 28px;
-  color: var(--color-text-secondary);
+  color: #000;
 }
 
 /* enhanced preview + hover animation */
@@ -538,12 +536,12 @@ img.work-logo {
   margin-top: calc(var(--spacing-unit) * 3);
   border: 2px solid var(--color-border-light);
   border-radius: var(--radius-md);
-  padding: 48px;                     /* increased padding */
+  padding: 40px 120px;                 /* increased left/right padding to make image smaller */
   overflow: hidden;
   background: var(--color-bg);       /* fill extra space */
   cursor: pointer;
   transition: all 0.3s ease;
-  max-width: 700px;                  /* cap preview width */
+  max-width: 900px;                  /* increased to 900px for flush design */
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -561,7 +559,7 @@ img.work-logo {
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  background: var(--color-bg);
+  background: transparent;
   transition: transform 0.3s ease;
 }
 
