@@ -14,6 +14,11 @@
   --jumbo-border: rgba(50, 200, 158, 0.6);
 }
 
+/* Simple utility class for common image pattern */
+.img-block {
+  display: block;
+}
+
 /* Headline Section */
 .headline-section {
   padding: 72px 0 24px;
