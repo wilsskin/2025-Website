@@ -457,9 +457,9 @@ body {
 
 /* 7. Work selector */
 .work-selector h2 {
-  color: var(--color-text-secondary);
+  color: #000;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 200;
   margin-top: calc(var(--spacing-unit) * 4);
 }
 
@@ -489,17 +489,18 @@ body {
 /* Ensure real JC logo image caps at 28x28 and can shrink responsively */
 img.work-logo {
   display: block;
-  max-width: 28px;
-  max-height: 28px;
+  max-width: 26px;
+  max-height: 26px;
   width: auto;
   height: auto;
   background: transparent;
 }
 
 .work-title h3 {
-  margin-left: 12px;
+  margin-left: 10px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
+  color: #727272;
 }
 
 .present-label {
@@ -509,10 +510,10 @@ img.work-logo {
 }
 
 .work-description {
-  color: var(--color-text-secondary);
+  color: #000;
   font-size: 24px;
   margin-top: var(--spacing-unit);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .tag-list {

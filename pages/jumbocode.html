@@ -3,13 +3,523 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JumboCode</title>
+  <title>JumboCode Case Study</title>
   <link rel="stylesheet" href="../assets/style.css">
-  <script src="../js/index.js" defer></script>
+  <link rel="stylesheet" href="../assets/jumbo.css">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" 
+    rel="stylesheet"
+  />
 </head>
 <body>
-  <div class="container">
-    <!-- JumboCode page content -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- header/logo -->
+      <a href="index.html" class="logo" aria-label="Home">
+        <img src="../assets/media/large/logo.png" alt="Wilson Skinner logo"/>
+      </a>
+
+      <!-- desktop nav -->
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html" class="active">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Resume</a></li>
+        </ul>
+      </nav>
+
+      <!-- mobile menu button -->
+      <button class="hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
+        <img src="../assets/media/hamburger.svg" alt="Menu icon"/>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-content">
+      <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu"></button>
+      <nav>
+        <ul class="mobile-menu-nav">
+          <li><a href="index.html" class="active" onclick="closeMobileMenu()">Work</a></li>
+          <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
+          <li><a href="#" onclick="closeMobileMenu()">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
+
+  <main>
+    <!-- Headline Section -->
+    <section class="headline-section">
+      <div class="container">
+        <h1 class="headline">
+          Revamping JumboCode's Website to Grow Student Applications by 35%
+        </h1>
+      </div>
+    </section>
+
+    <!-- Hero Image Section -->
+    <section class="hero-image-section">
+      <div class="container">
+        <div class="hero-image-container">
+          <img src="../assets/media/jumbocode/hero-thumbnail.png" alt="JumboCode website redesign" class="hero-image"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary Text Section -->
+    <section class="summary-section">
+      <div class="container">
+        <div class="summary-content">
+          <p class="summary-text">
+            JumboCode is a student-run digital agency at Tufts that builds free software for nonprofits, with 175+ members and 75+ shipped apps. As Head of Design, I led the full website redesign, leading research, branding, and UI/UX decisions.
+          </p>
+          <a href="#" class="visit-site-link">Visit Site →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Container Section -->
+    <section class="impact-section">
+      <div class="container">
+        <div class="impact-container">
+          <div class="impact-card">
+            <h3 class="impact-number">35%</h3>
+            <p class="impact-description">Increase in applications (2023 vs 2024)</p>
+          </div>
+          <div class="impact-card">
+            <h3 class="impact-number">4.5x</h3>
+            <p class="impact-description">Growth in site content (old site vs new)</p>
+          </div>
+          <div class="impact-card">
+            <h3 class="impact-number">1</h3>
+            <p class="impact-description">Design system for handoff (no prior documentation)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Comparison Section -->
+    <section class="product-comparison-section">
+      <div class="container">
+        <div class="comparison-container">
+          <div class="comparison-column">
+            <h3 class="comparison-title">Before</h3>
+            <div class="comparison-image before-image">
+              <img src="../assets/media/jumbocode/before-1.png" alt="Old JumboCode website" class="comparison-img"/>
+            </div>
+          </div>
+          <div class="comparison-column">
+            <h3 class="comparison-title">After</h3>
+            <div class="comparison-image after-image">
+              <img src="../assets/media/jumbocode/after-1-44cb16.png" alt="New JumboCode website" class="comparison-img"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+      <div class="container">
+        <h2 class="section-title">Problem</h2>
+        <p class="section-text">
+          The old website left students unsure how to join and nonprofits uncertain on what we offered, threatening JumboCode's ability to grow and sustain 12 annual web app projects.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3 Problems Section -->
+    <section class="problems-grid-section">
+      <div class="container">
+        <div class="problems-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h4 class="problem-title">Unclear what JumboCode does</h4>
+            <p class="problem-description">
+              Users couldn't tell that we build free software for nonprofits or why it mattered
+            </p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M15 9l-6 6M9 9l6 6" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h4 class="problem-title">Missing proof of impact</h4>
+            <p class="problem-description">
+              Project entries lacked details like final screens and results, hurting user trust
+            </p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2"/>
+                <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2"/>
+                <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2"/>
+                <line x1="16" y1="17" x2="8" y2="17" stroke="currentColor" stroke-width="2"/>
+                <polyline points="10,9 9,9 8,9" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <h4 class="problem-title">Lack of application details</h4>
+            <p class="problem-description">
+              Scattered roles and steps left students and nonprofits confused about applying
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Showcase Section -->
+    <section class="problem-showcase-section">
+      <div class="container">
+        <div class="showcase-grid">
+          <div class="showcase-item">
+            <div class="showcase-image">
+              <img src="../assets/media/jumbocode/problem-showcase-1-48becb.png" alt="Old project showcase" class="showcase-img"/>
+              <p class="image-caption">Old Project Showcase</p>
+            </div>
+            <div class="showcase-description">
+              <div class="description-card">
+                <div class="description-icon">👎</div>
+                <p class="description-text">
+                  Each project only showed a title and short blurb, leaving out goals, outcomes, and final deliverables
+                </p>
+              </div>
+              <div class="description-card">
+                <div class="description-icon">👎</div>
+                <p class="description-text">
+                  Without UI screenshots, projects felt incomplete and failed to showcase web app quality
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-item">
+            <div class="showcase-image">
+              <img src="../assets/media/jumbocode/problem-showcase-3.png" alt="Old apply page" class="showcase-img"/>
+              <p class="image-caption">Old Apply Page</p>
+            </div>
+            <div class="showcase-description">
+              <div class="description-card">
+                <div class="description-icon">👎</div>
+                <p class="description-text">
+                  Application process was unclear and scattered across multiple pages
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Goal Section -->
+    <section class="goal-section">
+      <div class="container">
+        <h2 class="section-title">Goal</h2>
+        <p class="section-text">
+          How might we design a website that explains what JumboCode does, builds confidence through our projects, and makes applying simple for students and nonprofits.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3 Goals Section -->
+    <section class="goals-section">
+      <div class="container">
+        <div class="goals-grid">
+          <div class="goal-card">
+            <div class="goal-number">1</div>
+            <h4 class="goal-title">Make it obvious we build free software for nonprofits</h4>
+          </div>
+          <div class="goal-card">
+            <div class="goal-number">2</div>
+            <h4 class="goal-title">Showcase project outcomes and final screens to build user trust</h4>
+          </div>
+          <div class="goal-card">
+            <div class="goal-number">3</div>
+            <h4 class="goal-title">Present roles, timelines, and steps to make applying easy</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+      <div class="container">
+        <h2 class="section-title">Solution</h2>
+        <p class="section-text">
+          The new JumboCode website provides a modern platform that better represents our work and community. I supported the dev team across coding sprints and oversaw the final execution to ensure the site launched smoothly. Jump to the process section to see how we got there!
+        </p>
+      </div>
+    </section>
+
+    <!-- Solution Showcase Section -->
+    <section class="solution-showcase-section">
+      <div class="container">
+        <div class="solution-card">
+          <h3 class="solution-title">01 - Homepage</h3>
+          <div class="solution-content">
+            <h4 class="solution-subtitle">A new, modern website for students and non-profits.</h4>
+            <p class="solution-description">subtext to explain more about this</p>
+          </div>
+          <div class="solution-image">
+            <img src="../assets/media/jumbocode/solution-1-16a023.png" alt="New JumboCode homepage" class="solution-img"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+      <div class="container">
+        <h2 class="section-title">Process</h2>
+        <div class="process-content">
+          <h3 class="process-subtitle">Research</h3>
+          <p class="process-description">
+            Competitive Analysis: After analyzing the old JumboCode website to determine where we could make improvements, we looked to similar clubs at other universities to identify trends and effective designs. Below are 2 of the many clubs we analyzed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Images Section -->
+    <section class="research-images-section">
+      <div class="container">
+        <div class="research-grid">
+          <div class="research-item">
+            <div class="research-image">
+              <img src="../assets/media/jumbocode/research-1-48becb.png" alt="Blueprint, a UC Berkeley digital agency" class="research-img"/>
+              <p class="image-caption">Blueprint, a UC Berkeley digital agency</p>
+            </div>
+            <div class="research-description">
+              <div class="description-card positive">
+                <div class="description-icon">👍</div>
+                <p class="description-text">
+                  Clear project showcase with detailed outcomes and impact metrics
+                </p>
+              </div>
+              <div class="description-card positive">
+                <div class="description-icon">👍</div>
+                <p class="description-text">
+                  Professional design that builds trust and credibility
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="research-item">
+            <div class="research-image">
+              <img src="../assets/media/jumbocode/research-3.png" alt="Atlas Digital, a student consulting org at UMichigan" class="research-img"/>
+              <p class="image-caption">Atlas Digital, a student consulting org at UMichigan</p>
+            </div>
+            <div class="research-description">
+              <div class="description-card positive">
+                <div class="description-icon">👍</div>
+                <p class="description-text">
+                  Streamlined application process with clear steps and requirements
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information Architecture Section -->
+    <section class="info-arch-section">
+      <div class="container">
+        <p class="section-text">
+          Information Architecture: After analyzing the old JumboCode website to determine where we could make improvements, we looked to similar clubs at other universities to identify trends and effective designs. Below are 2 of the many clubs we analyzed.
+        </p>
+        <div class="info-arch-image">
+          <img src="../assets/media/jumbocode/info-arch-48becb.png" alt="Information architecture diagram" class="info-arch-img"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prototypes Section -->
+    <section class="prototypes-section">
+      <div class="container">
+        <div class="prototypes-content">
+          <h3 class="process-subtitle">Prototypes</h3>
+          <p class="process-description">
+            Site Map: After analyzing the old JumboCode website to determine where we could make improvements, we looked to similar clubs at other universities to identify trends and effective designs. Below are 2 of the many clubs we analyzed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prototypes Grid Section -->
+    <section class="prototypes-grid-section">
+      <div class="container">
+        <div class="prototypes-grid">
+          <div class="prototype-item">
+            <p class="prototype-label">Home Page</p>
+            <img src="../assets/media/jumbocode/prototype-1-48becb.png" alt="Homepage prototype" class="prototype-img"/>
+          </div>
+          <div class="prototype-item">
+            <p class="prototype-label">Projects Page</p>
+            <img src="../assets/media/jumbocode/prototype-2-48becb.png" alt="Projects page prototype" class="prototype-img"/>
+          </div>
+          <div class="prototype-item">
+            <p class="prototype-label">About Page</p>
+            <img src="../assets/media/jumbocode/prototype-3-48becb.png" alt="About page prototype" class="prototype-img"/>
+          </div>
+          <div class="prototype-item">
+            <p class="prototype-label">Apply Page</p>
+            <img src="../assets/media/jumbocode/prototype-4-48becb.png" alt="Apply page prototype" class="prototype-img"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Iterations Section -->
+    <section class="iterations-section">
+      <div class="container">
+        <p class="section-text">
+          Iterations & Testing: After analyzing the old JumboCode website to determine where we could make improvements, we looked to similar clubs at other universities to identify trends and effective designs. Below are 2 of the many clubs we analyzed.
+        </p>
+        <div class="iterations-grid">
+          <div class="iteration-row">
+            <div class="iteration-item">
+              <img src="../assets/media/jumbocode/iteration-1-48becb.png" alt="Iteration 1" class="iteration-img"/>
+            </div>
+            <div class="iteration-item">
+              <img src="../assets/media/jumbocode/iteration-2-48becb.png" alt="Iteration 2" class="iteration-img"/>
+            </div>
+            <div class="iteration-item">
+              <img src="../assets/media/jumbocode/iteration-3-48becb.png" alt="Iteration 3" class="iteration-img"/>
+            </div>
+          </div>
+          <div class="iteration-row">
+            <div class="iteration-item">
+              <img src="../assets/media/jumbocode/iteration-4-48becb.png" alt="Iteration 4" class="iteration-img"/>
+            </div>
+            <div class="iteration-item">
+              <img src="../assets/media/jumbocode/iteration-5-48becb.png" alt="Iteration 5" class="iteration-img"/>
+            </div>
+            <div class="iteration-item">
+              <img src="../assets/media/jumbocode/iteration-1-48becb.png" alt="Final iteration" class="iteration-img"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Section -->
+    <section class="design-section">
+      <div class="container">
+        <div class="design-content">
+          <h3 class="process-subtitle">Design</h3>
+          <p class="process-description">
+            Design System: After analyzing the old JumboCode website to determine where we could make improvements, we looked to similar clubs at other universities to identify trends and effective designs. Below are 2 of the many clubs we analyzed.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Design Showcase Section -->
+    <section class="design-showcase-section">
+      <div class="container">
+        <div class="design-system-grid">
+          <div class="design-item">
+            <div class="color-swatch" style="background-color: #007095;"></div>
+            <p class="design-label">Nav bar, Buttons</p>
+            <p class="color-code">#007095</p>
+          </div>
+          <div class="design-item">
+            <div class="color-swatch" style="background-color: #889F50;"></div>
+            <p class="design-label">HomeStart Logo</p>
+            <p class="color-code">#889F50</p>
+          </div>
+          <div class="design-item">
+            <div class="color-swatch" style="background-color: #7F3465;"></div>
+            <p class="design-label">Accent Color</p>
+            <p class="color-code">#7F3465</p>
+          </div>
+          <div class="design-item">
+            <div class="color-swatch" style="background-color: #004961;"></div>
+            <p class="design-label">Nav bar selection</p>
+            <p class="color-code">#004961</p>
+          </div>
+          <div class="design-item">
+            <div class="color-swatch" style="background-color: #EEEEEE;"></div>
+            <p class="design-label">Background</p>
+            <p class="color-code">#EEEEEE</p>
+          </div>
+          <div class="design-item">
+            <div class="color-swatch" style="background-color: #808080;"></div>
+            <p class="design-label">Text, Icons</p>
+            <p class="color-code">#808080</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Figma Structure Section -->
+    <section class="figma-structure-section">
+      <div class="container">
+        <p class="section-text">
+          Figma Structure: After analyzing the old JumboCode website to determine where we could make improvements, we looked to similar clubs at other universities to identify trends and effective designs. Below are 2 of the many clubs we analyzed.
+        </p>
+        <div class="figma-structure-image">
+          <img src="../assets/media/jumbocode/figma-structure-48becb.png" alt="Figma structure diagram" class="figma-structure-img"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Takeaways Section -->
+    <section class="takeaways-section">
+      <div class="container">
+        <h2 class="section-title">Takeaways</h2>
+        <p class="section-text">
+          The old website left students unsure how to join and nonprofits uncertain on what we offered, threatening JumboCode's ability to grow and sustain 12 annual web app projects. The old website left students unsure how to join and nonprofits uncertain on what we offered, threatening JumboCode's ability to grow and sustain 12 annual web app projects.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">© 2025 Wilson Skinner</div>
+      <div class="footer-right">
+        <a href="#" class="icon-link" aria-label="Email">
+          <img src="../assets/media/send.svg?v=1" class="default-icon" alt="Send"/>
+          <img src="../assets/media/filled_send.svg" class="hover-icon" alt="Send filled"/>
+        </a>
+        <a href="#" class="icon-link" aria-label="LinkedIn">
+          <img src="../assets/media/linkedin.svg" class="default-icon" alt="LinkedIn"/>
+          <img src="../assets/media/filled_linkedin.svg" class="hover-icon" alt="LinkedIn filled"/>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const overlay = document.getElementById('mobileMenuOverlay');
+      const hamburger = document.querySelector('.hamburger');
+      overlay.classList.toggle('active');
+      hamburger.classList.toggle('active');
+      document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
+    }
+
+    function closeMobileMenu() {
+      const overlay = document.getElementById('mobileMenuOverlay');
+      const hamburger = document.querySelector('.hamburger');
+      overlay.classList.remove('active');
+      hamburger.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('mobileMenuOverlay')
+      .addEventListener('click', e => { if (e.target === e.currentTarget) closeMobileMenu(); });
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
+  </script>
 </body>
 </html>
