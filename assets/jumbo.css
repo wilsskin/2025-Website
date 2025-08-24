@@ -21,7 +21,7 @@
 
 /* Headline Section */
 .headline-section {
-  padding: 72px 0 24px;
+  padding: var(--spacing-large) 0 var(--spacing-small);
   background: var(--color-bg);
 }
 
@@ -42,7 +42,7 @@
 }
 
 .hero-image-container {
-  padding: 32px 64px;
+  padding: var(--spacing-medium) var(--spacing-large);
   background: var(--jumbo-border);
   border: 1px solid var(--jumbo-accent);
   border-radius: 13.5px;
@@ -100,7 +100,7 @@
 
 /* Impact Section */
 .impact-section {
-  padding: 0 0 108px;
+  padding: 0 0 var(--spacing-section);
   background: var(--color-bg);
 }
 
@@ -140,17 +140,17 @@
 
 /* Product Comparison Section */
 .product-comparison-section {
-  padding: 32px 64px 0;
+  padding: var(--spacing-medium) var(--spacing-large) 0;
   background: var(--color-bg);
 }
 
 .comparison-container {
   display: flex;
   justify-content: center;
-  gap: 64px;
+  gap: var(--spacing-large);
   max-width: 900px;
   margin: 0 auto;
-  padding: 32px 64px 0;
+  padding: var(--spacing-medium) var(--spacing-large) 0;
   background: var(--jumbo-bg-light);
   border-radius: 16px;
 }
@@ -207,13 +207,13 @@
 
 /* Problem Section */
 .problem-section {
-  padding: 108px 0 32px;
+  padding: var(--spacing-section) 0 var(--spacing-medium);
   background: var(--color-bg);
 }
 
 /* Problems Grid */
 .problems-grid-section {
-  padding: 0 0 64px;
+  padding: 0 0 var(--spacing-large);
   background: var(--color-bg);
 }
 
@@ -260,7 +260,7 @@
 
 /* Problem Showcase */
 .problem-showcase-section {
-  padding: 0 0 64px;
+  padding: 0 0 var(--spacing-large);
   background: var(--color-bg);
 }
 
@@ -273,7 +273,7 @@
 .showcase-item {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: var(--spacing-small);
 }
 
 .showcase-image {
@@ -342,20 +342,20 @@
 
 /* Goal Section */
 .goal-section {
-  padding: 108px 0 32px;
+  padding: var(--spacing-section) 0 var(--spacing-medium);
   background: var(--color-bg);
 }
 
 /* Goals Grid */
 .goals-section {
-  padding: 0 0 64px;
+  padding: 0 0 var(--spacing-large);
   background: var(--color-bg);
 }
 
 .goals-grid {
   display: flex;
   align-items: center;
-  gap: 64px;
+  gap: var(--spacing-large);
   max-width: 900px;
 }
 
@@ -363,8 +363,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
-  padding: 24px 16px;
+  gap: var(--spacing-small);
+  padding: var(--spacing-small) 16px;
   width: 257.33px;
   background: var(--color-bg);
   border: 1.5px solid var(--jumbo-primary);
@@ -398,13 +398,13 @@
 
 /* Solution Section */
 .solution-section {
-  padding: 108px 0 64px;
+  padding: var(--spacing-section) 0 var(--spacing-large);
   background: var(--color-bg);
 }
 
 /* Solution Showcase */
 .solution-showcase-section {
-  padding: 0 0 64px;
+  padding: 0 0 var(--spacing-large);
   background: var(--color-bg);
 }
 
@@ -412,7 +412,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 40px 48px;
+  padding: 40px 48px; /* Keep this as special exception */
   background: var(--jumbo-bg-light);
   border-radius: 16px;
   max-width: 900px;
@@ -466,7 +466,7 @@
 
 /* Process Section */
 .process-section {
-  padding: 108px 0 32px;
+  padding: var(--spacing-section) 0 var(--spacing-medium);
   background: var(--color-bg);
 }
 
@@ -497,7 +497,7 @@
 
 /* Research Images */
 .research-images-section {
-  padding: 0 0 64px;
+  padding: 0 0 var(--spacing-large);
   background: var(--color-bg);
 }
 
@@ -510,7 +510,7 @@
 .research-item {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: var(--spacing-small);
 }
 
 .research-image {
@@ -536,7 +536,7 @@
 
 /* Info Architecture */
 .info-arch-section {
-  padding: 80px 0 32px;
+  padding: var(--spacing-xlarge) 0 var(--spacing-medium);
   background: var(--color-bg);
 }
 
@@ -557,7 +557,7 @@
 
 /* Prototypes */
 .prototypes-section {
-  padding: 108px 0 32px;
+  padding: var(--spacing-section) 0 var(--spacing-medium);
   background: var(--color-bg);
 }
 
@@ -569,7 +569,7 @@
 
 /* Prototypes Grid */
 .prototypes-grid-section {
-  padding: 0 0 64px;
+  padding: 0 0 var(--spacing-large);
   background: var(--color-bg);
 }
 
@@ -577,7 +577,7 @@
   display: flex;
   justify-content: stretch;
   align-items: stretch;
-  gap: 32px;
+  gap: var(--spacing-medium);
   max-width: 900px;
 }
 
@@ -609,7 +609,7 @@
 
 /* Iterations */
 .iterations-section {
-  padding: 80px 0 32px;
+  padding: var(--spacing-xlarge) 0 var(--spacing-medium);
   background: var(--color-bg);
 }
 
@@ -641,7 +641,7 @@
 
 /* Design Section */
 .design-section {
-  padding: 108px 0 32px;
+  padding: var(--spacing-section) 0 var(--spacing-medium);
   background: var(--color-bg);
 }
 
@@ -653,7 +653,7 @@
 
 /* Design Showcase */
 .design-showcase-section {
-  padding: 0 0 64px;
+  padding: 0 0 var(--spacing-large);
   background: var(--color-bg);
 }
 
@@ -702,7 +702,7 @@
 
 /* Figma Structure */
 .figma-structure-section {
-  padding: 80px 0 32px;
+  padding: var(--spacing-xlarge) 0 var(--spacing-medium);
   background: var(--color-bg);
 }
 
@@ -723,7 +723,7 @@
 
 /* Takeaways */
 .takeaways-section {
-  padding: 108px 0 64px;
+  padding: var(--spacing-section) 0 var(--spacing-large);
   background: var(--color-bg);
 }
 
@@ -734,7 +734,7 @@
   }
   
   .hero-image-container {
-    padding: 24px 32px;
+    padding: var(--spacing-small) var(--spacing-medium);
   }
   
   .summary-content {
@@ -744,7 +744,7 @@
   
   .impact-container {
     flex-direction: column;
-    gap: 24px;
+    gap: var(--spacing-small);
   }
   
   .impact-card {
@@ -753,8 +753,8 @@
   
   .comparison-container {
     flex-direction: column;
-    gap: 32px;
-    padding: 24px 32px;
+    gap: var(--spacing-medium);
+    padding: var(--spacing-small) var(--spacing-medium);
   }
   
   .comparison-image {
@@ -763,7 +763,7 @@
   
   .problems-grid {
     flex-direction: column;
-    gap: 24px;
+    gap: var(--spacing-small);
   }
   
   .problem-card {
@@ -772,7 +772,7 @@
   
   .showcase-grid {
     flex-direction: column;
-    gap: 48px;
+    gap: var(--spacing-large);
   }
   
   .showcase-item {
@@ -786,7 +786,7 @@
   
   .goals-grid {
     flex-direction: column;
-    gap: 24px;
+    gap: var(--spacing-small);
   }
   
   .goal-card {
@@ -795,7 +795,7 @@
   
   .research-grid {
     flex-direction: column;
-    gap: 48px;
+    gap: var(--spacing-large);
   }
   
   .research-item {
@@ -809,7 +809,7 @@
   
   .prototypes-grid {
     flex-direction: column;
-    gap: 24px;
+    gap: var(--spacing-small);
   }
   
   .iteration-row {
@@ -819,7 +819,7 @@
   
   .design-system-grid {
     flex-wrap: wrap;
-    gap: 24px;
+    gap: var(--spacing-small);
   }
   
   .design-item {
@@ -829,20 +829,20 @@
 
 @media (max-width: 480px) {
   .hero-image-container {
-    padding: 16px 24px;
+    padding: 16px var(--spacing-small);
   }
   
   .comparison-container {
-    padding: 16px 24px;
+    padding: 16px var(--spacing-small);
   }
   
   .solution-card {
-    padding: 24px 32px;
+    padding: var(--spacing-small) var(--spacing-medium);
   }
   
   .design-system-grid {
     flex-direction: column;
-    gap: 24px;
+    gap: var(--spacing-small);
   }
   
   .design-item {
