@@ -110,9 +110,11 @@
           <span class="tag-pill">Design system</span>
           <span class="tag-pill">0–1</span>
         </div>
-        <div class="work-preview jumbocode">
-          <img src="../assets/media/index/JC-thumbnail.png" alt="Screenshot of JumboCode redesign"/>
-        </div>
+        <a href="jumbocode.html" class="work-preview-link">
+          <div class="work-preview jumbocode">
+            <img src="../assets/media/index/JC-thumbnail.png" alt="Screenshot of JumboCode redesign"/>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -134,9 +136,11 @@
           <span class="tag-pill">Business to Consumer</span>
           <span class="tag-pill">Calculator</span>
         </div>
-        <div class="work-preview cargurus">
-          <div class="work-preview-placeholder"></div>
-        </div>
+        <a href="#" class="work-preview-link">
+          <div class="work-preview cargurus">
+            <div class="work-preview-placeholder"></div>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -158,9 +162,11 @@
           <span class="tag-pill">Education</span>
           <span class="tag-pill">AI Tools</span>
         </div>
-        <div class="work-preview realityai">
-          <div class="work-preview-placeholder"></div>
-        </div>
+        <a href="#" class="work-preview-link">
+          <div class="work-preview realityai">
+            <div class="work-preview-placeholder"></div>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -205,6 +211,25 @@
       .addEventListener('click', e => { if (e.target === e.currentTarget) closeMobileMenu(); });
 
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
+
+    // Logo cursor tracking rotation
+    const logo = document.querySelector('.site-header .logo img');
+    if (logo && window.innerWidth > 480) {
+      document.addEventListener('mousemove', e => {
+        const rect = logo.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const distance = Math.sqrt((e.clientX - centerX) ** 2 + (e.clientY - centerY) ** 2);
+        
+        logo.style.transform = distance <= 18 
+          ? `rotate(${(e.clientX - centerX) / 18 * 18}deg)` 
+          : 'rotate(0deg)';
+      }, { passive: true });
+      
+      window.addEventListener('resize', () => {
+        if (window.innerWidth <= 480) logo.style.transform = 'rotate(0deg)';
+      });
+    }
   </script>
 </body>
 </html>

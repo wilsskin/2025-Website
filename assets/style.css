@@ -121,6 +121,7 @@ body {
 .site-header .logo {
   display: inline-flex;
   align-items: center;
+  transform-style: preserve-3d;
 }
 .site-header .logo img {
   display: block;
@@ -128,6 +129,15 @@ body {
   max-height: 30px;
   width: auto;
   height: auto;
+  transform-origin: center bottom;
+  transition: transform 0.1s ease-out;
+}
+
+/* Logo rotation animation - desktop only */
+@media (min-width: 481px) {
+  .site-header .logo img {
+    will-change: transform;
+  }
 }
 
 /* Desktop nav hidden on mobile */

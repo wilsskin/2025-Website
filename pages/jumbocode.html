@@ -16,7 +16,7 @@
     <div class="container header-inner">
       <!-- header/logo -->
       <a href="index.html" class="logo" aria-label="Home">
-        <img src="../assets/media/large/logo.png" alt="Wilson Skinner logo"/>
+        <img src="../assets/media/logo.png" alt="Wilson Skinner logo"/>
       </a>
 
       <!-- desktop nav -->
@@ -520,6 +520,25 @@
       .addEventListener('click', e => { if (e.target === e.currentTarget) closeMobileMenu(); });
 
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
+
+    // Logo cursor tracking rotation
+    const logo = document.querySelector('.site-header .logo img');
+    if (logo && window.innerWidth > 480) {
+      document.addEventListener('mousemove', e => {
+        const rect = logo.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const distance = Math.sqrt((e.clientX - centerX) ** 2 + (e.clientY - centerY) ** 2);
+        
+        logo.style.transform = distance <= 18 
+          ? `rotate(${(e.clientX - centerX) / 18 * 18}deg)` 
+          : 'rotate(0deg)';
+      }, { passive: true });
+      
+      window.addEventListener('resize', () => {
+        if (window.innerWidth <= 480) logo.style.transform = 'rotate(0deg)';
+      });
+    }
   </script>
 </body>
 </html>
