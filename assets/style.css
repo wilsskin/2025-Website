@@ -130,7 +130,7 @@ body {
   width: auto;
   height: auto;
   transform-origin: center bottom;
-  transition: transform 0.1s ease-out;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Logo rotation animation - desktop only */
@@ -536,7 +536,7 @@ img.work-logo {
 
 /* Case study specific colors */
 .work-title-h3.jumbocode {
-  color: #28A07E; /* JumboCode green */
+  color: #2DB48F; /* JumboCode green */
 }
 
 .work-title-h3.cargurus {

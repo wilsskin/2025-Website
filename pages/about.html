@@ -257,7 +257,7 @@
         const distance = Math.sqrt((e.clientX - centerX) ** 2 + (e.clientY - centerY) ** 2);
         
         logo.style.transform = distance <= 18 
-          ? `rotate(${(e.clientX - centerX) / 18 * 18}deg)` 
+          ? `rotate(${(e.clientX - centerX) / 18 * 12}deg)` 
           : 'rotate(0deg)';
       }, { passive: true });
       
