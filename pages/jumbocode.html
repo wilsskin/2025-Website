@@ -49,7 +49,29 @@
     </div>
   </div>
 
-  <main>
+  <!-- Page Layout Wrapper -->
+  <div class="page-layout-wrapper">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar-nav">
+      <div class="sidebar-content">
+        <a href="index.html" class="back-link">
+          <span class="back-arrow">←</span> Back
+        </a>
+        <nav class="page-nav">
+          <ul>
+            <li><a href="#hero" class="nav-link" data-section="hero">Hero</a></li>
+            <li><a href="#problem" class="nav-link" data-section="problem">Problem</a></li>
+            <li><a href="#goal" class="nav-link" data-section="goal">Goal</a></li>
+            <li><a href="#solution" class="nav-link" data-section="solution">Solution</a></li>
+            <li><a href="#process" class="nav-link" data-section="process">Process</a></li>
+            <li><a href="#takeaways" class="nav-link" data-section="takeaways">Takeaways</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
     <!-- Headline Section -->
     <section class="headline-section">
       <div class="container">
@@ -60,7 +82,7 @@
     </section>
 
     <!-- Hero Image Section -->
-    <section class="hero-image-section">
+    <section id="hero" class="hero-image-section">
       <div class="container">
         <div class="hero-image-container">
           <img src="../assets/media/index/JC-thumbnail.png" alt="JumboCode website redesign" class="hero-image img-block"/>
@@ -121,7 +143,7 @@
     </section>
 
     <!-- Problem Section -->
-    <section class="problem-section">
+    <section id="problem" class="problem-section">
       <div class="container">
         <h2 class="section-title">Problem</h2>
         <p class="section-text">
@@ -223,7 +245,7 @@
     </section>
 
     <!-- Goal Section -->
-    <section class="goal-section">
+    <section id="goal" class="goal-section">
       <div class="container">
         <h2 class="section-title">Goal</h2>
         <p class="section-text">
@@ -253,12 +275,12 @@
     </section>
 
     <!-- Solution Section -->
-    <section class="solution-section">
+    <section id="solution" class="solution-section">
       <div class="container">
         <h2 class="section-title">Solution</h2>
         <p class="section-text">
           The new JumboCode website provides a modern platform that better represents our work and community. I supported the dev team across coding sprints and oversaw the final execution to ensure the site launched smoothly.<br><br>
-          <a href="#process-section" class="process-link"><span class="process-link-text">Jump to the process section</span></a> to see more details!
+          <a href="#process-section" class="process-link"><span class="process-link-text">Jump to process section</span></a> to see more details!
         </p>
       </div>
     </section>
@@ -279,8 +301,38 @@
       </div>
     </section>
 
+    <section class="solution-showcase-section">
+      <div class="container">
+        <div class="solution-card">
+          <h3 class="solution-title">02 - Apply Page</h3>
+          <div class="solution-content">
+            <h4 class="solution-subtitle">A new, modern website for students and non-profits.</h4>
+            <p class="solution-description">subtext to explain more about this</p>
+          </div>
+          <div class="solution-image">
+            <img src="../assets/media/jumbocode/solution-homepage.png" alt="New JumboCode homepage" class="solution-img img-block"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution-showcase-section">
+      <div class="container">
+        <div class="solution-card">
+          <h3 class="solution-title">01 - Homepage</h3>
+          <div class="solution-content">
+            <h4 class="solution-subtitle">A new, modern website for students and non-profits.</h4>
+            <p class="solution-description">subtext to explain more about this</p>
+          </div>
+          <div class="solution-image">
+            <img src="../assets/media/jumbocode/solution-homepage.png" alt="New JumboCode homepage" class="solution-img img-block"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Process Section -->
-    <section class="process-section" id="process-section">
+    <section id="process" class="process-section">
       <div class="container">
         <h2 class="section-title">Process</h2>
         <div class="process-content">
@@ -478,15 +530,17 @@
     </section>
 
     <!-- Takeaways Section -->
-    <section class="takeaways-section">
+    <section id="takeaways" class="takeaways-section">
       <div class="container">
         <h2 class="section-title">Takeaways</h2>
         <p class="section-text">
-          The old website left students unsure how to join and nonprofits uncertain on what we offered, threatening JumboCode's ability to grow and sustain 12 annual web app projects. The old website left students unsure how to join and nonprofits uncertain on what we offered, threatening JumboCode's ability to grow and sustain 12 annual web app projects.
+          The old website left students unsure how to join and nonprofits uncertain on what we offered, threatening JumboCode's ability to grow and sustain 12 annual web app projects. <br><br>
+          The old website left students unsure how to join and nonprofits uncertain on what we offered, threatening JumboCode's ability to grow and sustain 12 annual web app projects.
         </p>
       </div>
     </section>
   </main>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-inner">
@@ -525,6 +579,89 @@
       .addEventListener('click', e => { if (e.target === e.currentTarget) closeMobileMenu(); });
 
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
+
+    // Sidebar navigation functionality
+    function initSidebarNav() {
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('section[id]');
+      
+      // Smooth scrolling for navigation links
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Update active section based on scroll position
+      function updateActiveSection() {
+        const scrollPosition = window.scrollY + 100;
+        const isAtBottom = scrollPosition + window.innerHeight >= document.documentElement.scrollHeight - 50;
+        
+        // Handle bottom of page case
+        if (isAtBottom) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          document.querySelector('[href="#takeaways"]')?.classList.add('active');
+          return;
+        }
+        
+        // Find current section using proper boundaries
+        let currentSection = null;
+        
+        for (let i = 0; i < sections.length; i++) {
+          const section = sections[i];
+          const sectionTop = section.offsetTop;
+          
+          // Define section boundaries: from this section's top to the next section's top
+          let sectionBottom;
+          if (i < sections.length - 1) {
+            // Use the start of the next section as the end of this section
+            sectionBottom = sections[i + 1].offsetTop;
+          } else {
+            // For the last section, use its actual bottom
+            sectionBottom = sectionTop + section.offsetHeight;
+          }
+          
+          // Check if we're within this section's boundaries
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            currentSection = section;
+            break;
+          }
+        }
+        
+        // Update active state
+        navLinks.forEach(link => link.classList.remove('active'));
+        if (currentSection) {
+          document.querySelector(`[href="#${currentSection.id}"]`)?.classList.add('active');
+        }
+      }
+
+      // Listen for scroll events
+      window.addEventListener('scroll', updateActiveSection);
+      
+      // Initial call to set active section
+      updateActiveSection();
+      
+      // Set hero as active by default if no section is active
+      const activeLink = document.querySelector('.nav-link.active');
+      if (!activeLink) {
+        const heroLink = document.querySelector('[href="#hero"]');
+        if (heroLink) {
+          heroLink.classList.add('active');
+        }
+      }
+    }
+
+    // Initialize sidebar navigation when DOM is loaded
+    document.addEventListener('DOMContentLoaded', initSidebarNav);
 
     // Logo cursor tracking rotation
     const logo = document.querySelector('.site-header .logo img');

@@ -176,7 +176,7 @@
 
 /* Product Comparison Section */
 .product-comparison-section {
-  padding: var(--spacing-section) var(--spacing-large) 0;
+  padding: var(--spacing-section) 0 0;
   background: var(--color-bg);
 }
 
@@ -184,8 +184,8 @@
   display: flex;
   justify-content: center;
   gap: var(--spacing-large);
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding: var(--spacing-medium) var(--spacing-large) 0;
   background: var(--jumbo-bg-light);
   border-radius: 16px;
@@ -761,7 +761,106 @@
   background: var(--color-bg);
 }
 
-/* Responsive Design */
+/* Page Layout Wrapper */
+.page-layout-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+  position: fixed;
+  top: 0;
+  /* Fluid calculation: 
+     - 50% centers the main content
+     - 474px is half the main content width (948px/2)
+     - 74px is sidebar width
+     - The gap calculation changes based on viewport:
+       * 1440px+ to 1224px: gap stays 40px, only left margin shrinks
+       * 1224px to 1160px: gap shrinks from 40px to 8px
+       * <1160px: sidebar disappears */
+  left: calc(50% - 474px - 74px - clamp(8px, calc(40px - (1224px - 100vw) * 0.5), 40px));
+  width: 74px;
+  padding-top: 130px; /* Align with main header */
+  z-index: 100;
+  height: fit-content;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--jumbo-text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--jumbo-text-dark);
+  font-weight: 400;
+}
+
+.back-arrow {
+  font-size: 16px;
+}
+
+.page-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  color: var(--jumbo-text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: block;
+  padding: 0;
+}
+
+.nav-link:hover {
+  color: var(--jumbo-text-dark);
+  font-weight: 400;
+}
+
+.nav-link.active {
+  font-weight: 400;
+  color: var(--jumbo-text-dark);
+}
+
+/* Main content */
+.main-content {
+  max-width: 948px;
+  margin: 0 auto; /* Center the main content */
+  width: 100%;
+}
+
+/* Responsive adjustments - simplified to just handle the breakpoint where sidebar disappears */
+@media (max-width: 1159px) {
+  .sidebar-nav {
+    display: none; /* Hide sidebar on smaller screens */
+  }
+  
+  .main-content {
+    max-width: 948px;
+    margin: 0 auto; /* Center the content */
+  }
+}
 @media (max-width: 768px) {
   .headline {
     font-size: 20px;
@@ -883,3 +982,4 @@
     width: 100%;
   }
 }
+
