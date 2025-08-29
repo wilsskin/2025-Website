@@ -428,10 +428,10 @@
 
 .goal-title {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 14px;
   line-height: 1.5em;
-  color: var(--jumbo-text-light);
+  color: var(--jumbo-text-dark);
   text-align: center;
   margin: 0;
 }
@@ -592,6 +592,7 @@
   object-fit: cover;
   border-radius: 8px;
   display: block;
+  border: 1px solid #cccccc;
 }
 
 .research-description {
