@@ -53,29 +53,27 @@
     <section class="hero">
       <div class="container">
         <h1>
-          <strong>Wilson Skinner.</strong> Product Designer using code, empathy, and AI to create crisp digital experiences
+          <strong>Wilson Skinner.</strong> Product Designer crafting crisp digital experiences with code and empathy
         </h1>
         <p class="subtext">
-          Currently freelancing and building side projects with Cursor. Previously head of design at JumboCode and design intern at Reality AI.
-        </p>
+          Currently redesigning bodegabaylavender.com and building with agentic software. Former Head of Design at JumboCode and Design Intern at Reality AI.        </p>
         <div class="hero-actions">
           <span class="status-pill" aria-haspopup="true">
-            <span class="status-indicator"></span>
             <span class="status-text-wrap">
-              <span class="status-text">Open to full-time</span>
+              <span class="status-text">Let's build something</span>
               <span class="status-text status-text--measure" aria-hidden="true">Open to full-time</span>
             </span>
             <div class="status-tooltip" role="tooltip">
               <div class="status-tooltip-inner">
-                <div class="status-tooltip-text">I love new projects</div>
-                <a href="#" class="status-tooltip-link" aria-label="Calendar link">Let's chat!</a>
+                <div class="status-tooltip-text">Got a cool idea?</div>
+                <a href="#" class="status-tooltip-link" aria-label="Calendar link">Email me!</a>
               </div>
             </div>
           </span>
-          <!-- send icon -->
-          <a href="#" class="icon-link telegram" aria-label="Email">
-            <img src="../assets/media/send.svg?v=1" class="default-icon" alt="Send"/>
-            <img src="../assets/media/filled_send.svg" class="hover-icon" alt="Send filled"/>
+          <!-- github icon -->
+          <a href="#" class="icon-link github" aria-label="GitHub">
+            <img src="../assets/media/github.svg" class="default-icon" alt="GitHub"/>
+            <img src="../assets/media/github-filled.svg" class="hover-icon" alt="GitHub filled"/>
           </a>
           <!-- linkedin icon -->
           <a href="#" class="icon-link linkedin" aria-label="LinkedIn">
@@ -86,21 +84,41 @@
       </div>
     </section>
 
-    <section class="work-selector">
-      <div class="container">
-        <h2>Work –</h2>
-      </div>
-    </section>
-
-    <!-- Existing case study -->
+    <!-- CarGurus case study -->
     <section class="work-card">
       <div class="container">
         <div class="work-card-header">
           <div class="work-title">
-            <img src="../assets/media/index/JC.png" alt="JumboCode logo" class="work-logo jumbocode"/>
-            <h3 class="work-title-h3 jumbocode">JumboCode</h3>
+            <img src="../assets/media/about/logo-cargurus.png" alt="CarGurus logo" class="work-logo cargurus"/>
+            <h3 class="work-title-h3 cargurus"><span style="color: #EE3342;">Car</span>Gurus <span class="present-label">/ 2025</span></h3>
           </div>
-          <span class="present-label">Present</span>
+          
+        </div>
+        <p class="work-description">
+          Built a concept mobile finance calculator for 45M+ monthly users
+        </p>
+        <div class="tag-list">
+          <span class="tag-pill">Senior Capstone</span>
+          <span class="tag-pill">Lovable</span>
+          <span class="tag-pill">B2C</span>
+        </div>
+        <a href="#" class="work-preview-link">
+          <div class="work-preview cargurus">
+            <div class="work-preview-placeholder"></div>
+          </div>
+        </a>
+      </div>
+    </section>
+    
+    <!-- JumboCode case study -->
+    <section class="work-card" style="margin-top: 80px;">
+      <div class="container">
+        <div class="work-card-header">
+          <div class="work-title">
+            <img src="../assets/media/index/JC.png" alt="JumboCode logo" class="work-logo jumbocode"/>
+            <h3 class="work-title-h3 jumbocode">JumboCode <span class="present-label">/ 2024-25</span>
+            </h3>
+          </div>
         </div>
         <p class="work-description">
           Revamping JumboCode's Website to Grow Student Applications by 35%
@@ -118,33 +136,9 @@
       </div>
     </section>
 
-    <!-- CarGurus case study -->
-    <section class="work-card" style="margin-top: 64px;">
-      <div class="container">
-        <div class="work-card-header">
-          <div class="work-title">
-            <img src="../assets/media/about/logo-cargurus.png" alt="CarGurus logo" class="work-logo cargurus"/>
-            <h3 class="work-title-h3 cargurus">CarGurus</h3>
-          </div>
-          <span class="present-label">2025</span>
-        </div>
-        <p class="work-description">
-          Built a concept mobile finance calculator for 45M+ monthly users
-        </p>
-        <div class="tag-list">
-          <span class="tag-pill">Senior Capstone</span>
-          <span class="tag-pill">Lovable</span>
-          <span class="tag-pill">B2C</span>
-        </div>
-        <a href="#" class="work-preview-link">
-          <div class="work-preview cargurus">
-            <div class="work-preview-placeholder"></div>
-          </div>
-        </a>
-      </div>
-    </section>
+    
 
-    <!-- Reality AI case study -->
+    <!-- Reality AI case study 
     <section class="work-card" style="margin-top: 64px;">
       <div class="container">
         <div class="work-card-header">
@@ -169,7 +163,7 @@
         </a>
       </div>
     </section>
-
+-->
 
 
   </main>
@@ -181,6 +175,10 @@
         <a href="#" class="icon-link" aria-label="Email">
           <img src="../assets/media/send.svg?v=1" class="default-icon" alt="Send"/>
           <img src="../assets/media/filled_send.svg" class="hover-icon" alt="Send filled"/>
+        </a>
+        <a href="#" class="icon-link" aria-label="GitHub">
+          <img src="../assets/media/github.svg" class="default-icon" alt="GitHub"/>
+          <img src="../assets/media/github-filled.svg" class="hover-icon" alt="GitHub filled"/>
         </a>
         <a href="#" class="icon-link" aria-label="LinkedIn">
           <img src="../assets/media/linkedin.svg" class="default-icon" alt="LinkedIn"/>
@@ -212,19 +210,16 @@
 
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
 
-    // Logo cursor tracking rotation
+    // Logo hover rotation
     const logo = document.querySelector('.site-header .logo img');
     if (logo && window.innerWidth > 480) {
-      document.addEventListener('mousemove', e => {
-        const rect = logo.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const distance = Math.sqrt((e.clientX - centerX) ** 2 + (e.clientY - centerY) ** 2);
-        
-        logo.style.transform = distance <= 18 
-          ? `rotate(${(e.clientX - centerX) / 18 * 12}deg)` 
-          : 'rotate(0deg)';
-      }, { passive: true });
+      logo.addEventListener('mouseenter', () => {
+        logo.style.transform = 'rotate(10deg)';
+      });
+      
+      logo.addEventListener('mouseleave', () => {
+        logo.style.transform = 'rotate(0deg)';
+      });
       
       window.addEventListener('resize', () => {
         if (window.innerWidth <= 480) logo.style.transform = 'rotate(0deg)';

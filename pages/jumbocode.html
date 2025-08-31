@@ -620,6 +620,10 @@
           <img src="../assets/media/send.svg?v=1" class="default-icon" alt="Send"/>
           <img src="../assets/media/filled_send.svg" class="hover-icon" alt="Send filled"/>
         </a>
+        <a href="#" class="icon-link" aria-label="GitHub">
+          <img src="../assets/media/github.svg" class="default-icon" alt="GitHub"/>
+          <img src="../assets/media/github-filled.svg" class="hover-icon" alt="GitHub filled"/>
+        </a>
         <a href="#" class="icon-link" aria-label="LinkedIn">
           <img src="../assets/media/linkedin.svg" class="default-icon" alt="LinkedIn"/>
           <img src="../assets/media/filled_linkedin.svg" class="hover-icon" alt="LinkedIn filled"/>
@@ -745,19 +749,16 @@
     
     document.querySelectorAll('.solution-video').forEach(video => videoObserver.observe(video));
 
-    // Logo cursor tracking rotation
+    // Logo hover rotation
     const logo = document.querySelector('.site-header .logo img');
     if (logo && window.innerWidth > 480) {
-      document.addEventListener('mousemove', e => {
-        const rect = logo.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const distance = Math.sqrt((e.clientX - centerX) ** 2 + (e.clientY - centerY) ** 2);
-        
-        logo.style.transform = distance <= 18 
-          ? `rotate(${(e.clientX - centerX) / 18 * 12}deg)` 
-          : 'rotate(0deg)';
-      }, { passive: true });
+      logo.addEventListener('mouseenter', () => {
+        logo.style.transform = 'rotate(12deg)';
+      });
+      
+      logo.addEventListener('mouseleave', () => {
+        logo.style.transform = 'rotate(0deg)';
+      });
       
       window.addEventListener('resize', () => {
         if (window.innerWidth <= 480) logo.style.transform = 'rotate(0deg)';

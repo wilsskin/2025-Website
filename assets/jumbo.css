@@ -28,7 +28,7 @@
 .headline {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: var(--type-size-title);
   line-height: 1.5em;
   color: var(--jumbo-text-dark);
   max-width: 900px;
@@ -79,8 +79,8 @@
 
 .summary-text {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 300;
+  font-size: var(--type-size-body);
   line-height: 1.5em;
   color: var(--jumbo-text-dark);
   max-width: 600px;
@@ -91,7 +91,7 @@
 .visit-site-link {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: var(--type-size-body);
   line-height: 1.5em;
   letter-spacing: 0.01em;
   color: #2DB48F;
@@ -154,7 +154,7 @@
 .impact-number {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: var(--type-size-heading);
   line-height: 1.5em;
   color: var(--jumbo-primary);
   margin: 0;
@@ -163,7 +163,7 @@
 .impact-description {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: var(--type-size-body);
   line-height: 1.5em;
   color: #000000;
   margin: 0;
@@ -201,7 +201,7 @@
 .comparison-title {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: var(--type-size-meta);
   line-height: 1.21em;
   color: var(--jumbo-text-dark);
   margin: 0;
@@ -223,7 +223,7 @@
 .section-title {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 14px;
+  font-size: var(--type-size-meta);
   line-height: 1.5em;
   letter-spacing: 0.01em;
   color: var(--jumbo-text-light);
@@ -232,8 +232,8 @@
 
 .section-text {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 300;
+  font-size: var(--type-size-body);
   line-height: 1.5em;
   color: var(--jumbo-text-dark);
   max-width: 600px;
@@ -277,8 +277,8 @@
 
 .problem-title {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 300;
+  font-size: var(--type-size-meta);
   line-height: 1.21em;
   color: var(--jumbo-text-dark);
   margin: 0;
@@ -287,7 +287,7 @@
 .problem-description {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: var(--type-size-meta);
   line-height: 1.5em;
   color: var(--jumbo-text-light);
   margin: 0;
@@ -328,7 +328,7 @@
 .image-caption {
   font-family: 'Inter', sans-serif;
   font-weight: 200;
-  font-size: 14px;
+  font-size: var(--type-size-meta);
   line-height: 1.45em;
   color: #000000;
   margin: 0;
@@ -368,13 +368,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: var(--type-size-body);
 }
 
 .description-text {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: var(--type-size-meta);
   line-height: 1.45em;
   color: var(--jumbo-text-dark);
   margin: 0;
@@ -421,15 +421,15 @@
   border-radius: 50%;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: var(--type-size-heading);
   line-height: 1em;
   color: var(--jumbo-primary);
 }
 
 .goal-title {
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  font-size: 14px;
+  font-weight: 400;
+  font-size: var(--type-size-meta);
   line-height: 1.5em;
   color: var(--jumbo-text-dark);
   text-align: center;
@@ -460,7 +460,7 @@
 .solution-title {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: var(--type-size-meta);
   line-height: 1.5em;
   letter-spacing: 0.01em;
   color: var(--jumbo-text-dark);
@@ -477,7 +477,7 @@
 .solution-subtitle {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: var(--type-size-heading);
   line-height: 1.5em;
   color: var(--jumbo-text-dark);
   margin: 0;
@@ -486,7 +486,7 @@
 .solution-description {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: var(--type-size-body);
   line-height: 1.5em;
   color: var(--jumbo-text-light);
   margin: 0;
@@ -535,7 +535,7 @@
 .process-subtitle {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 24px;
+  font-size: var(--type-size-heading);
   line-height: 1.5em;
   color: var(--jumbo-text-dark);
   margin: 0;
@@ -545,7 +545,7 @@
 .process-tag {
   font-family: 'Inter', sans-serif;
   font-weight: 200;
-  font-size: 14px;
+  font-size: var(--type-size-meta);
   line-height: 1.6em;
   color: var(--jumbo-text-dark);
   margin: 0;
@@ -555,7 +555,7 @@
 .process-description {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: var(--type-size-body);
   line-height: 1.5em;
   color: var(--jumbo-text-light);
   max-width: 600px;
@@ -660,7 +660,7 @@
 .prototype-label {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: var(--type-size-meta);
   line-height: 1.45em;
   color: var(--jumbo-text-dark);
   margin: 0;
@@ -752,7 +752,7 @@
 .design-label {
   font-family: 'Proxima Nova', sans-serif;
   font-weight: 300;
-  font-size: 14.66px;
+  font-size: var(--type-size-meta);
   line-height: 1em;
   color: var(--jumbo-text-dark);
   margin: 0;
@@ -762,7 +762,7 @@
 .color-code {
   font-family: 'Proxima Nova', sans-serif;
   font-weight: 500;
-  font-size: 14.66px;
+  font-size: var(--type-size-meta);
   line-height: 1em;
   color: #FFFFFF;
   margin: 0;
@@ -833,7 +833,7 @@
   gap: 8px;
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: var(--type-size-meta);
   color: var(--jumbo-text-light);
   text-decoration: none;
   transition: color 0.3s ease;
@@ -845,7 +845,7 @@
 }
 
 .back-arrow {
-  font-size: 16px;
+  font-size: var(--type-size-body);
 }
 
 .page-nav ul {
@@ -860,7 +860,7 @@
 .nav-link {
   font-family: 'Inter', sans-serif;
   font-weight: 200;
-  font-size: 14px;
+  font-size: var(--type-size-meta);
   color: var(--jumbo-text-light);
   text-decoration: none;
   transition: color 0.3s ease;
@@ -897,10 +897,6 @@
   }
 }
 @media (max-width: 768px) {
-  .headline {
-    font-size: 20px;
-  }
-  
   .hero-image-container {
     padding: var(--spacing-small) var(--spacing-medium);
   }
