@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CarGurus Case Study</title>
+  <link rel="icon" type="image/png" href="../assets/media/favicon.png">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/jumbo.css">
+  <link rel="stylesheet" href="../assets/cargurus.css">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" 
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- header/logo -->
+      <a href="index.html" class="logo" aria-label="Home">
+        <img src="../assets/media/logo.png" alt="Wilson Skinner logo"/>
+      </a>
+
+      <!-- desktop nav -->
+      <nav class="site-nav">
+        <ul>
+          <li><a href="index.html" class="active">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Resume</a></li>
+        </ul>
+      </nav>
+
+      <!-- mobile menu button -->
+      <button class="hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
+        <img src="../assets/media/hamburger.svg" alt="Menu icon"/>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu-content">
+      <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu"></button>
+      <nav>
+        <ul class="mobile-menu-nav">
+          <li><a href="index.html" class="active" onclick="closeMobileMenu()">Work</a></li>
+          <li><a href="about.html" onclick="closeMobileMenu()">About</a></li>
+          <li><a href="#" onclick="closeMobileMenu()">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Page Layout Wrapper -->
+  <div class="page-layout-wrapper">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar-nav">
+      <div class="sidebar-content">
+        <a href="index.html" class="back-link">
+          <span class="back-arrow">←</span> Back
+        </a>
+        <nav class="page-nav">
+          <ul>
+            <li><a href="#hero" class="nav-link" data-section="hero">Hero</a></li>
+            <li><a href="#problem" class="nav-link" data-section="problem">Problem</a></li>
+            <li><a href="#goal" class="nav-link" data-section="goal">Goal</a></li>
+            <li><a href="#solution" class="nav-link" data-section="solution">Solution</a></li>
+            <li><a href="#takeaways" class="nav-link" data-section="takeaways">Takeaways</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+    <!-- Headline Section -->
+    <section class="headline-section">
+      <div class="container">
+        <h1 class="headline">
+            Built a Mobile Finance Calculator Prototype for CarGurus’ 45M+ Monthly Users
+        </h1>
+      </div>
+    </section>
+
+    <!-- Hero Image Section -->
+    <section id="hero" class="hero-image-section">
+      <div class="container">
+        <div class="hero-image-container">
+          <img src="../assets/media/cargurus/cg-thumbnail.png" alt="CarGurus finance calculator" class="hero-image img-block"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summary Text Section -->
+    <section class="summary-section">
+      <div class="container">
+        <div class="summary-content">
+          <p class="summary-text">
+            CarGurus is one of the largest online automotive marketplaces in the U.S., connecting millions of buyers with dealers. I led the design direction for a Mobile Finance Calculator, creating nearly all of the visuals in Figma and building the final prototype with Lovable AI. 
+          </p>
+          <a href="https://www.cargurus.com//" target="_blank" class="visit-site-link">Visit Site <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Container Section -->
+    <section class="impact-section">
+      <div class="container">
+        <div class="impact-container">
+          <div class="impact-card">
+            <h3 class="impact-number">9</h3>
+            <p class="impact-description">Concepts explored<br><span class="impact-detail">(before Finance Calculator)</span></p>
+          </div>
+          <div class="impact-card">
+            <h3 class="impact-number">2</h3>
+            <p class="impact-description">Pain points addressed<br><span class="impact-detail">(transparency & efficiency)</span></p>
+          </div>
+          <div class="impact-card">
+            <h3 class="impact-number">1</h3>
+            <p class="impact-description">Deployed prototype<br><span class="impact-detail">(handed off to CarGurus)</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product in Action Section -->
+    <section class="product-showcase-section">
+      <div class="container">
+        <div class="product-showcase-image">
+          <img src="../assets/media/cargurus/hero-image.png" alt="CarGurus finance calculator in action" class="product-showcase-img img-block"/>
+          <div class="image-caption">Finance Calculator Prototype</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem-section">
+      <div class="container">
+        <h2 class="section-title">Problem</h2>
+        <p class="section-text">
+          Few buyers used the CarGurus app at dealerships, revealing an opportunity to design a new use case for mobile users. We discovered buyers struggled with hidden fees and confusing financing paperwork at dealerships.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3 Problems Section -->
+    <section class="problems-grid-section">
+      <div class="container">
+        <div class="problems-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <img src="../assets/media/jumbocode/unclear.svg" alt="Unclear icon"/>
+            </div>
+            <h4 class="problem-title">Lack of information transparency</h4>
+            <p class="problem-description">
+              80% of buyers said hidden fees and unclear pricing caused major stress 
+            </p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <img src="../assets/media/jumbocode/missing.svg" alt="Missing icon"/>
+            </div>
+            <h4 class="problem-title">Slow and difficult negotiation process</h4>
+            <p class="problem-description">
+              Confusing paperwork left only 9.7% of buyers confident they got the best deal
+            </p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <img src="../assets/media/jumbocode/lack.svg" alt="Lack icon"/>
+            </div>
+            <h4 class="problem-title">Outdated tools with no customization</h4>
+            <p class="problem-description">
+              Generic calculators and undetailed listings failed to show true out-the-door cost
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Showcase Section -->
+    <section class="problem-showcase-section">
+      <div class="container">
+        <div class="showcase-grid">
+          <div class="showcase-item">
+            <figure class="showcase-image">
+              <img src="../assets/media/cargurus/buyers-order1.png" alt="Car buyers order process 1" class="showcase-img img-block"/>
+              <figcaption class="image-caption">Buyers Order A</figcaption>
+            </figure>
+            <div class="showcase-description">
+              <div class="description-card">
+                <div class="description-icon">
+                  <img src="../assets/media/jumbocode/thumbsdown.svg" alt="Thumbs down icon"/>
+                </div>
+                <p class="description-text">
+                  Multiple handwritten payment options made it unclear which cost was final
+                </p>
+              </div>
+              <div class="description-card">
+                <div class="description-icon">
+                  <img src="../assets/media/jumbocode/thumbsdown.svg" alt="Thumbs down icon"/>
+                </div>
+                <p class="description-text">
+                  Key numbers like trade-in, cash down, and price were scattered across different boxes
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="showcase-item">
+            <figure class="showcase-image">
+              <img src="../assets/media/cargurus/buyers-order2.png" alt="Car buyers order process 2" class="showcase-img img-block"/>
+              <figcaption class="image-caption">Buyers Order B</figcaption>
+            </figure>
+            <div class="showcase-description">
+              <div class="description-card">
+                <div class="description-icon">
+                  <img src="../assets/media/jumbocode/thumbsdown.svg" alt="Thumbs down icon"/>
+                </div>
+                <p class="description-text">
+                  Dense text and itemized fees overwhelmed buyers with too many numbers
+                </p>
+              </div>
+              <div class="description-card">
+                <div class="description-icon">
+                  <img src="../assets/media/jumbocode/thumbsdown.svg" alt="Thumbs down icon"/>
+                </div>
+                <p class="description-text">
+                  Total sale price was buried, making it hard to find the real out-the-door cost
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Goal Section -->
+    <section id="goal" class="goal-section">
+      <div class="container">
+        <h2 class="section-title">Goal</h2>
+        <p class="section-text">
+          How might we empower buyers with clear financing information and motivate them to use the CarGurus app at dealerships, while still supporting dealer relationships?
+        </p>
+      </div>
+    </section>
+
+    <!-- 3 Goals Section -->
+    <section class="goals-section">
+      <div class="container">
+        <div class="goals-grid">
+          <div class="goal-card">
+            <div class="goal-number">1</div>
+            <h4 class="goal-title">Provide transparent cost estimates</h4>
+          </div>
+          <div class="goal-card">
+            <div class="goal-number">2</div>
+            <h4 class="goal-title">Simplify financing steps and paperwork</h4>
+          </div>
+          <div class="goal-card">
+            <div class="goal-number">3</div>
+            <h4 class="goal-title">Build and maintain trust with buyers & dealersy</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution-section">
+      <div class="container">
+        <h2 class="section-title">Solution</h2>
+        <p class="section-text">
+          After exploring 9 different concepts, we built a Finance Calculator prototype that gives buyers a clear breakdown of all costs, boosting confidence during onsite negotiations. I led the design direction through several iterations in Figma and developed the final prototype with Lovable.
+        </br> </br>Prototype available<a href="#" target="_blank" class="process-link"> <span class="process-link-text">upon request</span></a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Solution Showcase Section -->
+    <section class="solution-showcase-section">
+      <div class="container">
+        <div class="solution-card">
+          <h3 class="solution-title">01 - Finance Customization</h3>
+          <div class="solution-content">
+            <h4 class="solution-subtitle">Select and compare financing options</h4>
+            <p class="solution-description">A clear entry point where buyers choose dealer financing, outside loan, or cash, giving them control over how to structure their deal and start estimating with confidence.</p>
+          </div>
+          <div class="solution-image">
+            <video class="solution-video" loop muted playsinline loading="lazy">
+              <source src="../assets/media/jumbocode/home-solution.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution-showcase-section" style="padding-top: 64px;">
+      <div class="container">
+        <div class="solution-card">
+          <h3 class="solution-title">02 - Cost Breakdown</h3>
+          <div class="solution-content">
+            <h4 class="solution-subtitle">View all hidden fees and calculations            </h4>
+            <p class="solution-description">A receipt-style breakdown of taxes, fees, and dealer add-ons that replaces scattered paperwork with one transparent view, reducing confusion and hidden cost stress.            </p>
+          </div>
+          <div class="solution-image">
+            <video class="solution-video" loop muted playsinline loading="lazy">
+              <source src="../assets/media/jumbocode/project-solution.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="solution-showcase-section" style="padding-top: 64px;">
+      <div class="container">
+        <div class="solution-card">
+          <h3 class="solution-title">03 - Estimate Summary</h3>
+          <div class="solution-content">
+            <h4 class="solution-subtitle">Prepare for dealer negotiations confidently</h4>
+            <p class="solution-description">A summarized cost and monthly payment range that buyers can save or share, helping them enter negotiations informed and reducing decision fatigue at the dealership.            </p>
+          </div>
+          <div class="solution-image">
+            <video class="solution-video" loop muted playsinline loading="lazy">
+              <source src="../assets/media/jumbocode/apply-solution.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Takeaways Section -->
+    <section id="takeaways" class="takeaways-section">
+      <div class="container">
+        <h2 class="section-title">Takeaways</h2>
+        <p class="section-text">
+          I learned how far AI tools can be pushed and where they break. Using Lovable to build from just prompting showed me the importance of context in guiding outputs, and that the final 10% of polish requires the most effort.
+          <br><br>Future iterations could expand features and strengthen trust. If I had more time, I would manually refine the last 10% of the design, build out leasing flows, and collaborate with dealers on incentives that preserve trust. </p>
+      </div>
+    </section>
+  </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">© 2025 Wilson Skinner</div>
+      <div class="footer-right">
+        <a href="#" class="icon-link" aria-label="Email">
+          <img src="../assets/media/send.svg?v=1" class="default-icon" alt="Send"/>
+          <img src="../assets/media/filled_send.svg" class="hover-icon" alt="Send filled"/>
+        </a>
+        <a href="#" class="icon-link" aria-label="GitHub">
+          <img src="../assets/media/github.svg" class="default-icon" alt="GitHub"/>
+          <img src="../assets/media/github-filled.svg" class="hover-icon" alt="GitHub filled"/>
+        </a>
+        <a href="#" class="icon-link" aria-label="LinkedIn">
+          <img src="../assets/media/linkedin.svg" class="default-icon" alt="LinkedIn"/>
+          <img src="../assets/media/filled_linkedin.svg" class="hover-icon" alt="LinkedIn filled"/>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileMenu() {
+      const overlay = document.getElementById('mobileMenuOverlay');
+      const hamburger = document.querySelector('.hamburger');
+      overlay.classList.toggle('active');
+      hamburger.classList.toggle('active');
+      document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
+    }
+
+    function closeMobileMenu() {
+      const overlay = document.getElementById('mobileMenuOverlay');
+      const hamburger = document.querySelector('.hamburger');
+      overlay.classList.remove('active');
+      hamburger.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('mobileMenuOverlay')
+      .addEventListener('click', e => { if (e.target === e.currentTarget) closeMobileMenu(); });
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
+
+    // Sidebar navigation functionality
+    function initSidebarNav() {
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('section[id]');
+      
+      // Smooth scrolling for navigation links
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Update active section based on scroll position
+      function updateActiveSection() {
+        const scrollPosition = window.scrollY + 100;
+        const isAtBottom = scrollPosition + window.innerHeight >= document.documentElement.scrollHeight - 50;
+        
+        // Handle bottom of page case
+        if (isAtBottom) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          document.querySelector('[href="#takeaways"]')?.classList.add('active');
+          return;
+        }
+        
+        // Handle top of page case - always highlight hero when at top
+        if (scrollPosition < 200) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          document.querySelector('[href="#hero"]')?.classList.add('active');
+          return;
+        }
+        
+        // Find current section using proper boundaries
+        let currentSection = null;
+        
+        for (let i = 0; i < sections.length; i++) {
+          const section = sections[i];
+          const sectionTop = section.offsetTop;
+          
+          // Define section boundaries: from this section's top to the next section's top
+          let sectionBottom;
+          if (i < sections.length - 1) {
+            // Use the start of the next section as the end of this section
+            sectionBottom = sections[i + 1].offsetTop;
+          } else {
+            // For the last section, use its actual bottom
+            sectionBottom = sectionTop + section.offsetHeight;
+          }
+          
+          // Check if we're within this section's boundaries
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            currentSection = section;
+            break;
+          }
+        }
+        
+        // Update active state
+        navLinks.forEach(link => link.classList.remove('active'));
+        if (currentSection) {
+          document.querySelector(`[href="#${currentSection.id}"]`)?.classList.add('active');
+        }
+      }
+
+      // Listen for scroll events
+      window.addEventListener('scroll', updateActiveSection);
+      
+      // Initial call to set active section
+      updateActiveSection();
+      
+      // Set hero as active by default if no section is active
+      const activeLink = document.querySelector('.nav-link.active');
+      if (!activeLink) {
+        const heroLink = document.querySelector('[href="#hero"]');
+        if (heroLink) {
+          heroLink.classList.add('active');
+        }
+      }
+    }
+
+    // Initialize sidebar navigation when DOM is loaded
+    document.addEventListener('DOMContentLoaded', initSidebarNav);
+
+    // Video autoplay with delay when visible
+    const videoObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.play(), 1000);
+          videoObserver.unobserve(entry.target);
+        }
+      });
+    });
+    
+    document.querySelectorAll('.solution-video').forEach(video => videoObserver.observe(video));
+
+    // Logo hover rotation
+    const logo = document.querySelector('.site-header .logo img');
+    if (logo && window.innerWidth > 480) {
+      logo.addEventListener('mouseenter', () => {
+        logo.style.transform = 'rotate(12deg)';
+      });
+      
+      logo.addEventListener('mouseleave', () => {
+        logo.style.transform = 'rotate(0deg)';
+      });
+      
+      window.addEventListener('resize', () => {
+        if (window.innerWidth <= 480) logo.style.transform = 'rotate(0deg)';
+      });
+    }
+  </script>
+</body>
+</html>

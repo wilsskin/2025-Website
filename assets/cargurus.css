@@ -1,0 +1,121 @@
+/* Import main design system */
+@import url('style.css');
+@import url('jumbo.css');
+
+/* CarGurus specific variables */
+:root {
+  --cargurus-primary: #00A1DD;
+  --cargurus-secondary: #00719B;
+  --cargurus-text-dark: #000000;
+  --cargurus-text-light: #727272;
+  --cargurus-bg-light: #63C4E8;
+  --cargurus-grey-light: rgba(0, 0, 0, 0.05);
+  --cargurus-border: #00A1DD;
+}
+
+/* Override JumboCode green elements with CarGurus blue */
+.hero-image-container {
+  border-color: var(--cargurus-border);
+  background: var(--cargurus-bg-light);
+}
+
+/* Product showcase section styling */
+.product-showcase-section {
+  padding-top: 80px;
+}
+
+.product-showcase-image {
+  padding: 48px;
+  background: #EBEBEB;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 161, 221, 0.1);
+  text-align: center;
+}
+
+.product-showcase-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.image-caption {
+  font-size: 14px;
+  color: #000000;
+  margin-top: 8px;
+  text-align: left;
+  font-weight: 200;
+}
+
+.visit-site-link {
+  color: var(--cargurus-primary);
+}
+
+.visit-site-link:hover {
+  color: var(--cargurus-secondary);
+}
+
+.process-link-text {
+  color: var(--cargurus-primary);
+}
+
+.process-link:hover .process-link-text {
+  color: var(--cargurus-secondary);
+}
+
+.impact-number {
+  color: var(--cargurus-primary);
+}
+
+.goal-card {
+  border-color: var(--cargurus-primary);
+}
+
+.goal-number {
+  border-color: var(--cargurus-primary);
+  color: var(--cargurus-primary);
+}
+
+.description-card.positive {
+  border-color: var(--cargurus-primary);
+}
+
+.description-card.positive.black-thumbs {
+  border-color: var(--cargurus-border);
+}
+
+/* Problem showcase responsive image styling */
+.showcase-grid {
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+}
+
+.showcase-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.showcase-image {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.showcase-img {
+  width: 418px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  border: 1px solid #EBEBEB;
+  
+}
+
+.showcase-description {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 418px;
+}

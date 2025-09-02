@@ -314,7 +314,7 @@
 .showcase-image {
   display: flex;
   flex-direction: column;
-  gap: 6.76px;
+  gap: 6px;
 }
 
 .showcase-img {

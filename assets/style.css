@@ -601,12 +601,12 @@ img.work-logo {
 }
 
 .work-preview.cargurus {
-  border-color: #007095;
-  background: rgba(0, 112, 149, 0.05);
+  border-color: #00A1DD;
+  background: #63C4E8;
 }
 
 .work-preview.cargurus:hover {
-  background: rgba(0, 112, 149, 0.1);
+  background: #19AAE0;
   box-shadow: var(--shadow-medium);
 }
 
