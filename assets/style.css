@@ -512,6 +512,13 @@ body {
   pointer-events: auto;
 }
 
+/* Open state (for mobile click) */
+.status-pill.open .status-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-2px);
+  pointer-events: auto;
+}
+
 
 /* 8. Work cards + animation */
 .work-card {

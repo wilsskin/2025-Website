@@ -225,6 +225,56 @@
         if (window.innerWidth <= 480) logo.style.transform = 'rotate(0deg)';
       });
     }
+
+    // Status pill click-to-toggle for mobile (<=480px)
+    (function() {
+      const statusPill = document.querySelector('.status-pill');
+      if (!statusPill) return;
+      const tooltip = statusPill.querySelector('.status-tooltip');
+
+      function closeStatusTooltip() {
+        statusPill.classList.remove('open');
+        statusPill.setAttribute('aria-expanded', 'false');
+      }
+
+      function toggleStatusTooltip() {
+        if (window.innerWidth <= 480) {
+          const willOpen = !statusPill.classList.contains('open');
+          statusPill.classList.toggle('open');
+          statusPill.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        }
+      }
+
+      // Toggle on pill tap (but allow clicks inside tooltip to pass through)
+      statusPill.addEventListener('click', (e) => {
+        if (window.innerWidth <= 480) {
+          const clickedInsideTooltip = tooltip && tooltip.contains(e.target);
+          if (!clickedInsideTooltip) {
+            e.stopPropagation();
+            toggleStatusTooltip();
+          }
+        }
+      });
+
+      // Close when tapping outside
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 480) {
+          if (statusPill.classList.contains('open') && !statusPill.contains(e.target)) {
+            closeStatusTooltip();
+          }
+        }
+      });
+
+      // Close on Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeStatusTooltip();
+      });
+
+      // Ensure closed when resizing back to desktop
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 480) closeStatusTooltip();
+      });
+    })();
   </script>
 </body>
 </html>
