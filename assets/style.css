@@ -54,13 +54,16 @@ body {
 }
 
 /* —— Shared footer —— */
-.site-footer { padding: var(--spacing-large) 0 8px; }
+.site-footer { padding: 144px 0 8px; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; }
 .footer-left { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 300; }
 .footer-right { display: inline-flex; gap: 64px; }
 .footer-right .icon-link { padding: 0; border: none; height: auto; }
 .footer-right .icon-link img { width: 16px; height: 16px; }
 .footer-right .icon-link:hover { transform: none; box-shadow: none; }
+
+/* Ensure the last content block before the footer has no bottom spacing */
+main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !important; }
 
 /* —— About page —— */
 .about-page h3 { font-size: var(--type-size-body); font-weight: 500; line-height: 24px; color: var(--color-text-primary); }
@@ -120,7 +123,7 @@ body {
 .about-interests-text .about-interests-sub { font-size: var(--type-size-meta); font-weight: 400; color: var(--color-text-primary); margin-top: 24px; margin-bottom: 0px; }
 .about-interests-media { width: 100%; max-width: 450px; height: auto; max-height: 220px; border-radius: 8px; display: block; flex-shrink: 1; }
 
-.about-footer { padding-bottom: 8px; padding-top: var(--spacing-large); }
+.about-footer { padding-bottom: 8px; padding-top: 144px; }
 .about-footer-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; }
 .footer-left { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 300; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; }
