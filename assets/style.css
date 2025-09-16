@@ -705,6 +705,45 @@ img.work-logo {
   transform: scale(1.02);
 }
 
+/* See project link matches sidebar nav styling */
+.see-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-size: var(--type-size-meta);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.see-project-link .text {
+  position: relative;
+}
+
+.see-project-link .text::after {
+  content: attr(data-measure);
+  position: absolute;
+  inset: 0 auto auto 0;
+  visibility: hidden;
+  font-weight: 400; /* reserve width for hover weight */
+  white-space: nowrap;
+}
+
+.see-project-link:hover {
+  color: var(--color-text-primary);
+  font-weight: 400; /* match sidebar nav hover weight */
+}
+
+.see-project-link .arrow {
+  display: inline-block;
+  font-weight: 300; /* keep arrow weight steady so it doesn't visually shift */
+}
+
+/* Match sidebar nav: no arrow movement on hover */
+
 /* 9. Breakpoints */
 @media (max-width: 768px) {
   /* Scale down spacing for mobile */
