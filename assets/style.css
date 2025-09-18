@@ -623,6 +623,7 @@ img.work-logo {
   font-size: var(--type-size-meta);
   font-weight: 200;
   color: #000;
+  background-color: #F2F2F2;
 }
 
 /* enhanced preview + hover animation */
@@ -712,7 +713,7 @@ img.work-logo {
   gap: 8px;
   margin-top: 16px;
   font-family: 'Inter', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   font-size: var(--type-size-meta);
   color: var(--color-text-secondary);
   text-decoration: none;
@@ -734,12 +735,17 @@ img.work-logo {
 
 .see-project-link:hover {
   color: var(--color-text-primary);
-  font-weight: 400; /* match sidebar nav hover weight */
+  font-weight: 300; /* match sidebar nav hover weight */
 }
 
 .see-project-link .arrow {
   display: inline-block;
   font-weight: 300; /* keep arrow weight steady so it doesn't visually shift */
+  transition: transform 0.3s ease;
+}
+ 
+.see-project-link:hover .arrow {
+  transform: translateX(4px);
 }
 
 /* Match sidebar nav: no arrow movement on hover */
