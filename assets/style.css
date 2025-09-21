@@ -375,7 +375,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 .status-pill {
   display: inline-flex;
   align-items: center;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #CCCCCC;
   border-radius: var(--radius-lg);
   padding: 4px 12px;
   height: 32px;
@@ -400,6 +400,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 
 .status-text-wrap { position: relative; display: inline-block; }
 .status-text { font-weight: 250; line-height: 1; }
+.status-text-link { color: inherit; text-decoration: none; }
 /* measurement ghost to lock width */
 .status-text--measure {
   position: absolute;
@@ -414,7 +415,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #CCCCCC;
   border-radius: var(--radius-lg);
   padding: var(--spacing-unit);
   height: 32px;
@@ -524,9 +525,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 
 
 /* 8. Work cards + animation */
-.work-card {
-  margin-top: var(--spacing-small);
-}
+
 
 .work-card-header {
   display: flex;
