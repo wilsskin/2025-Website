@@ -131,8 +131,11 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 .about-exp-left { display: flex; align-items: center; gap: 8px; }
 .about-exp-logo { width: 17px; height: 17px; border-radius: 4px; object-fit: contain; display: block; }
 .about-exp-title { display: inline-flex; gap: 4px; font-size: var(--type-size-meta); line-height: 150%; }
+.more-work-title { margin-bottom: 8px; font-size: var(--type-size-body);}
 .about-exp-year { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 300; }
 .about-exp-desc { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 300; line-height: 130%; }
+/* More Work descriptions use body size without affecting About page */
+.more-work-desc { font-size: var(--type-size-body); }
 
 .about-interests { padding: 0 0 var(--spacing-section); }
 .about-interests-inner { display: flex; gap: 24px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; }
