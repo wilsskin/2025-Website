@@ -53,6 +53,23 @@ body {
   padding: 0 var(--side-padding);
 }
 
+/* Shared media frame utilities */
+.media-frame {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 900 / 472;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+.media-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* —— Shared footer —— */
 .site-footer { padding: 144px 0 8px; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; }
@@ -595,6 +612,11 @@ img.work-logo {
   color: #EA4335; /* Google Nest red */
 }
 
+/* Bodega Bay Lavender */
+.work-title-h3.bodegabay {
+  color: #6149A2;
+}
+
 .present-label {
   color: var(--color-text-secondary);
   font-size: var(--type-size-body);
@@ -630,14 +652,15 @@ img.work-logo {
   margin-top: var(--spacing-xsmall);
   border: 1px solid var(--color-border-light);
   border-radius: 16px;
-  padding: 36px 100px;
+  /* no inner padding to ensure container is exactly 900x472 */
+  padding: 0;
   overflow: hidden;
   background: var(--color-bg);
   cursor: pointer;
   transition: all 0.35s ease;
   max-width: 900px;
-  max-height: 472px;
   width: 100%;
+  aspect-ratio: 900 / 472;
   margin-left: auto;
   margin-right: auto;
 }
@@ -646,7 +669,13 @@ img.work-logo {
 .work-preview.jumbocode {
   border-color: #32C89E;
   background: #81DBC2;
-  padding-bottom: 0px;
+  padding: 5.333% 10.666% 0 10.666%;
+  box-sizing: border-box;
+}
+
+/* Bottom anchor for JumboCode preview image when needed */
+.work-preview.jumbocode .jc-cover {
+  object-position: center bottom;
 }
 
 .work-preview.jumbocode:hover {
@@ -657,6 +686,8 @@ img.work-logo {
 .work-preview.cargurus {
   border-color: #00A1DD;
   background: #63C4E8;
+  padding: 5.333% 5.333% 0 5.333%;
+  box-sizing: border-box;
 }
 
 .work-preview.cargurus:hover {
@@ -674,12 +705,30 @@ img.work-logo {
   box-shadow: var(--shadow-medium);
 }
 
+/* Bodega Bay Lavender card */
+.work-preview.bodegabay {
+  border-color: #6149A2;
+  background: #7D70B0;
+  padding: 5.333% 0 0 0; /* 48px top at 900px; sides 0 */
+  box-sizing: border-box;
+}
+
+.work-preview.bodegabay:hover {
+  background: #6149A2;
+  box-shadow: var(--shadow-medium);
+}
+
+/* Bottom anchor for Bodega Bay image */
+.work-preview.bodegabay .bbl-cover {
+  object-position: center bottom;
+}
+
 /* real images scale by width, retain aspect ratio */
 .work-preview img {
   display: block;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   background: transparent;
   transition: transform 0.35s ease;
 }
@@ -687,7 +736,8 @@ img.work-logo {
 /* placeholders keep the pattern */
 .work-preview-placeholder {
   width: 100%;
-  height: 472px;
+  height: 100%;
+  aspect-ratio: 900 / 472;
   border-radius: var(--radius-sm);
   background: #E0E0E0;
   background-image:

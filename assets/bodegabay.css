@@ -1,0 +1,27 @@
+/* Bodega Bay Lavender case study styles */
+
+/* Proportional inner padding for hero: 48px top at 900px => 5.333% */
+.hero-image-container.bbl-pad {
+  padding: 5.333% 0 0 0;
+  box-sizing: border-box;
+}
+
+/* Anchor image to bottom within 900x472 frame */
+.hero-image.bbl-cover {
+  object-position: center bottom;
+}
+
+/* Hero frame background behind thumbnail */
+.hero-image-container {
+  background: #9E94C3;
+  border-color: #6149A2;
+}
+
+/* Visit Site link color + hover (approx 20% darker) */
+.visit-site-link {
+  color: #6149A2;
+}
+
+.visit-site-link:hover {
+  color: #4E3A82;
+}
