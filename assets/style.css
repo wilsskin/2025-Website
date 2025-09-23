@@ -727,6 +727,15 @@ img.work-logo {
   transition: transform 0.35s ease;
 }
 
+/* Safari-safe cover for specific cards without changing container */
+.work-preview.jumbocode img,
+.work-preview.cargurus img {
+  /* Let intrinsic ratio drive height calculation in Safari */
+  height: auto;
+  min-height: 100%;
+  object-position: center;
+}
+
 /* placeholders keep the pattern */
 .work-preview-placeholder {
   width: 100%;
