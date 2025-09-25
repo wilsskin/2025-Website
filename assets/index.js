@@ -1,7 +1,7 @@
 // main.js
 // Add any site-wide JavaScript here
 
-const RESUME_URL = 'https://drive.google.com/file/d/1pKdhFi-PGmU2rsgVO0seI4085QxV0Ibw/view?usp=sharing';
+const RESUME_URL = 'https://drive.google.com/file/d/1w8p4BH86tD6YP9aSXiOMEmUaSLX-bVNv/view?usp=sharing';
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[data-resume-link]').forEach(a => {
