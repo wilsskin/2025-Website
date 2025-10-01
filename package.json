@@ -11,7 +11,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "vercel": "^48.1.6"
-  }
+  "devDependencies": {}
 }
