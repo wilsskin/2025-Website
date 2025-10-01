@@ -370,7 +370,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   text-decoration: none;
 }
 .subtext .subtext-link strong {
-  font-weight: 400;
+  font-weight: 450;
 }
 .subtext .subtext-link:hover strong {
   color: #000;
@@ -382,7 +382,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   text-decoration: none;
 }
 .about-summary-text .subtext-link strong {
-  font-weight: 400;
+  font-weight: 450;
 }
 .about-summary-text .subtext-link:hover strong {
   color: #000;

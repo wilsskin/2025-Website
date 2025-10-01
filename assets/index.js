@@ -10,5 +10,3 @@ document.addEventListener('DOMContentLoaded', () => {
     a.setAttribute('rel', 'noopener noreferrer');
   });
 });
-
-console.log('Site loaded');
