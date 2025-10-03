@@ -24,9 +24,77 @@
   padding-top: 80px;
 }
 
+/* Old vs New Calculator comparison */
+.calc-compare {
+  background: #EBEBEB;
+  border-radius: 16px;
+  padding: 48px 45px;
+}
+
+.calc-compare-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 45px;
+}
+
+.calc-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.calc-note {
+  max-width: 270px;
+  width: 100%;
+  text-align: center;
+  font-size: var(--type-size-meta);
+  font-weight: 400;
+  color: #000;
+  margin: 0 auto;
+}
+
+.calc-strong { font-weight: 600; }
+
+/* Align notes per column to match Figma: old (right), new (left) */
+.calc-compare-row .calc-col:first-child .calc-note {
+  margin: 0 0 0 auto;
+  padding-right: 1.5%;
+}
+.calc-compare-row .calc-col:last-child .calc-note {
+  margin: 0 auto 0 0;
+  padding-left: 1.5%;
+}
+
+.calc-frame {
+  width: 100%;
+  max-width: 397px; /* new: 397; old will be slightly narrower via class */
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.calc-frame.old { max-width: 368px; }
+
+@media (max-width: 948px) {
+  .calc-compare { padding: 32px 24px; }
+  .calc-compare-row { gap: 24px; }
+  .calc-note { width: auto; max-width: 240px; }
+  /* Keep proportional scaling: old (368px) vs new (397px) => ~0.927 */
+  .calc-frame { max-width: 45vw; }
+  .calc-frame.old { max-width: calc(45vw * 0.927); }
+}
+
+@media (max-width: 600px) {
+  .calc-compare { padding: 24px 16px; }
+  .calc-compare-row { gap: 12px; }
+  .calc-frame { max-width: 42vw; }
+  .calc-frame.old { max-width: calc(42vw * 0.927); }
+  .calc-note { max-width: 200px; font-weight: 400; }
+}
+
 .product-showcase-image {
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 161, 221, 0.1);
   text-align: center;
 }
 
@@ -35,6 +103,26 @@
   height: auto;
   border-radius: 8px;
   display: block;
+}
+
+/* Impact wrapper background and padding */
+.impact-frame {
+  background: #DCECF3;
+  border-radius: 16px;
+  padding: 32px clamp(16px, 4vw, 48px);
+  border: 1px solid #00A1DD;
+}
+
+/* Spaced impact container with auto-width cards */
+.impact-spaced {
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.impact-spaced .impact-card {
+  width: auto;
+  flex: 0 0 auto;
+  min-width: 0;
 }
 
 .image-caption {
@@ -85,7 +173,8 @@
 /* Problem showcase responsive image styling */
 .showcase-grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 48px;
   max-width: 900px;
 }
 
@@ -98,17 +187,17 @@
 .showcase-image {
   display: flex;
   flex-direction: column;
-  
+  width: 100%;
 }
 
 .showcase-img {
-  width: 418px;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
   display: block;
   border: 1px solid #EBEBEB;
-  
 }
 
 .showcase-description {
@@ -116,6 +205,21 @@
   flex-direction: column;
   gap: 12px;
   width: 418px;
+}
+
+/* Ensure showcase images stack and shrink on small screens */
+@media (max-width: 900px) {
+  .showcase-grid {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--spacing-small);
+    width: 100%;
+  }
+  .showcase-item {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .showcase-image { width: 100%; }
 }
 
 /* Solution image grid styling */
@@ -202,7 +306,7 @@
 .research-quote {
   background: #EBEBEB;
   border-radius: 16px;
-  border: 1.5px solid #0762D4;
+  border: 1px solid #0762D4;
   /* 24px top padding as requested; balanced vertical padding otherwise */
   padding: 32px 48px;
   /* left-aligned within the container */
@@ -212,7 +316,7 @@
 
 .research-quote .quote-text {
   color: #0762D4;
-  font-weight: 500;
+  font-weight: 400;
   font-size: var(--type-size-heading);
   line-height: 1.5;
   margin: 0;
@@ -230,11 +334,24 @@
 
 /* Section spacing utilities */
 .section-large {
-  padding-top: 160px;
+  padding-top: var(--spacing-casestudy);
 }
 
 .secion-meduim {
-  padding-top: var(--spacing-xlarge);
+  padding-top: var(--spacing-section);
+}
+
+/* Remove inherited bottom padding on main Process blocks to avoid extra gap */
+.process-section.section-large {
+  padding-bottom: 0;
+}
+
+/* Elevate inter-section spacing for CarGurus case study
+   Keep bottom padding from base styles; increase only top spacing to 160px */
+.problem-section,
+.goal-section,
+.solution-section {
+  padding-top: var(--spacing-casestudy);
 }
 
 /* Competitive comparison row */

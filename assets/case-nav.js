@@ -27,13 +27,6 @@
       const scrollPosition = window.scrollY + 100;
       const isAtBottom = scrollPosition + window.innerHeight >= document.documentElement.scrollHeight - 50;
 
-      // Bottom of page → Takeaways active
-      if (isAtBottom) {
-        navLinks.forEach(link => link.classList.remove('active'));
-        const endLink = document.querySelector('[href="#takeaways"]');
-        if (endLink) endLink.classList.add('active');
-        return;
-      }
 
       // Near top → Hero active
       if (scrollPosition < 200) {
@@ -88,13 +81,8 @@
           a.setAttribute('data-section', 'process');
           a.textContent = 'Process';
           li.appendChild(a);
-          // insert before Takeaways if present, else append
-          const takeawaysLink = pageNavList.querySelector('[href="#takeaways"]');
-          if (takeawaysLink && takeawaysLink.parentElement) {
-            pageNavList.insertBefore(li, takeawaysLink.parentElement);
-          } else {
-            pageNavList.appendChild(li);
-          }
+          // append at end (no takeaways section)
+          pageNavList.appendChild(li);
 
           // attach smooth scroll to the newly inserted link
           a.addEventListener('click', (e) => {

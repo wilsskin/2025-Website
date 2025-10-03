@@ -44,6 +44,7 @@ body {
   --spacing-large: 64px;   /* 8x8 */
   --spacing-xlarge: 80px;  /* 10x8 */
   --spacing-section: 120px; /* 15x8 */
+  --spacing-casestudy: 160px; /* 20x8 - case study inter-section top padding */
 }
 
 /* 3. Containers and layout */
