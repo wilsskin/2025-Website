@@ -253,27 +253,6 @@
   </footer>
 
   <script>
-    function toggleMobileMenu() {
-      const overlay = document.getElementById('mobileMenuOverlay');
-      const hamburger = document.querySelector('.hamburger');
-      overlay.classList.toggle('active');
-      hamburger.classList.toggle('active');
-      document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
-    }
-
-    function closeMobileMenu() {
-      const overlay = document.getElementById('mobileMenuOverlay');
-      const hamburger = document.querySelector('.hamburger');
-      overlay.classList.remove('active');
-      hamburger.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-    
-    document.getElementById('mobileMenuOverlay')
-      .addEventListener('click', e => { if (e.target === e.currentTarget) closeMobileMenu(); });
-
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
-
     // Logo hover rotation
     const logo = document.querySelector('.site-header .logo img');
     if (logo && window.innerWidth > 480) {

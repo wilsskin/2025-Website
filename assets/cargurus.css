@@ -119,18 +119,42 @@
 }
 
 /* Solution image grid styling */
+.solution-grid-frame {
+  width: 100%;
+  max-width: 900px;
+  background: var(--cargurus-grey-light);
+  border-radius: 16px;
+  padding: 32px clamp(8px, 3vw, 16px);
+  margin-top: 32px;
+}
+
 .solution-image-grid {
   display: flex;
-  gap: 64px;
+  gap: clamp(8px, 4vw, 48px);
   justify-content: center;
   align-items: flex-start;
+  margin: 8px 0;
+  padding-inline: 0;
+  flex-wrap: nowrap; /* keep in one row */
+}
+
+.solution-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.solution-caption {
+  font-size: var(--type-size-meta);
+  font-weight: 200;
+  color: #000;
   margin-top: 8px;
-  
+  margin-left: 8px;
 }
 
 .solution-img {
-  max-width: 225.33px;
-  width: 100%;
+  max-width: clamp(100px, 28vw, 225.33px);
+  width: auto;
   height: auto;
   border-radius: 8px;
   display: block;
@@ -147,15 +171,11 @@
 /* Responsive adjustments for solution grid */
 @media (max-width: 768px) {
   .solution-image-grid {
-    flex-direction: column;
-    gap: 32px;
+    flex-direction: row; /* keep side-by-side */
+    gap: clamp(8px, 3vw, 20px);
     align-items: center;
     max-height: none;
-  }
-  
-  .solution-img {
-    max-width: 100%;
-    width: 100%;
+    padding-inline: clamp(8px, 3vw, 16px);
   }
 }
 
@@ -176,4 +196,145 @@
 .solution-section + .solution-showcase-section + .solution-showcase-section + .solution-showcase-section .solution-image-grid .solution-img:nth-child(1),
 .solution-section + .solution-showcase-section + .solution-showcase-section + .solution-showcase-section .solution-image-grid .solution-img:nth-child(2) {
   opacity: 0.3;
+}
+
+/* Research quote card (from Figma) */
+.research-quote {
+  background: #EBEBEB;
+  border-radius: 16px;
+  border: 1.5px solid #0762D4;
+  /* 24px top padding as requested; balanced vertical padding otherwise */
+  padding: 32px 48px;
+  /* left-aligned within the container */
+  margin-top: 32px;
+  max-width: 696px;
+}
+
+.research-quote .quote-text {
+  color: #0762D4;
+  font-weight: 500;
+  font-size: var(--type-size-heading);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+.research-quote .quote-attrib {
+  color: #666666;
+  font-weight: 300;
+  font-size: var(--type-size-meta);
+  margin: 16px 0 0;
+  line-height: 1.5;
+}
+
+/* Section spacing utilities */
+.section-large {
+  padding-top: 160px;
+}
+
+.secion-meduim {
+  padding-top: var(--spacing-xlarge);
+}
+
+/* Competitive comparison row */
+.comp-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  width: 100%;
+  padding-top: 32px;
+}
+
+.comp-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.comp-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 400px;
+}
+
+.comp-title {
+  font-weight: 400;
+  font-size: var(--type-size-heading);
+  line-height: 1.5;
+  color: var(--cargurus-text-dark);
+  margin: 0;
+}
+
+.comp-text {
+  font-weight: 300;
+  font-size: var(--type-size-body);
+  line-height: 1.5;
+  color: var(--cargurus-text-light);
+  margin: 0;
+}
+
+/* Figma-comp text list */
+.comp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.comp-item { display: flex; flex-direction: column; gap: 4px; }
+
+.comp-item-title {
+  font-weight: 600;
+  font-size: var(--type-size-body);
+  line-height: 1.35;
+  color: #000000;
+  margin: 0;
+}
+
+.comp-item-desc {
+  font-weight: 400;
+  font-size: var(--type-size-meta);
+  line-height: 1.2;
+  color: #727272;
+  margin: 0;
+}
+
+/* Accent color span for selected titles */
+.comp-accent { color: #0762D4; }
+
+@media (max-width: 948px) {
+  .comp-row {
+    flex-direction: column;
+    gap: 48px;
+    padding-top: 36px;
+  }
+  .comp-columns {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 48px;
+    row-gap: 16px;
+  }
+}
+
+/* Two text columns next to the image */
+.comp-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 48px;
+  row-gap: 0;
+  align-items: start;
+}
+
+@media (max-width: 600px) {
+  .comp-columns {
+    grid-template-columns: 1fr;
+  }
+  .comp-item-desc { display: none; }
+  /* Extra spacing between item 5 and 6 when single-column */
+  .comp-columns .comp-list + .comp-list > .comp-item:first-child { margin-top: 16px; }
 }

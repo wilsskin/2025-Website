@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wilson Skinner - JumboCode Showcase</title>
+  <title>Wilson Skinner - JumboCode</title>
   <link rel="icon" type="image/png" href="../assets/media/favicon.png">
   <link rel="stylesheet" href="../assets/style.css">
   <link rel="stylesheet" href="../assets/jumbo.css">
@@ -12,6 +12,7 @@
     rel="stylesheet"
   />
   <script src="../assets/index.js" defer></script>
+  <script src="../assets/case-nav.js" defer></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFG502KHS9"></script>
 <script>
@@ -357,8 +358,8 @@
         <h2 class="section-title">Process</h2>
         <div class="process-content">
           <div class="process-header">
+            <p class="tag-pill">📝Research</p>
             <h3 class="process-subtitle">Users wanted clarity on what JumboCode actually does</h3>
-            <span class="process-tag">Research</span>
           </div>
           <p class="process-description">
             We spoke with students, nonprofit clients, and club members to understand what information was missing and what would have helped them when they first discovered the club. Later, we validated our near-final designs through informal usability tests, pulling key quotes and insights.
@@ -466,8 +467,8 @@
       <div class="container">
         <div class="prototypes-content">
           <div class="process-header">
+            <p class="tag-pill">🛠️ Prototypes</p>
             <h3 class="process-subtitle">We restructured the site around a clear information architecture              </h3>
-            <span class="process-tag">Prototypes</span>
           </div>
           <p class="process-description">
             The old website buried critical details. I created a new content hierarchy to ensure prospective students and nonprofits could easily find what they needed.
@@ -551,8 +552,8 @@
       <div class="container">
         <div class="design-content">
           <div class="process-header">
+            <p class="tag-pill">🎨 Design</p>
             <h3 class="process-subtitle">We chose a design direction that balanced visuals with clarity</h3>
-            <span class="process-tag">Design</span>
           </div>
           <p class="process-description">
             After rounds of iteration, we landed on a design that communicated JumboCode’s mission clearly while also showcasing its people and impact in a more engaging way.
@@ -633,116 +634,7 @@
   </footer>
 
   <script>
-    function toggleMobileMenu() {
-      const overlay = document.getElementById('mobileMenuOverlay');
-      const hamburger = document.querySelector('.hamburger');
-      overlay.classList.toggle('active');
-      hamburger.classList.toggle('active');
-      document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
-    }
-
-    function closeMobileMenu() {
-      const overlay = document.getElementById('mobileMenuOverlay');
-      const hamburger = document.querySelector('.hamburger');
-      overlay.classList.remove('active');
-      hamburger.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    document.getElementById('mobileMenuOverlay')
-      .addEventListener('click', e => { if (e.target === e.currentTarget) closeMobileMenu(); });
-
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
-
-    // Sidebar navigation functionality
-    function initSidebarNav() {
-      const navLinks = document.querySelectorAll('.nav-link');
-      const sections = document.querySelectorAll('section[id]');
-      
-      // Smooth scrolling for navigation links
-      navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const targetId = link.getAttribute('href').substring(1);
-          const targetSection = document.getElementById(targetId);
-          
-          if (targetSection) {
-            targetSection.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        });
-      });
-
-      // Update active section based on scroll position
-      function updateActiveSection() {
-        const scrollPosition = window.scrollY + 100;
-        const isAtBottom = scrollPosition + window.innerHeight >= document.documentElement.scrollHeight - 50;
-        
-        // Handle bottom of page case
-        if (isAtBottom) {
-          navLinks.forEach(link => link.classList.remove('active'));
-          document.querySelector('[href="#takeaways"]')?.classList.add('active');
-          return;
-        }
-        
-        // Handle top of page case - always highlight hero when at top
-        if (scrollPosition < 200) {
-          navLinks.forEach(link => link.classList.remove('active'));
-          document.querySelector('[href="#hero"]')?.classList.add('active');
-          return;
-        }
-        
-        // Find current section using proper boundaries
-        let currentSection = null;
-        
-        for (let i = 0; i < sections.length; i++) {
-          const section = sections[i];
-          const sectionTop = section.offsetTop;
-          
-          // Define section boundaries: from this section's top to the next section's top
-          let sectionBottom;
-          if (i < sections.length - 1) {
-            // Use the start of the next section as the end of this section
-            sectionBottom = sections[i + 1].offsetTop;
-          } else {
-            // For the last section, use its actual bottom
-            sectionBottom = sectionTop + section.offsetHeight;
-          }
-          
-          // Check if we're within this section's boundaries
-          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-            currentSection = section;
-            break;
-          }
-        }
-        
-        // Update active state
-        navLinks.forEach(link => link.classList.remove('active'));
-        if (currentSection) {
-          document.querySelector(`[href="#${currentSection.id}"]`)?.classList.add('active');
-        }
-      }
-
-      // Listen for scroll events
-      window.addEventListener('scroll', updateActiveSection);
-      
-      // Initial call to set active section
-      updateActiveSection();
-      
-      // Set hero as active by default if no section is active
-      const activeLink = document.querySelector('.nav-link.active');
-      if (!activeLink) {
-        const heroLink = document.querySelector('[href="#hero"]');
-        if (heroLink) {
-          heroLink.classList.add('active');
-        }
-      }
-    }
-
-    // Initialize sidebar navigation when DOM is loaded
-    document.addEventListener('DOMContentLoaded', initSidebarNav);
+    // case-nav.js now handles sidebar nav for case study pages
 
     // Video autoplay with delay when visible
     const videoObserver = new IntersectionObserver(entries => {
