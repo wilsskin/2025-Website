@@ -5,6 +5,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Prevent layout shift on images */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 html, body {
   height: 100%;
 }
@@ -72,7 +79,7 @@ body {
 }
 
 /* —— Shared footer —— */
-.site-footer { padding: 144px 0 8px; }
+.site-footer { padding: 144px 0 12px; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; }
 .footer-left { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 300; }
 .footer-right { display: inline-flex; gap: 64px; }
@@ -181,8 +188,8 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 }
 .site-header .logo img {
   display: block;
-  max-width: 30px;
-  max-height: 30px;
+  max-width: 32px;
+  max-height: 32px;
   width: auto;
   height: auto;
   transform-origin: center;

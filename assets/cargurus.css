@@ -79,7 +79,7 @@
 @media (max-width: 948px) {
   .calc-compare { padding: 32px 24px; }
   .calc-compare-row { gap: 24px; }
-  .calc-note { width: auto; max-width: 240px; }
+  .calc-note { width: auto; max-width: 245px; }
   /* Keep proportional scaling: old (368px) vs new (397px) => ~0.927 */
   .calc-frame { max-width: 45vw; }
   .calc-frame.old { max-width: calc(45vw * 0.927); }
@@ -90,7 +90,15 @@
   .calc-compare-row { gap: 12px; }
   .calc-frame { max-width: 42vw; }
   .calc-frame.old { max-width: calc(42vw * 0.927); }
-  .calc-note { max-width: 200px; font-weight: 400; }
+  .calc-note { max-width: 220px; font-weight: 400; font-size: 12px; }
+}
+
+@media (max-width: 500px) {
+  .calc-compare { padding: 20px 12px; }
+  .calc-compare-row { gap: 10px; }
+  .calc-frame { max-width: 40vw; }
+  .calc-frame.old { max-width: calc(40vw * 0.927); }
+  .calc-note { max-width: 200px; font-size: 12px; }
 }
 
 .product-showcase-image {
@@ -109,7 +117,7 @@
 .impact-frame {
   background: #DCECF3;
   border-radius: 16px;
-  padding: 32px clamp(16px, 4vw, 48px);
+  padding: 32px clamp(16px, 8vw, 48px);
   border: 1px solid #00A1DD;
 }
 
@@ -125,6 +133,25 @@
   min-width: 0;
 }
 
+/* Impact cards responsive breakpoint */
+@media (max-width: 850px) {
+  .impact-frame {
+    width: fit-content;
+    margin: 0;
+  }
+  
+  .impact-spaced {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  
+  .impact-spaced .impact-card {
+    width: auto;
+    text-align: left;
+  }
+}
+
 .image-caption {
   font-size: 14px;
   color: #000000;
@@ -134,32 +161,32 @@
 }
 
 .visit-site-link {
-  color: var(--cargurus-primary);
+  color: #0762D4;
 }
 
 .visit-site-link:hover {
-  color: var(--cargurus-secondary);
+  color: var(--cargurus-primary);
 }
 
 .process-link-text {
-  color: var(--cargurus-primary);
+  color: #0762D4;
 }
 
 .process-link:hover .process-link-text {
-  color: var(--cargurus-secondary);
+  color: var(--cargurus-primary);
 }
 
 .impact-number {
-  color: var(--cargurus-primary);
+  color: #0762D4;
 }
 
 .goal-card {
-  border-color: var(--cargurus-primary);
+  border-color: #0762D4;
 }
 
 .goal-number {
-  border-color: var(--cargurus-primary);
-  color: var(--cargurus-primary);
+  border-color: #0762D4;
+  color: #0762D4;
 }
 
 .description-card.positive {

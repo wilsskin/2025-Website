@@ -2,6 +2,7 @@
 
 /* Import main design system */
 @import url('style.css');
+@import url('cargurus.css');
 
 /* JumboCode specific variables */
 :root {
@@ -224,6 +225,25 @@
   color: #727272;
   font-weight: 200;
 }
+/* Impact cards responsive breakpoint */
+@media (max-width: 850px) {
+  .impact-frame-jumbo {
+    width: fit-content;
+    margin: 0;
+  }
+  
+  .impact-spaced {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  
+  .impact-spaced .impact-card {
+    width: auto;
+    text-align: left;
+  }
+}
+
 
 /* Product Comparison Section */
 .product-comparison-section {
@@ -234,10 +254,10 @@
 .comparison-container {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-large);
+  gap: clamp(16px, 4vw, 64px); /* Responsive gap */
   width: 100%;
   margin: 0;
-  padding: var(--spacing-medium) var(--spacing-large) 0;
+  padding: clamp(16px, 3vw, 32px) clamp(16px, 4vw, 64px) 0; /* Responsive padding */
   background: var(--jumbo-bg-light);
   border-radius: 16px;
 }
@@ -246,7 +266,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: clamp(12px, 2vw, 16px); /* Responsive gap */
+  flex: 1; /* Equal width columns */
+  min-width: 0; /* Allow shrinking */
 }
 
 .comparison-title {
@@ -259,13 +281,15 @@
 }
 
 .comparison-image {
-  width: 350px;
-  height: auto;
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 350 / 568; /* Fixed aspect ratio */
 }
 
 .comparison-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   border-radius: 8px 8px 0 0;
 }
@@ -353,6 +377,7 @@
 .showcase-grid {
   display: flex;
   justify-content: space-between;
+  gap: clamp(24px, 6vw, 64px); /* Responsive gap starting at 64px */
   max-width: 900px;
 }
 
@@ -360,37 +385,30 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-small);
+  flex: 1; /* Equal width items */
+  min-width: 0; /* Allow shrinking */
 }
 
 .showcase-image {
   display: flex;
   flex-direction: column;
-  gap: 6px;
 }
 
 .showcase-img {
-  width: 418px;
-  height: 225px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 418 / 225; /* Maintain original aspect ratio */
   object-fit: cover;
   border-radius: 8px;
   display: block;
 }
 
-.image-caption {
-  font-family: 'Inter', sans-serif;
-  font-weight: 200;
-  font-size: var(--type-size-meta);
-  line-height: 1.45em;
-  color: #000000;
-  margin: 0;
-  text-align: left;
-}
 
 .showcase-description {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 418px;
+  width: 100%;
 }
 
 .description-card {
@@ -420,6 +438,7 @@
   align-items: center;
   justify-content: center;
   font-size: var(--type-size-body);
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 .description-text {
@@ -502,7 +521,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 40px 48px; /* Keep this as special exception */
+  padding: 40px clamp(16px, 4vw, 48px) 0 clamp(16px, 4vw, 48px); /* Responsive side padding, no bottom */
   background: var(--jumbo-bg-light);
   border-radius: 16px;
   max-width: 900px;
@@ -558,9 +577,9 @@
 
 .solution-video {
   width: 100%;
-  height: 452px; /* 16:9 ratio with 804px width */
+  aspect-ratio: 16 / 9; /* Lock to 16:9 aspect ratio */
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: clamp(8px, 2vw, 16px) clamp(8px, 2vw, 16px) 0px 0px; /* Responsive rounded corners */
   display: block;
 }
 
@@ -625,6 +644,7 @@
 .research-grid {
   display: flex;
   justify-content: space-between;
+  gap: clamp(24px, 6vw, 64px); /* Responsive gap starting at 64px */
   max-width: 900px;
 }
 
@@ -632,17 +652,19 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-small);
+  flex: 1; /* Equal width items */
+  min-width: 0; /* Allow shrinking */
 }
 
 .research-image {
   display: flex;
   flex-direction: column;
-  gap: 6.76px;
 }
 
 .research-img {
-  width: 418px;
-  height: 225px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 418 / 225; /* Maintain original aspect ratio */
   object-fit: cover;
   border-radius: 8px;
   display: block;
@@ -653,7 +675,7 @@
   display: flex;
   flex-direction: column;
   gap: 16.89px;
-  width: 418px;
+  width: 100%;
 }
 
 /* Info Architecture */
@@ -706,8 +728,8 @@
 .prototype-item {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   flex: 1;
+  aspect-ratio: 452 / 576;
 }
 
 .prototype-img {
@@ -842,7 +864,6 @@
   display: flex;
   flex-direction: column;
   align-items: left;
-  gap: 8px;
   margin-top: var(--spacing-medium);
 }
 
@@ -958,7 +979,7 @@
     margin: 0 auto; /* Center the content */
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .hero-image-container {
     padding: var(--spacing-small) var(--spacing-medium);
   }
@@ -981,6 +1002,7 @@
     flex-direction: column;
     gap: var(--spacing-medium);
     padding: var(--spacing-small) var(--spacing-medium);
+    padding-bottom: 0px;
   }
   
   .comparison-image {
@@ -999,6 +1021,7 @@
   .showcase-grid {
     flex-direction: column;
     gap: var(--spacing-large);
+    max-width: 400px;
   }
   
   .showcase-item {
@@ -1022,6 +1045,7 @@
   .research-grid {
     flex-direction: column;
     gap: var(--spacing-large);
+    max-width: 400px;
   }
   
   .research-item {
@@ -1034,8 +1058,10 @@
   }
   
   .prototypes-grid {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--spacing-small);
+    max-width: 400px;
   }
   
   .iteration-row {
@@ -1060,10 +1086,11 @@
   
   .comparison-container {
     padding: 16px var(--spacing-small);
+    padding-bottom: 0px;
   }
   
   .solution-card {
-    padding: var(--spacing-small) var(--spacing-medium);
+    padding: var(--spacing-small) var(--spacing-medium) 0 var(--spacing-medium); /* Remove bottom padding */
   }
   
   .design-system-grid {

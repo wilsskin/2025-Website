@@ -25,7 +25,6 @@
     // Update active section based on scroll position
     function updateActiveSection() {
       const scrollPosition = window.scrollY + 100;
-      const isAtBottom = scrollPosition + window.innerHeight >= document.documentElement.scrollHeight - 50;
 
 
       // Near top → Hero active
@@ -36,17 +35,13 @@
         return;
       }
 
-      // Find current section by boundaries
+      // Find current section - just use the last section we've scrolled past
       let currentSection = null;
       for (let i = 0; i < sections.length; i++) {
         const section = sections[i];
         const sectionTop = section.offsetTop;
-        const sectionBottom = i < sections.length - 1
-          ? sections[i + 1].offsetTop
-          : sectionTop + section.offsetHeight;
-        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        if (scrollPosition >= sectionTop) {
           currentSection = section;
-          break;
         }
       }
 
