@@ -50,7 +50,9 @@
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
     <div class="mobile-menu-content">
-      <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu"></button>
+      <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">
+        <img src="../assets/media/cross.svg" alt="Close menu icon"/>
+      </button>
       <nav>
         <ul class="mobile-menu-nav">
           <li><a href="/" onclick="closeMobileMenu()">Work</a></li>
@@ -154,7 +156,7 @@
     </section>
 
     <!-- Problem Section -->
-    <section id="problem" class="problem-section">
+    <section id="problem" class="problem-section section-large">
       <div class="container">
         <h2 class="section-title">Problem</h2>
         <p class="section-text">
@@ -164,7 +166,7 @@
     </section>
 
     <!-- 3 Problems Section -->
-    <section class="problems-grid-section">
+    <section class="problems-grid-section secion-meduim">
       <div class="container">
         <div class="problems-grid">
           <div class="problem-card">
@@ -199,7 +201,7 @@
     </section>
 
     <!-- Problem Showcase Section -->
-    <section class="problem-showcase-section">
+    <section class="problem-showcase-section secion-meduim">
       <div class="container">
         <div class="showcase-grid">
           <div class="showcase-item">
@@ -256,7 +258,7 @@
     </section>
 
     <!-- Goal Section -->
-    <section id="goal" class="goal-section">
+    <section id="goal" class="goal-section section-large">
       <div class="container">
         <h2 class="section-title">Goal</h2>
         <p class="section-text">
@@ -266,7 +268,7 @@
     </section>
 
     <!-- 3 Goals Section -->
-    <section class="goals-section">
+    <section class="goals-section secion-meduim">
       <div class="container">
         <div class="goals-grid">
           <div class="goal-card">
@@ -286,11 +288,11 @@
     </section>
 
     <!-- Solution Section -->
-    <section id="solution" class="solution-section">
+    <section id="solution" class="solution-section section-large">
       <div class="container">
         <h2 class="section-title">Solution</h2>
         <p class="section-text">
-          The new JumboCode website provides a modern platform that better represents our work and community. I supported the dev team across coding sprints and oversaw the final execution to ensure the site launched smoothly.<br><br>
+          The new JumboCode website provides a modern platform that better represents our work and community. I supported the dev team across coding sprints and oversaw the final execution to ensure the site launched smoothly, leading to a 35% increase in student applications.<br><br>
           Check out the <a href="https://jumbocode.org/" target="_blank" class="process-link"> <span class="process-link-text">full site here!</span></a>
         </p>
       </div>
@@ -314,7 +316,7 @@
       </div>
     </section>
 
-    <section class="solution-showcase-section" style="padding-top: 64px;">
+    <section class="solution-showcase-section" style="margin-top: 64px;">
       <div class="container">
         <div class="solution-card">
           <h3 class="solution-title">02 - Project Page</h3>
@@ -331,7 +333,7 @@
       </div>
     </section>
 
-    <section class="solution-showcase-section" style="padding-top: 64px;">
+    <section class="solution-showcase-section" style="margin-top: 64px;">
       <div class="container">
         <div class="solution-card">
           <h3 class="solution-title">03 - Apply Page</h3>
@@ -349,7 +351,7 @@
     </section>
 
     <!-- Process & User Research Section -->
-    <section id="process" class="process-section">
+    <section id="process" class="process-section section-large">
       <div class="container">
         <h2 class="section-title">Process</h2>
         <div class="process-content">
@@ -361,23 +363,17 @@
             We spoke with students, nonprofit clients, and club members to understand what information was missing and what would have helped them when they first discovered the club. Later, we validated our near-final designs through informal usability tests, pulling key quotes and insights.
           </p>
         </div>
-      </div>
-    </section>
-
-    <!-- User Research Quotes Section -->
-    <section class="user-research-quotes-section">
-      <div class="container">
-        <div class="problems-grid">
+        <div class="problems-grid" style="margin-top: 32px;">
           <div class="problem-card">
             <h4 class="problem-title">Tufts Sophomore</h4>
             <p class="problem-description">
-              <em>"I couldn’t really tell what JumboCode did or how I was supposed to join"</em>
+              <em>"I couldn't really tell what JumboCode did or how I was supposed to join"</em>
             </p>
           </div>
           <div class="problem-card">
             <h4 class="problem-title">JumboCode PM</h4>
             <p class="problem-description">
-              <em>"The site felt so old and incomplete that I didn’t even want to show it to people"</em>
+              <em>"The site felt so old and incomplete that I didn't even want to show it to people"</em>
             </p>
           </div>
           <div class="problem-card">
@@ -391,7 +387,7 @@
     </section>
 
     <!-- Competitive Analysis Section -->
-    <section class="competitive-analysis-section" style="padding-top: 80px;">
+    <section class="competitive-analysis-section secion-meduim">
   <div class="container">
     <div class="process-content">
       <div class="process-header">
@@ -401,13 +397,7 @@
         We analyzed peer organizations like Blueprint and Commit the Change, borrowing effective patterns around structure, impact metrics, and community storytelling to inform our own site direction.
       </p>
     </div>
-  </div>
-</section>
-
-    <!-- Competitive Analysis Images Section -->
-    <section class="competitive-analysis-images-section" style="padding-top: 32px;">
-      <div class="container">
-        <div class="research-grid">
+    <div class="research-grid" style="margin-top: 32px;">
           <div class="research-item">
             <figure class="research-image">
               <img src="../assets/media/jumbocode/research-blueprint-berkeley.png" alt="Blueprint, a UC Berkeley digital agency" class="research-img img-block"/>
@@ -459,7 +449,7 @@
     </section>
 
     <!-- Prototypes Section -->
-    <section class="prototypes-section">
+    <section class="prototypes-section section-large">
       <div class="container">
         <div class="prototypes-content">
           <div class="process-header">
@@ -470,13 +460,7 @@
             The old website buried critical details. I created a new content hierarchy to ensure prospective students and nonprofits could easily find what they needed.
           </p>
         </div>
-      </div>
-    </section>
-
-    <!-- Prototypes Grid Section -->
-    <section class="prototypes-grid-section">
-      <div class="container">
-        <div class="prototypes-grid">
+        <div class="prototypes-grid" style="margin-top: 32px;">
           <div class="prototype-item">
             <img src="../assets/media/jumbocode/home-lofi.png" alt="Homepage prototype" class="prototype-img img-block"/>
             <p class="image-caption">Home Page</p>
@@ -498,7 +482,7 @@
     </section>
 
     <!-- Iterations Section -->
-    <section class="iterations-section">
+    <section class="iterations-section secion-meduim">
       <div class="container">
         <div class="process-content">
           <div class="process-header">
@@ -544,7 +528,7 @@
     </section>
 
     <!-- Design Section -->
-    <section class="design-section">
+    <section class="design-section section-large">
       <div class="container">
         <div class="design-content">
           <div class="process-header">
@@ -552,17 +536,10 @@
             <h3 class="process-subtitle">We chose a design direction that balanced visuals with clarity</h3>
           </div>
           <p class="process-description">
-            After rounds of iteration, we landed on a design that communicated JumboCode’s mission clearly while also showcasing its people and impact in a more engaging way.
+            After rounds of iteration, we landed on a design that communicated JumboCode's mission clearly while also showcasing its people and impact in a more engaging way.
           </p>
         </div>
-      </div>
-    </section>
-
-    <!-- Design Showcase Section -->
-    <!-- Product Comparison Section -->
-    <section class="design-showcase-section">
-      <div class="container">
-        <div class="comparison-container">
+        <div class="comparison-container" style="margin-top: 32px;">
           <div class="comparison-column">
             <h3 class="comparison-title">Before</h3>
             <div class="comparison-image before-image">
@@ -580,25 +557,25 @@
     </section>
 
     <!-- Figma Structure Section -->
-    <section class="figma-structure-section">
+    <section class="figma-structure-section secion-meduim">
       <div class="container">
         <div class="process-content">
           <div class="process-header">
             <h3 class="process-subtitle">A design system ensured smooth handoff and lasting impact</h3>
           </div>
           <p class="process-description">
-            I built JumboCode’s first design system and created a dedicated Figma file for the club. This streamlined developer handoff and left future members with a structured foundation to build on.
+            I built JumboCode's first design system and created a dedicated Figma file for the club. This streamlined developer handoff and left future members with a structured foundation to build on.
           </p>
         </div>
         <figure class="figma-structure-image">
           <img src="../assets/media/jumbocode/figma-structure.png" alt="Figma structure diagram" class="figma-structure-img img-block"/>
-          <figcaption class="image-caption">Figma file structure (not shown: mobile designs)</figcaption>
+          <figcaption class="image-caption">Figma file structure</figcaption>
         </figure>
       </div>
     </section>
 
     <!-- Impact Container Section -->
-    <section class="impact-section" style="padding-top: 48px;">
+    <section class="impact-section" style="padding-top: 80px;">
       <div class="container">
         <div class="impact-frame-jumbo">
         <div class="impact-container impact-spaced">
@@ -620,7 +597,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-left">© 2025 Wilson Skinner</div>
+      <div class="footer-left">© 2025 Wilson Skinner.</div>
       <div class="footer-right">
         <a href="mailto:w0skinner@gmail.com" class="icon-link" aria-label="Email" target="_blank">
           <img src="../assets/media/send.svg?v=1" class="default-icon" alt="Send"/>

@@ -247,7 +247,7 @@
 
 /* Product Comparison Section */
 .product-comparison-section {
-  padding: var(--spacing-section) 0 0;
+  padding: var(--spacing-xlarge) 0 0;
   background: var(--color-bg);
 }
 
@@ -317,7 +317,7 @@
 
 /* Problem Section */
 .problem-section {
-  padding: var(--spacing-section) 0 var(--spacing-medium);
+  padding-bottom: var(--spacing-medium);
   background: var(--color-bg);
 }
 
@@ -452,7 +452,7 @@
 
 /* Goal Section */
 .goal-section {
-  padding: var(--spacing-section) 0 var(--spacing-medium);
+  padding-bottom: var(--spacing-medium);
   background: var(--color-bg);
 }
 
@@ -508,7 +508,7 @@
 
 /* Solution Section */
 .solution-section {
-  padding: var(--spacing-section) 0 var(--spacing-large);
+  padding-bottom: var(--spacing-large);
   background: var(--color-bg);
 }
 
@@ -585,7 +585,7 @@
 
 /* Process Section */
 .process-section {
-  padding: var(--spacing-section) 0 var(--spacing-medium);
+  padding-bottom: var(--spacing-medium);
   background: var(--color-bg);
 }
 
@@ -701,7 +701,6 @@
 
 /* Prototypes */
 .prototypes-section {
-  padding: var(--spacing-section) 0 var(--spacing-medium);
   background: var(--color-bg);
 }
 
@@ -719,22 +718,26 @@
 
 .prototypes-grid {
   display: flex;
-  justify-content: stretch;
+  justify-content: space-between;
   align-items: stretch;
-  gap: var(--spacing-medium);
+  gap: clamp(16px, 4vw, 32px);
   max-width: 900px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .prototype-item {
   display: flex;
   flex-direction: column;
   flex: 1;
-  aspect-ratio: 452 / 576;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .prototype-img {
   width: 100%;
-  height: 256px;
+  height: auto;
+  aspect-ratio: 452 / 576;
   object-fit: cover;
   object-position: top;
   border-radius: 4px;
@@ -743,13 +746,13 @@
 
 /* Iterations */
 .iterations-section {
-  padding: 0 0 var(--spacing-medium);
+  padding-top: var(--spacing-section);
   background: var(--color-bg);
 }
 
 .iterations-grid {
   display: flex;
-  gap: 16px;
+  gap: clamp(8px, 2vw, 16px);
   max-width: 900px;
   padding-top: var(--spacing-medium);
 }
@@ -757,7 +760,7 @@
 .iteration-column {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: clamp(8px, 2vw, 16px);
   flex: 1;
 }
 
@@ -795,7 +798,6 @@
 
 /* Design Section */
 .design-section {
-  padding: var(--spacing-section) 0 var(--spacing-medium);
   background: var(--color-bg);
 }
 
@@ -856,8 +858,8 @@
 
 /* Figma Structure */
 .figma-structure-section {
-  padding: 0 0 var(--spacing-medium);
   background: var(--color-bg);
+  padding-top: var(--spacing-section);
 }
 
 .figma-structure-image {
@@ -1060,8 +1062,10 @@
   .prototypes-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-small);
-    max-width: 400px;
+    gap: clamp(8px, 2vw, 16px);
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
   }
   
   .iteration-row {

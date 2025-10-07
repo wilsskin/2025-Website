@@ -51,7 +51,9 @@
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
     <div class="mobile-menu-content">
-      <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu"></button>
+      <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">
+        <img src="../assets/media/cross.svg" alt="Close menu icon"/>
+      </button>
       <nav>
         <ul class="mobile-menu-nav">
           <li><a href="/" onclick="closeMobileMenu()">Work</a></li>
@@ -211,16 +213,16 @@
         <div class="showcase-grid">
           <div class="showcase-item">
             <figure class="showcase-image">
-              <img src="../assets/media/cargurus/buyers-order1.webp" alt="Car buyers order process 1" class="showcase-img img-block"/>
-              <figcaption class="image-caption">Buyer's order sheets scatter important information</figcaption>
+              <img src="../assets/media/cargurus/buyers-order1.webp" alt="Car buyers order process 1" class="showcase-img-cg img-block"/>
             </figure>
           </div>
           <div class="showcase-item">
             <figure class="showcase-image">
-              <img src="../assets/media/cargurus/buyers-order2.webp" alt="Car buyers order process 2" class="showcase-img img-block"/>
+              <img src="../assets/media/cargurus/buyers-order2.webp" alt="Car buyers order process 2" class="showcase-img-cg img-block"/>
             </figure>
           </div>
         </div>
+        <figcaption class="image-caption image-caption-full">Confusing buyer's order sheets led to overwhelmed buyers</figcaption>
       </div>
     </section>
 
@@ -268,51 +270,54 @@
     <!-- Solution Showcase Section -->
     <section class="solution-showcase-section">
       <div class="container">
-        <div class="solution-card">
-          <h3 class="solution-title">01 - Finance Customization</h3>
-          <div class="solution-content">
-            <h4 class="solution-subtitle">Select and compare financing options</h4>
-            <p class="solution-description">A clear entry point where buyers choose dealer financing, outside loan, or cash, giving them control over how to structure their deal and start estimating with confidence.</p>
+        <div class="solution-layout">
+          <div class="solution-text">
+            <h3 class="solution-title solution-title-cg">01 - Finance Info & Goal Setting</h3>
+            <h4 class="solution-subtitle solution-subtitle-cg">Input your personal finance info</h4>
+            <p class="solution-description">Buyers begin by confirming or editing prefilled finance details and setting a target monthly payment. Personalized suggestions guide users toward meeting their goals.</p>
+            <ul class="solution-bullets">
+              <li>Prefilled finance info from prequalification or manually entered              </li>
+              <li>Set a monthly payment goal and receive instant suggestions to meet it              </li>
+              <li>Experiment with different inputs to see how they affect total and monthly cost</li>
+            </ul>
           </div>
-          <div class="solution-image-grid">
-            <img src="../assets/media/cargurus/solution-1.webp" alt="Finance customization screenshot 1" class="solution-img"/>
-            <img src="../assets/media/cargurus/solution-2.webp" alt="Finance customization screenshot 2" class="solution-img"/>
-            <img src="../assets/media/cargurus/solution-3.webp" alt="Finance customization screenshot 3" class="solution-img"/>
-          </div>
+          <img src="../assets/media/cargurus/solution-1.webp" alt="Finance customization screenshot" class="solution-img"/>
         </div>
       </div>
     </section>
 
     <section class="solution-showcase-section" style="padding-top: 64px;">
       <div class="container">
-        <div class="solution-card">
-          <h3 class="solution-title">02 - Cost Breakdown</h3>
-          <div class="solution-content">
-            <h4 class="solution-subtitle">View all hidden fees and calculations</h4>
-            <p class="solution-description">A receipt-style breakdown of taxes, fees, and dealer add-ons that replaces scattered paperwork with one transparent view, reducing confusion and hidden cost stress.</p>
+        <div class="solution-layout">
+          <div class="solution-text">
+            <h3 class="solution-title solution-title-cg">02 - Cost Breakdown</h3>
+            <h4 class="solution-subtitle solution-subtitle-cg">Anticipate hidden costs and add-ons</h4>
+            <p class="solution-description">As users scroll, the calculator transitions into a receipt-style breakdown of taxes, fees, and add-ons. Optional dealer incentives and trade-ins dynamically adjust total costs.</p>
+            <ul class="solution-bullets">
+              <li>View every fee, add-on, and tax clearly listed in one organized view</li>
+              <li>Add trade-ins or discounts at the dealership to reflect real-time negotiations</li>
+              <li>Build trust with dealers and reduce stress during the buying process              </li>
+            </ul>
           </div>
-          <div class="solution-image-grid">
-            <img src="../assets/media/cargurus/solution-1.webp" alt="Cost breakdown screenshot 1" class="solution-img"/>
-            <img src="../assets/media/cargurus/solution-2.webp" alt="Cost breakdown screenshot 2" class="solution-img"/>
-            <img src="../assets/media/cargurus/solution-3.webp" alt="Cost breakdown screenshot 3" class="solution-img"/>
-          </div>
+          <img src="../assets/media/cargurus/solution-2.webp" alt="Cost breakdown screenshot" class="solution-img"/>
         </div>
       </div>
     </section>
 
     <section class="solution-showcase-section" style="padding-top: 64px;">
       <div class="container">
-        <div class="solution-card">
-          <h3 class="solution-title">03 - Estimate Summary</h3>
-          <div class="solution-content">
-            <h4 class="solution-subtitle">Prepare for dealer negotiations confidently</h4>
-            <p class="solution-description">A summarized cost and monthly payment range that buyers can save or share, helping them enter negotiations informed and reducing decision fatigue at the dealership.</p>
+        <div class="solution-layout">
+          <div class="solution-text">
+            <h3 class="solution-title solution-title-cg">03 - Estimate Summary</h3>
+            <h4 class="solution-subtitle solution-subtitle-cg">Feel confident on-the-lot            </h4>
+            <p class="solution-description">The final section mirrors the financing calculations from a buyer’s order form, giving users a realistic estimate before entering negotiations. </p>
+            <ul class="solution-bullets">
+              <li>Save and share estimates with clear total cost and payment              </li>
+              <li>Compare saved estimates to explore different financing options              </li>
+              <li>Reduce decision fatigue and arrive to the dealership with confidence </li>
+            </ul>
           </div>
-          <div class="solution-image-grid">
-            <img src="../assets/media/cargurus/solution-1.webp" alt="Estimate summary screenshot 1" class="solution-img"/>
-            <img src="../assets/media/cargurus/solution-2.webp" alt="Estimate summary screenshot 2" class="solution-img"/>
-            <img src="../assets/media/cargurus/solution-3.webp" alt="Estimate summary screenshot 3" class="solution-img"/>
-          </div>
+          <img src="../assets/media/cargurus/solution-3.webp" alt="Estimate summary screenshot" class="solution-img"/>
         </div>
       </div>
     </section>
@@ -353,13 +358,13 @@
         <div class="showcase-grid" style="padding-top: 32px;">
           <div class="showcase-item">
             <figure class="showcase-image">
-              <img src="../assets/media/cargurus/buyers-order2.webp" alt="Car buyers order process 1" class="showcase-img img-block"/>
+              <img src="../assets/media/cargurus/buyers-order2.webp" alt="Car buyers order process 1" class="showcase-img-cg img-block"/>
               <figcaption class="image-caption">Buyer's order sheets scatter important information</figcaption>
             </figure>
           </div>
           <div class="showcase-item">
             <figure class="showcase-image">
-              <img src="../assets/media/cargurus/me-ayat.webp" alt="Car buyers order process 2" class="showcase-img img-block" style="border:none;"/>
+              <img src="../assets/media/cargurus/me-ayat.webp" alt="Car buyers order process 2" class="showcase-img-cg img-block" style="border:none;"/>
               <figcaption class="image-caption">Me and a teammate conducting onsite research!</figcaption>
             </figure>
           </div>

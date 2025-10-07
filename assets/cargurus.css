@@ -19,6 +19,18 @@
   background: var(--cargurus-bg-light);
 }
 
+/* Override problem icon sizing for CarGurus */
+.problem-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.problem-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 /* Product showcase section styling */
 .product-showcase-section {
   padding-top: 80px;
@@ -160,6 +172,12 @@
   font-weight: 200;
 }
 
+.image-caption-full {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 8px;
+}
+
 .visit-site-link {
   color: #0762D4;
 }
@@ -227,6 +245,18 @@
   border: 1px solid #EBEBEB;
 }
 
+/* CarGurus problem section images - different aspect ratio (870x1028) */
+.showcase-img-cg {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 870 / 1028;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  border: 1px solid #EBEBEB;
+}
+
 .showcase-description {
   display: flex;
   flex-direction: column;
@@ -249,20 +279,86 @@
   .showcase-image { width: 100%; }
 }
 
-/* Solution image grid styling */
+/* Solution layout - text left, image right */
+.solution-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(32px, 8vw, 64px);
+  width: 100%;
+  max-width: 900px;
+  padding: clamp(16px, 4vw, 40px) clamp(24px, 4vw, 48px);
+  background: #EBEBEB;
+  border-radius: 16px;
+}
+
+.solution-text {
+  flex: 1;
+  max-width: 475px;
+  padding-top: 16px;
+}
+
+.solution-title-cg {
+  padding-bottom: 24px;
+}
+
+.solution-subtitle-cg {
+  padding-bottom: 8px;
+}
+
+.solution-bullets {
+  margin: 16px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.solution-bullets li {
+  font-size: 16px;
+  font-weight: 300;
+  color: #000000;
+  line-height: 1.33;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 16px;
+}
+
+.solution-bullets li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-weight: 300;
+}
+
+.solution-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.solution-img {
+  width: auto;
+  max-width: clamp(200px, 30vw, 250px);
+  min-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+  margin-left: auto;
+}
+
+/* Solution image grid styling (for other sections) */
 .solution-grid-frame {
   width: 100%;
   max-width: 900px;
   background: var(--cargurus-grey-light);
   border-radius: 16px;
-  padding: 32px clamp(8px, 3vw, 16px);
+  padding: clamp(16px, 4vw, 32px) clamp(16px, 4vw, 48px);
   margin-top: 32px;
 }
 
 .solution-image-grid {
   display: flex;
-  gap: clamp(8px, 4vw, 48px);
-  justify-content: center;
+  gap: clamp(16px, 4vw, 48px);
+  justify-content: space-between;
   align-items: flex-start;
   margin: 8px 0;
   padding-inline: 0;
@@ -273,6 +369,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex: 1;
+  min-width: 0;
 }
 
 .solution-caption {
@@ -280,12 +378,14 @@
   font-weight: 200;
   color: #000;
   margin-top: 8px;
-  margin-left: 8px;
+  text-align: left;
+  width: 100%;
 }
 
-.solution-img {
-  max-width: clamp(100px, 28vw, 225.33px);
-  width: auto;
+/* Solution grid images - responsive sizing for 3-in-a-row layout */
+.solution-image-grid .solution-img {
+  width: 100%;
+  min-width: 0;
   height: auto;
   border-radius: 8px;
   display: block;
@@ -299,14 +399,48 @@
   overflow: hidden;
 }
 
+/* Responsive adjustments for solution layout */
+@media (max-width: 650px) {
+  .solution-layout {
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+  }
+  
+  .solution-text {
+    max-width: 100%;
+  }
+  
+  .solution-image {
+    width: 100%;
+  }
+  
+  .solution-img {
+    max-width: 150px;
+  }
+  .solution-bullets li {
+    display: none;
+  }
+  
+  .solution-img {
+    margin-left: 0;
+  }
+}
+
 /* Responsive adjustments for solution grid */
-@media (max-width: 768px) {
+@media (max-width: 650px) {
   .solution-image-grid {
     flex-direction: row; /* keep side-by-side */
-    gap: clamp(8px, 3vw, 20px);
-    align-items: center;
+    gap: clamp(16px, 4vw, 48px);
+    align-items: flex-start;
     max-height: none;
-    padding-inline: clamp(8px, 3vw, 16px);
+    padding-inline: 0;
+  }
+  
+
+  
+  .solution-grid-frame {
+    padding: clamp(16px, 4vw, 32px) clamp(16px, 4vw, 48px);
   }
 }
 
@@ -334,8 +468,8 @@
   background: #EBEBEB;
   border-radius: 16px;
   border: 1px solid #0762D4;
-  /* 24px top padding as requested; balanced vertical padding otherwise */
-  padding: 32px 48px;
+  /* Responsive padding with clamp */
+  padding: clamp(16px, 4vw, 32px) clamp(24px, 6vw, 48px);
   /* left-aligned within the container */
   margin-top: 32px;
   max-width: 696px;
@@ -479,6 +613,11 @@
     grid-template-columns: 1fr;
   }
   .comp-item-desc { display: none; }
+  .comp-item-title { font-size: var(--type-size-meta); font-weight: 400; }
+  .comp-accent {font-weight: 600; }
+  .comp-image {
+    max-width: clamp(250px, 65vw, 350px); }
+  .comp-row {gap: 32px; }
   /* Extra spacing between item 5 and 6 when single-column */
   .comp-columns .comp-list + .comp-list > .comp-item:first-child { margin-top: 16px; }
 }
