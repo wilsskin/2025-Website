@@ -1,7 +1,7 @@
 // main.js
 // Add any site-wide JavaScript here
 
-const RESUME_URL = 'https://drive.google.com/file/d/1avMJAPTP1dMGGeeNkCuSqzUhfFsd7iza/view?usp=sharing';
+const RESUME_URL = 'https://drive.google.com/file/d/1ZYduGvOW4dvp_hMde4dZ60u6a7ca0nid/view?usp=sharing';
 
 // 1) Global: hydrate resume links
 document.addEventListener('DOMContentLoaded', () => {
