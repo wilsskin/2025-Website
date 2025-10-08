@@ -143,10 +143,15 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 .about-exp-logo { width: 17px; height: 17px; border-radius: 4px; object-fit: contain; display: block; }
 .about-exp-title { display: inline-flex; gap: 4px; font-size: var(--type-size-meta); line-height: 150%; font-weight: 400; }
 .more-work-title { margin-bottom: 8px; font-size: var(--type-size-body); font-weight: 400; }
-/* Ensure emphasis tags don't override intended weights in Safari */
-.about-exp-title strong,
+/* Ensure proper font weights for about experience titles */
+.about-exp-title strong {
+  font-weight: 400;
+}
+.about-exp-title span {
+  font-weight: 300;
+}
 .more-work-title strong {
-  font-weight: inherit;
+  font-weight: 400;
 }
 .about-exp-year { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 300; }
 .about-exp-desc { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 300; line-height: 130%; }
@@ -160,8 +165,29 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 .about-interests-media { width: 100%; max-width: 450px; height: auto; max-height: 220px; border-radius: 8px; display: block; flex-shrink: 1; }
 
 
+@media (max-width: 480px) {
+  .about-exp-title { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 0px;
+  }
+  .slash {
+    display: none;
+  }
+  .about-exp-year {
+    display: none;
+  }
+  .about-exp-logo {
+    width: 25px;
+    height: 25px;
+  }
+  .about-exp-left {
+    gap: 8px;
+  }
+}
+
 @media (min-width: 768px) {
-  .about-skills-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .about-skills-grid { grid-template-columns: repeat(3, 1fr); gap: 40px; }
 }
 
 /* 4. Header/nav */
@@ -335,6 +361,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   width: 100%;
 }
 
+
 /* Headline */
 .hero h1 {
   position: relative;
@@ -408,28 +435,10 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   cursor: pointer;
 }
 
-/* Hover bridge to allow moving from pill to tooltip without flicker */
-.status-pill::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 100%;
-  width: 85%;
-  height: 12px;
-}
 
 .status-text-wrap { position: relative; display: inline-block; }
 .status-text { font-weight: 250; line-height: 1; }
 .status-text-link { color: inherit; text-decoration: none; }
-/* measurement ghost to lock width */
-.status-text--measure {
-  position: absolute;
-  inset: 0 auto auto 0;
-  font-weight: 200;
-  visibility: hidden;
-  white-space: nowrap;
-}
 
 /* Icon links */
 .icon-link {
@@ -454,95 +463,11 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 /* toned-down shadow + 5px lift */
 .status-pill:hover { box-shadow: var(--shadow-light); transform: translateY(-2px); }
 
-/* Indicator color on hover */
-.status-pill:hover .status-indicator { background: #70DF6C; border-color: #70DF6C; }
-
-/* Tooltip */
-.status-tooltip {
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 10px);
-  transform: translateX(-50%);
-  background: #F8F8F8;
-  color: var(--color-text-primary);
-  border: 1px solid #DDDDDD;
-  border-radius: 10px;
-  padding: 8px 10px;
-  width: 85%;
-  min-width: 0;
-  max-width: none;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  text-align: center;
-  cursor: default; /* default arrow in tooltip whitespace */
+/* Bold text on hover */
+.status-pill:hover .status-text-link { 
+  color: #000; 
 }
 
-/* Arrow with border (border behind, fill on top) */
-.status-tooltip::before {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 7px solid #DDDDDD;
-}
-
-.status-tooltip::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: -1px;
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid #F8F8F8;
-}
-
-.status-tooltip-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  align-items: center;
-}
-
-.status-tooltip-text {
-  font-size: var(--type-size-meta);
-  font-weight: 300;
-  color: #727272;
-  cursor: text; /* I-beam on text */
-}
-
-.status-tooltip-link {
-  font-size: var(--type-size-meta);
-  color: #000000;
-  font-weight: 300;
-  text-decoration: none;
-  cursor: pointer; /* pointer on link */
-  letter-spacing: 0;
-}
-.status-tooltip-link:hover { font-weight: 400; letter-spacing: -0.1px;}
-
-.status-pill:hover .status-tooltip,
-.status-pill .status-tooltip:hover {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-2px);
-  pointer-events: auto;
-}
-
-/* Open state (for mobile click) */
-.status-pill.open .status-tooltip {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-2px);
-  pointer-events: auto;
-}
 
 
 /* 8. Work cards + animation */
@@ -823,6 +748,10 @@ img.work-logo {
   }
   .hamburger { display: none; }
   .mobile-menu-overlay { display: none; }
+  .site-header .logo img {
+    max-width: 28px;
+    max-height: 28px;
+  }
 }
 
 @media (min-width: 768px) {
