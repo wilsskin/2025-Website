@@ -4,13 +4,13 @@
 
 /* CarGurus specific variables */
 :root {
-  --cargurus-primary: #00A1DD;
-  --cargurus-secondary: #00719B;
+  --cargurus-primary: #55A0CE;
+  --cargurus-secondary: #046096;
   --cargurus-text-dark: #000000;
   --cargurus-text-light: #727272;
-  --cargurus-bg-light: #63C4E8;
+  --cargurus-bg-light: #55A0CE;
   --cargurus-grey-light: rgba(0, 0, 0, 0.05);
-  --cargurus-border: #00A1DD;
+  --cargurus-border: #55A0CE;
 }
 
 /* Override JumboCode green elements with CarGurus blue */
@@ -179,32 +179,32 @@
 }
 
 .visit-site-link {
-  color: #0762D4;
+  color: #107BBC;
 }
 
 .visit-site-link:hover {
-  color: var(--cargurus-primary);
+  color: #509DCB;
 }
 
 .process-link-text {
-  color: #0762D4;
+  color: #107BBC;
 }
 
 .process-link:hover .process-link-text {
-  color: var(--cargurus-primary);
+  color: #509DCB;
 }
 
 .impact-number {
-  color: #0762D4;
+  color: #107BBC;
 }
 
 .goal-card {
-  border-color: #0762D4;
+  border-color: #107BBC;
 }
 
 .goal-number {
-  border-color: #0762D4;
-  color: #0762D4;
+  border-color: #107BBC;
+  color: #107BBC;
 }
 
 .description-card.positive {
@@ -467,7 +467,7 @@
 .research-quote {
   background: #EBEBEB;
   border-radius: 16px;
-  border: 1px solid #0762D4;
+  border: 1px solid #107BBC;
   /* Responsive padding with clamp */
   padding: clamp(16px, 4vw, 32px) clamp(24px, 6vw, 48px);
   /* left-aligned within the container */
@@ -476,7 +476,7 @@
 }
 
 .research-quote .quote-text {
-  color: #0762D4;
+  color: #107BBC;
   font-weight: 400;
   font-size: var(--type-size-heading);
   line-height: 1.5;
@@ -583,7 +583,7 @@
 }
 
 /* Accent color span for selected titles */
-.comp-accent { color: #0762D4; }
+.comp-accent { color: #107BBC; }
 
 @media (max-width: 948px) {
   .comp-row {

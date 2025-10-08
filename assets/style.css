@@ -530,7 +530,7 @@ img.work-logo {
 }
 
 .work-title-h3.cargurus {
-  color: #00A1DD; /* CarGurus blue */
+  color: #55A0CE; /* CarGurus blue */
 }
 
 .work-title-h3.realityai {
@@ -608,19 +608,19 @@ img.work-logo {
 }
 
 .work-preview.jumbocode:hover {
-  background: #46CDA7;
+  background: #2CAE8B;
   box-shadow: var(--shadow-medium);
 }
 
 .work-preview.cargurus {
-  border-color: #00A1DD;
-  background: #63C4E8;
+  border-color: #55A0CE;
+  background: #55A0CE;
   padding: 5.333% 5.333% 0 5.333%;
   box-sizing: border-box;
 }
 
 .work-preview.cargurus:hover {
-  background: #19AAE0;
+  background: #0F71AD;
   box-shadow: var(--shadow-medium);
 }
 
