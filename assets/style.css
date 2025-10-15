@@ -437,7 +437,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 
 
 .status-text-wrap { position: relative; display: inline-block; }
-.status-text { font-weight: 250; line-height: 1; }
+.status-text { font-weight: 300; line-height: 1; }
 .status-text-link { color: inherit; text-decoration: none; }
 
 /* Icon links */
