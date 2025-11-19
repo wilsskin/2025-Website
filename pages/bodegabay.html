@@ -75,7 +75,10 @@
         <nav class="page-nav">
           <ul>
             <li><a href="#hero" class="nav-link" data-section="hero">Context</a></li>
-        
+            <li><a href="#problem" class="nav-link" data-section="problem">Problem</a></li>
+            <li><a href="#goal" class="nav-link" data-section="goal">Goal</a></li>
+            <li><a href="#solution" class="nav-link" data-section="solution">Solution</a></li>
+            <li><a href="#process" class="nav-link" data-section="process">Process</a></li>
           </ul>
         </nav>
       </div>
@@ -95,8 +98,8 @@
     <!-- Hero Image Section -->
     <section id="hero" class="hero-image-section">
       <div class="container">
-        <div class="hero-image-container bbl-pad">
-          <img src="../assets/media/bodegabay/bbl-thumbnail.webp" alt="Bodega Bay Lavender storefront redesign" class="hero-image img-block bbl-cover" loading="eager" width="900" height="472"/>
+        <div class="hero-image-container case-study-hero">
+          <img src="../assets/media/bodegabay/bbl-thumbnail.webp" alt="Bodega Bay Lavender storefront redesign" class="thumbnail-image" loading="eager" width="788" height="424"/>
         </div>
       </div>
     </section>
@@ -105,87 +108,107 @@
     <section class="summary-section">
       <div class="container">
         <div class="summary-content">
-          <p class="summary-text">
-            Bodega Bay Lavender is a family-owned farm in Northern California. I’m currently redesigning and developing their new e-commerce website with HTML/CSS to modernize their online presence and improve customer conversions.
-
-          </p>
-          <a href="https://bodegabaylavender.com" target="_blank" class="visit-site-link">Visit Old Site <span class="arrow">→</span></a>
+          <div class="summary-left">
+            <div class="summary-text-group">
+              <p class="summary-text">
+                Bodega Bay Lavender is a family-owned ranch in Northern California that grows and distills lavender to create a variety of wellness products.
+              </p>
+              <p class="summary-text">As the only contributor, <span class="summary-text-bold">I created and implemented a new Shopify e-commerce platform using HTML/CSS</span> to increase online sales and address a 22% drop in conversions. The updated site was launched on November 7th and I’m currently conducting a final round of user testing to gather feedback. </p>
+            </div>
+            
+      <!--
+            <div class="summary-impact-metrics">
+              <div class="impact-pill">
+                <svg viewBox="0 0 11 13" class="impact-pill-icon" fill="none"><path d="M0.749676 4.59732C0.749676 4.59732 4.03867 0.750114 5.04361 0.750083C6.04849 0.750104 9.33747 4.59736 9.33747 4.59736M5.04359 1.17732L5.04359 11.4625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                <span>Placeholder metric 1</span>
+              </div>
+              <div class="impact-pill">
+                <svg viewBox="0 0 11 13" class="impact-pill-icon" fill="none"><path d="M0.749676 4.59732C0.749676 4.59732 4.03867 0.750114 5.04361 0.750083C6.04849 0.750104 9.33747 4.59736 9.33747 4.59736M5.04359 1.17732L5.04359 11.4625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                <span>Placeholder metric 2</span>
+              </div>
+            </div>
+      -->
+          </div>
+          <div class="summary-right">
+            <div class="summary-meta-item">
+              <p class="summary-meta-label">Timeline</p>
+              <p class="summary-meta-value">July - November 2025</p>
+            </div>
+            <div class="summary-meta-item">
+              <p class="summary-meta-label">Team</p>
+              <p class="summary-meta-value">Founder/CEO<br>Design Engineer (me)</p>
+            </div>
+            <div class="summary-meta-item">
+              <p class="summary-meta-label">Status</p>
+              <div class="summary-status">
+                <a href="https://bodegabaylavender.com" target="_blank" class="visit-site-link">Shipped<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="visit-site-icon"><path d="M2.56819 0.859325C2.56819 0.859325 7.61424 0.464613 8.32486 1.17519C9.03541 1.88576 8.64064 6.93182 8.64064 6.93182M8.02275 1.47727L0.75 8.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-<p style="text-align: center; font-size: var(--type-size-heading); padding-top: var(--spacing-large); margin: 0;">Solution in progress :)</p>
-
-    <!-- BEGIN TEMP HIDE Bodega Bay --><template id="bbl-hidden">
-    <!-- Impact Container Section -->
-    <section class="impact-section">
+    <!-- Product Comparison Section -->
+    <section class="product-comparison-section">
       <div class="container">
-        <div class="impact-container">
-          <div class="impact-card">
-            <h3 class="impact-number">80%</h3>
-            <p class="impact-description">Stressed by dealer negotiations <br><span class="impact-detail">(primary user research)</span></p>
+        <div class="comparison-container">
+          <div class="comparison-column">
+            <h3 class="comparison-title">Before</h3>
+            <div class="comparison-image bbl-comparison before-image">
+              <img src="../assets/media/bodegabay/bbl-before.webp" alt="Before comparison" class="comparison-img bbl-comparison-img img-block"/>
+            </div>
           </div>
-          <div class="impact-card">
-            <h3 class="impact-number">10%</h3>
-            <p class="impact-description">Satisfied with closing price <br><span class="impact-detail">(compiled internal research)</span></p>
+          <div class="comparison-column">
+            <h3 class="comparison-title">After</h3>
+            <div class="comparison-image bbl-comparison after-image">
+              <img src="../assets/media/bodegabay/bbl-after.webp" alt="After comparison" class="comparison-img bbl-comparison-img img-block"/>
+            </div>
           </div>
-          <div class="impact-card">
-            <h3 class="impact-number">1</h3>
-            <p class="impact-description">Mobile feature solution<br><span class="impact-detail">(being built by CarGurus)</span></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Product in Action Section -->
-    <section class="product-showcase-section">
-      <div class="container">
-        <div class="product-showcase-image">
-          <img src="../assets/media/cargurus/hero-image.png" alt="CarGurus finance calculator in action" class="product-showcase-img img-block"/>
-          <div class="image-caption">Finance Calculator Prototype</div>
         </div>
       </div>
     </section>
 
     <!-- Problem Section -->
-    <section id="problem" class="problem-section">
+    <section id="problem" class="problem-section section-large">
       <div class="container">
-        <h2 class="section-title">Problem</h2>
+        <h2 class="section-title">PROBLEM</h2>
+        <h3 class="process-subtitle">The old site wasn’t attracting or converting shoppers</h3>
         <p class="section-text">
-          Few buyers used the CarGurus app at dealerships, revealing an opportunity to design a new use case for mobile users. We also discovered buyers struggled with hidden fees and confusing financing paperwork at dealerships.
+          Low traffic, weak trust signals, and a lack of storytelling made it hard for shoppers to understand the brand or feel confident making a purchase.
         </p>
       </div>
     </section>
 
     <!-- 3 Problems Section -->
-    <section class="problems-grid-section">
+    <section class="problems-grid-section secion-meduim">
       <div class="container">
         <div class="problems-grid">
           <div class="problem-card">
             <div class="problem-icon">
-              <img src="../assets/media/jumbocode/unclear.svg" alt="Unclear icon"/>
+              <img src="../assets/media/icons/icon-visitors.svg" alt="Problem icon"/>
             </div>
-            <h4 class="problem-title">Lack of information transparency</h4>
+            <h4 class="problem-title">Less than 3500 annual visitors</h4>
             <p class="problem-description">
-              80% of buyers said hidden fees and unclear pricing caused major stress 
+              Weak SEO and a lack of storytelling made it difficult to attract new users
             </p>
           </div>
           <div class="problem-card">
             <div class="problem-icon">
-              <img src="../assets/media/jumbocode/missing.svg" alt="Missing icon"/>
+              <img src="../assets/media/icons/icon-purchase.svg" alt="Problem icon"/>
             </div>
-            <h4 class="problem-title">Slow and difficult negotiation process</h4>
+            <h4 class="problem-title">Less than 1% of users made a purchase</h4>
             <p class="problem-description">
-              Confusing paperwork left only 9.7% of buyers confident they got the best deal
+              A cluttered site map without trust signals left shoppers unsure about purchasing
             </p>
           </div>
           <div class="problem-card">
             <div class="problem-icon">
-              <img src="../assets/media/jumbocode/lack.svg" alt="Lack icon"/>
+              <img src="../assets/media/jumbocode/unclear.svg" alt="Problem icon"/>
             </div>
-            <h4 class="problem-title">Outdated tools with no customization</h4>
+            <h4 class="problem-title">No clear value proposition</h4>
             <p class="problem-description">
-              Generic calculators and undetailed listings failed to show true out-the-door cost
+              Users couldn’t tell why they should buy or what made the brand unique
             </p>
           </div>
         </div>
@@ -193,98 +216,62 @@
     </section>
 
     <!-- Problem Showcase Section -->
-    <section class="problem-showcase-section">
+    <section class="problem-showcase-section secion-meduim">
       <div class="container">
         <div class="showcase-grid">
           <div class="showcase-item">
             <figure class="showcase-image">
-              <img src="../assets/media/cargurus/buyers-order1.png" alt="Car buyers order process 1" class="showcase-img img-block"/>
-              <figcaption class="image-caption">Buyers Order A</figcaption>
+              <img src="../assets/media/bodegabay/bbl-problem-1.webp" alt="Problem showcase 1" class="bbl-problem-image"/>
             </figure>
-            <div class="showcase-description">
-              <div class="description-card">
-                <div class="description-icon">
-                  <img src="../assets/media/jumbocode/thumbsdown.svg" alt="Thumbs down icon"/>
-                </div>
-                <p class="description-text">
-                  Multiple handwritten payment options made it unclear which cost was final
-                </p>
-              </div>
-              <div class="description-card">
-                <div class="description-icon">
-                  <img src="../assets/media/jumbocode/thumbsdown.svg" alt="Thumbs down icon"/>
-                </div>
-                <p class="description-text">
-                  Key numbers like trade-in, cash down, and price were scattered across different boxes
-                </p>
-              </div>
-            </div>
           </div>
           <div class="showcase-item">
             <figure class="showcase-image">
-              <img src="../assets/media/cargurus/buyers-order2.png" alt="Car buyers order process 2" class="showcase-img img-block"/>
-              <figcaption class="image-caption">Buyers Order B</figcaption>
+              <img src="../assets/media/bodegabay/bbl-problem-2.webp" alt="Problem showcase 2" class="bbl-problem-image"/>
             </figure>
-            <div class="showcase-description">
-              <div class="description-card">
-                <div class="description-icon">
-                  <img src="../assets/media/jumbocode/thumbsdown.svg" alt="Thumbs down icon"/>
-                </div>
-                <p class="description-text">
-                  Dense text and itemized fees overwhelmed buyers with too many numbers
-                </p>
-              </div>
-              <div class="description-card">
-                <div class="description-icon">
-                  <img src="../assets/media/jumbocode/thumbsdown.svg" alt="Thumbs down icon"/>
-                </div>
-                <p class="description-text">
-                  Total sale price was buried, making it hard to find the real out-the-door cost
-                </p>
-              </div>
-            </div>
           </div>
         </div>
+        <figcaption class="image-caption image-caption-full">The old shop and about pages weren’t professional</figcaption>
       </div>
     </section>
 
     <!-- Goal Section -->
-    <section id="goal" class="goal-section">
+    <section id="goal" class="goal-section section-large">
       <div class="container">
-        <h2 class="section-title">Goal</h2>
+        <h2 class="section-title">GOAL</h2>
+        <h3 class="process-subtitle">Create a more inviting shopping experience</h3>
         <p class="section-text">
-          How might we empower buyers with clear financing information and motivate them to use the CarGurus app at dealerships, while still supporting dealer relationships?
-        </p>
+          How might we help shoppers better understand the brand and convince them to purchase lavender products?</p>
       </div>
     </section>
 
     <!-- 3 Goals Section -->
-    <section class="goals-section">
+    <section class="goals-section secion-meduim">
       <div class="container">
         <div class="goals-grid">
           <div class="goal-card">
             <div class="goal-number">1</div>
-            <h4 class="goal-title">Provide transparent cost estimates</h4>
+            <h4 class="goal-title">Attract more users to the platform</h4>
           </div>
           <div class="goal-card">
             <div class="goal-number">2</div>
-            <h4 class="goal-title">Simplify financing steps and paperwork</h4>
+            <h4 class="goal-title">Increase shopper confidence and conversions</h4>
           </div>
           <div class="goal-card">
             <div class="goal-number">3</div>
-            <h4 class="goal-title">Build and maintain trust with buyers & dealers</h4>
+            <h4 class="goal-title">Communicate a clear, compelling value proposition</h4>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Solution Section -->
-    <section id="solution" class="solution-section">
+    <section id="solution" class="solution-section section-large">
       <div class="container">
-        <h2 class="section-title">Solution</h2>
+        <h2 class="section-title">SOLUTION</h2>
+        <h3 class="process-subtitle">I designed and built a new site to effectively guide shoppers</h3>
         <p class="section-text">
-          After exploring 9 different concepts, we built a Finance Calculator prototype that gives buyers a clear breakdown of all costs, boosting confidence during onsite negotiations. I led the design direction through several iterations in Figma and developed the final prototype with Lovable.
-        </br> </br>Prototype available<a href="mailto:w0skinner@gmail.com" target="_blank" class="process-link"> <span class="process-link-text">upon request</span></a>
+          The new platform gives shoppers a clearer understanding of the brand, highlights key products, and creates a more natural path from browsing to purchasing.<br><br>
+          Check out the <a href="https://bodegabaylavender.com" target="_blank" class="process-link"> <span class="process-link-text">site here!</span></a>
         </p>
       </div>
     </section>
@@ -293,67 +280,80 @@
     <section class="solution-showcase-section">
       <div class="container">
         <div class="solution-card">
-          <h3 class="solution-title">01 - Finance Customization</h3>
-          <div class="solution-content">
-            <h4 class="solution-subtitle">Select and compare financing options</h4>
-            <p class="solution-description">A clear entry point where buyers choose dealer financing, outside loan, or cash, giving them control over how to structure their deal and start estimating with confidence.</p>
+          <div class="solution-title-wrapper">
+            <h3 class="solution-title">01 - Homepage</h3>
+            <div class="summary-status">
+              <a href="https://bodegabaylavender.com/" target="_blank" class="visit-site-link">Visit Page<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="visit-site-icon"><path d="M2.56819 0.859325C2.56819 0.859325 7.61424 0.464613 8.32486 1.17519C9.03541 1.88576 8.64064 6.93182 8.64064 6.93182M8.02275 1.47727L0.75 8.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
           </div>
-          <div class="solution-image-grid">
-            <img src="../assets/media/cargurus/solution-1.png" alt="Finance customization screenshot 1" class="solution-img"/>
-            <img src="../assets/media/cargurus/solution-2.png" alt="Finance customization screenshot 2" class="solution-img"/>
-            <img src="../assets/media/cargurus/solution-3.png" alt="Finance customization screenshot 3" class="solution-img"/>
+          <div class="solution-content">
+            <h4 class="solution-subtitle">Introducing the brand and guiding shoppers to products</h4>
+            <p class="solution-description">The new homepage builds trust through simple storytelling and directs visitors to best sellers and product categories without overwhelming them</p>
+          </div>
+          <div class="solution-image">
+            <video class="solution-video bbl-video" loop muted playsinline loading="lazy">
+              <source src="../assets/media/bodegabay/home.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="solution-showcase-section" style="padding-top: 64px;">
+    <section class="solution-showcase-section" style="margin-top: 64px;">
       <div class="container">
         <div class="solution-card">
-          <h3 class="solution-title">02 - Cost Breakdown</h3>
-          <div class="solution-content">
-            <h4 class="solution-subtitle">View all hidden fees and calculations</h4>
-            <p class="solution-description">A receipt-style breakdown of taxes, fees, and dealer add-ons that replaces scattered paperwork with one transparent view, reducing confusion and hidden cost stress.</p>
+          <div class="solution-title-wrapper">
+            <h3 class="solution-title">02 - Shop Page</h3>
+            <div class="summary-status">
+              <a href="https://bodegabaylavender.com/collections/best-sellers-1" target="_blank" class="visit-site-link">Visit Page<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="visit-site-icon"><path d="M2.56819 0.859325C2.56819 0.859325 7.61424 0.464613 8.32486 1.17519C9.03541 1.88576 8.64064 6.93182 8.64064 6.93182M8.02275 1.47727L0.75 8.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
           </div>
-          <div class="solution-image-grid">
-            <img src="../assets/media/cargurus/solution-1.png" alt="Cost breakdown screenshot 1" class="solution-img"/>
-            <img src="../assets/media/cargurus/solution-2.png" alt="Cost breakdown screenshot 2" class="solution-img"/>
-            <img src="../assets/media/cargurus/solution-3.png" alt="Cost breakdown screenshot 3" class="solution-img"/>
+          <div class="solution-content">
+            <h4 class="solution-subtitle">Organizing products by what shoppers care about</h4>
+            <p class="solution-description">Since the products don't differ much in price and no review system existed yet, a category first layout was the most intuitive way for shoppers to browse.  </p>
+          </div>
+          <div class="solution-image">
+            <video class="solution-video bbl-video" loop muted playsinline loading="lazy">
+              <source src="../assets/media/bodegabay/shop.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="solution-showcase-section" style="padding-top: 64px;">
+    <section class="solution-showcase-section" style="margin-top: 64px;">
       <div class="container">
         <div class="solution-card">
-          <h3 class="solution-title">03 - Estimate Summary</h3>
-          <div class="solution-content">
-            <h4 class="solution-subtitle">Prepare for dealer negotiations confidently</h4>
-            <p class="solution-description">A summarized cost and monthly payment range that buyers can save or share, helping them enter negotiations informed and reducing decision fatigue at the dealership.</p>
+          <div class="solution-title-wrapper">
+            <h3 class="solution-title">03 - Stay With Us</h3>
+            <div class="summary-status">
+              <a href="https://bodegabaylavender.com/pages/stay-with-us" target="_blank" class="visit-site-link">Visit Page<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="visit-site-icon"><path d="M2.56819 0.859325C2.56819 0.859325 7.61424 0.464613 8.32486 1.17519C9.03541 1.88576 8.64064 6.93182 8.64064 6.93182M8.02275 1.47727L0.75 8.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
           </div>
-          <div class="solution-image-grid">
-            <img src="../assets/media/cargurus/solution-1.png" alt="Estimate summary screenshot 1" class="solution-img"/>
-            <img src="../assets/media/cargurus/solution-2.png" alt="Estimate summary screenshot 2" class="solution-img"/>
-            <img src="../assets/media/cargurus/solution-3.png" alt="Estimate summary screenshot 3" class="solution-img"/>
+          <div class="solution-content">
+            <h4 class="solution-subtitle">Presenting the lavender ranch as a place worth visiting            </h4>
+            <p class="solution-description">This new page highlights the ranch experience with clear details and strong guest reviews that encourage visitors to book a stay.            </p>
+          </div>
+          <div class="solution-image">
+            <video class="solution-video bbl-video" loop muted playsinline loading="lazy">
+              <source src="../assets/media/bodegabay/stay with us.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Takeaways Section -->
-    <section id="takeaways" class="takeaways-section">
+    <!-- Process Section -->
+    <section id="process" class="process-section section-large">
       <div class="container">
-        <h2 class="section-title">Takeaways</h2>
-        <p class="section-text">
-          I learned how far AI tools can be pushed and where they break. Using Lovable to build from just prompting showed me the importance of context in guiding outputs, and that the final 10% of polish requires the most effort.
-          <br><br>Future iterations could expand features and strengthen trust. If I had more time, I would manually refine the last 10% of the design, build out leasing flows, and collaborate with dealers on incentives that preserve trust. </p>
+        <h2 class="section-title">PROCESS</h2>
+        <div class="process-content">
+          <div class="process-header">
+            <h3 class="process-subtitle">Coming soon</h3>
+          </div>
+        </div>
       </div>
     </section>
-  </main>
-  </div>
-  </template><!-- END TEMP HIDE Bodega Bay -->
-  
 
   <footer class="site-footer">
     <div class="container footer-inner">

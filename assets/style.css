@@ -94,25 +94,34 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 @media (max-width: 450px) { .site-footer {  padding: 144px 0 16px;   }}
 
 /* —— About page —— */
-.about-page h3 { font-size: var(--type-size-body); font-weight: 500; line-height: 24px; color: var(--color-text-primary); }
-.about-page p { color: var(--color-text-secondary); font-weight: 300; font-size: var(--type-size-meta); line-height: 1.5; margin-top: 4px;}
+.about-page h3 { font-size: 20px; font-weight: 500; line-height: 24px; color: var(--color-text-primary); }
+.about-page p { color: var(--color-text-secondary); font-weight: 300; font-size: var(--type-size-body); line-height: 1.5;}
 
-.about-hero { padding: var(--spacing-large) 0 16px; }
-.about-hero-inner { display: flex; align-items: center; gap: 16px; }
-.about-avatar { width: 50px; height: 50px; border-radius: 200px; object-fit: cover; display: block; }
+.about-hero { padding: var(--spacing-large) 0 12px; }
+.about-hero-inner { display: flex; flex-direction: column; gap: 24px; }
+.about-avatar { 
+  width: 80px; 
+  height: 80px; 
+  border-radius: 100px; 
+  object-fit: cover; 
+  display: block;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  transform-origin: center;
+}
+.about-avatar:hover {
+  transform: scale(1.0625); /* 85/80 = 1.0625 */
+  box-shadow: var(--shadow-light);
+}
 .about-greeting { font-size: var(--type-size-title); line-height: 32px; font-weight: 600; max-width: 600px; }
 
-.about-badges { padding: 0px 0 0px; }
-.about-badges-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
-
-.about-summary { padding: 24px 0 0; }
+.about-container { display: flex; flex-direction: column; gap: 16px; }
 .about-summary .about-summary-text { max-width: 600px; }
 
 .about-skills { padding: var(--spacing-section) 0 var(--spacing-section); }
 .about-skills-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
 .about-skill-card { display: flex; flex-direction: column; gap: 0px; padding-top: 24px; }
-.about-skill-card h4 { font-size: var(--type-size-meta); font-weight: 400; color: var(--color-text-primary); }
-.about-skill-card p { font-size: var(--type-size-meta); font-weight: 300; }
+.about-skill-card h4 { font-size: var(--type-size-body); font-weight: 400; color: var(--color-text-primary); }
+.about-skill-card p { font-size: var(--type-size-body); font-weight: 300; }
 .about-skill-icon { width: 28px; height: 28px; display: block; margin-bottom: 16px; }
 
 .about-experience { padding: 0 0 var(--spacing-section); }
@@ -141,8 +150,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 .about-exp-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-weight: 300;}
 .about-exp-left { display: flex; align-items: center; gap: 8px; }
 .about-exp-logo { width: 17px; height: 17px; border-radius: 4px; object-fit: contain; display: block; }
-.about-exp-title { display: inline-flex; gap: 4px; font-size: var(--type-size-meta); line-height: 150%; font-weight: 400; }
-.more-work-title { margin-bottom: 8px; font-size: var(--type-size-body); font-weight: 400; }
+.about-exp-title { display: inline; font-size: var(--type-size-body); line-height: 150%; font-weight: 500; }
 /* Ensure proper font weights for about experience titles */
 .about-exp-title strong {
   font-weight: 400;
@@ -150,36 +158,22 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 .about-exp-title span {
   font-weight: 300;
 }
-.more-work-title strong {
-  font-weight: 400;
-}
-.about-exp-year { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 300; }
+.about-exp-year { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 200; }
 .about-exp-desc { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 300; line-height: 130%; }
-/* More Work descriptions use body size without affecting About page */
-.more-work-desc { font-size: var(--type-size-body); }
 
 .about-interests { padding: 0 0 var(--spacing-section); }
 .about-interests-inner { display: flex; gap: 24px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; }
-.about-interests-text { display: flex; flex-direction: column; max-width: 300px;}
-.about-interests-text .about-interests-sub { font-size: var(--type-size-meta); font-weight: 400; color: var(--color-text-primary); margin-top: 24px; margin-bottom: 0px; }
+.about-interests-text { display: flex; flex-direction: column; max-width: 360px;}
+.about-interests-text .about-interests-sub { font-size: var(--type-size-body); font-weight: 400; color: var(--color-text-primary); margin-top: 24px; margin-bottom: 8px; }
 .about-interests-media { width: 100%; max-width: 450px; height: auto; max-height: 220px; border-radius: 8px; display: block; flex-shrink: 1; }
 
 
 @media (max-width: 480px) {
   .about-exp-title { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 0px;
-  }
-  .slash {
-    display: none;
+    display: inline;
   }
   .about-exp-year {
     display: none;
-  }
-  .about-exp-logo {
-    width: 25px;
-    height: 25px;
   }
   .about-exp-left {
     gap: 8px;
@@ -350,7 +344,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 
 /* 6. Hero */
 .hero {
-  padding: var(--spacing-large) 0 144px;
+  padding: var(--spacing-large) 0 120px;
   background: var(--color-bg);
 }
 .hero .container {
@@ -468,6 +462,15 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   color: #000; 
 }
 
+.tag-pill {
+  border: 1px solid #CCCCCC;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: var(--type-size-meta);
+  font-weight: 300;
+  color: #000;
+  background-color: #F2F2F2;
+}
 
 
 /* 8. Work cards + animation */
@@ -496,23 +499,18 @@ img.work-logo {
 
 /* Case study specific logo adjustments */
 .work-logo.jumbocode {
-  max-width: 20px;
-  max-height: 20px;
-}
-
-.work-logo.cargurus {
   max-width: 18px;
   max-height: 18px;
 }
 
-.work-logo.realityai {
-  max-width: 22px;
-  max-height: 22px;
+.work-logo.cargurus {
+  max-width: 24px;
+  max-height: 18px;
 }
 
-.work-logo.googlenest {
-  max-width: 19px;
-  max-height: 19px;
+.work-logo.bodegabay {
+  max-width: 18px;
+  max-height: 18px;
 }
 
 
@@ -526,11 +524,11 @@ img.work-logo {
 
 /* Case study specific colors */
 .work-title-h3.jumbocode {
-  color: #2DB48F; /* JumboCode green */
+  color: #28A07E; /* JumboCode green */
 }
 
 .work-title-h3.cargurus {
-  color: #55A0CE; /* CarGurus blue */
+  color: #0079AF; /* CarGurus blue */
 }
 
 .work-title-h3.realityai {
@@ -546,34 +544,13 @@ img.work-logo {
   color: #6149A2;
 }
 
-.present-label {
-  color: var(--color-text-secondary);
-  font-size: var(--type-size-body);
-  font-weight: 200;
-}
 
 .work-description {
   color: #000;
   font-size: var(--type-size-heading);
-  margin-top: 6px;
+  margin-top: 4px;
   font-weight: 400;
-}
-
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.tag-pill {
-  border: 0.75px solid #CCCCCC;
-  border-radius: 10px;
-  padding: 5px 10px;
-  font-size: var(--type-size-meta);
-  font-weight: 200;
-  color: #000;
-  background-color: #F2F2F2;
+  line-height: 1.5;
 }
 
 /* enhanced preview + hover animation */
@@ -592,45 +569,36 @@ img.work-logo {
   aspect-ratio: 900 / 472;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 /* Case study specific preview styling */
 .work-preview.jumbocode {
-  border-color: #32C89E;
-  background: #81DBC2;
-  padding: 5.333% 10.666% 0 10.666%;
-  box-sizing: border-box;
-}
-
-/* Bottom anchor for JumboCode preview image when needed */
-.work-preview.jumbocode .jc-cover {
-  object-position: center bottom;
+  border-color: #28A07E;
+  background: #5CB69C;
 }
 
 .work-preview.jumbocode:hover {
-  background: #2CAE8B;
+  background: #28A07E;
   box-shadow: var(--shadow-medium);
 }
 
 .work-preview.cargurus {
-  border-color: #55A0CE;
-  background: #55A0CE;
+  border-color: #0578BB;
+  background: #4298CA;
   padding: 5.333% 5.333% 0 5.333%;
   box-sizing: border-box;
 }
 
 .work-preview.cargurus:hover {
-  background: #0F71AD;
+  background: #0578BB;
   box-shadow: var(--shadow-medium);
 }
-
 
 /* Bodega Bay Lavender card */
 .work-preview.bodegabay {
   border-color: #6149A2;
-  background: #7D70B0;
-  padding: 5.333% 0 0 0; /* 48px top at 900px; sides 0 */
-  box-sizing: border-box;
+  background: #8775B7;
 }
 
 .work-preview.bodegabay:hover {
@@ -638,13 +606,31 @@ img.work-logo {
   box-shadow: var(--shadow-medium);
 }
 
-/* Bottom anchor for Bodega Bay image */
-.work-preview.bodegabay .bbl-cover {
-  object-position: center bottom;
+/* Thumbnail image - right and bottom aligned, max-width 788px, aspect ratio 788:424 */
+.thumbnail-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 788px;
+  width: min(788px, 100%);
+  height: auto;
+  aspect-ratio: 788 / 424;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+  transition: transform 0.35s ease;
+}
+
+/* Responsive scaling - maintain bottom-right alignment while shrinking */
+@media (max-width: 900px) {
+  .thumbnail-image {
+    max-width: min(788px, calc(100vw * 0.876));
+    /* 788/900 = 0.876, maintain proportion of container */
+  }
 }
 
 /* real images scale by width, retain aspect ratio */
-.work-preview img {
+.work-preview img:not(.thumbnail-image) {
   display: block;
   width: 100%;
   height: 100%;
@@ -654,7 +640,6 @@ img.work-logo {
 }
 
 /* Safari-safe cover for specific cards without changing container */
-.work-preview.jumbocode img,
 .work-preview.cargurus img {
   /* Let intrinsic ratio drive height calculation in Safari */
   height: auto;

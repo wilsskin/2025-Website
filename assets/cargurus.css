@@ -4,7 +4,7 @@
 
 /* CarGurus specific variables */
 :root {
-  --cargurus-primary: #55A0CE;
+  --cargurus-primary: #0079AF;
   --cargurus-secondary: #046096;
   --cargurus-text-dark: #000000;
   --cargurus-text-light: #727272;
@@ -19,6 +19,12 @@
   background: var(--cargurus-bg-light);
 }
 
+/* Case study hero - darker background, no border */
+.hero-image-container.case-study-hero-cg {
+  background: #0578BB;
+  border: none;
+}
+
 /* Override problem icon sizing for CarGurus */
 .problem-icon {
   width: 25px;
@@ -29,11 +35,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-/* Product showcase section styling */
-.product-showcase-section {
-  padding-top: 80px;
 }
 
 /* Old vs New Calculator comparison */
@@ -127,10 +128,10 @@
 
 /* Impact wrapper background and padding */
 .impact-frame {
-  background: #DCECF3;
+  background: rgba(0, 121, 175, 0.1);
   border-radius: 16px;
   padding: 32px clamp(16px, 8vw, 48px);
-  border: 1px solid #00A1DD;
+  border: 1px solid #0079AF;
 }
 
 /* Spaced impact container with auto-width cards */
@@ -166,7 +167,7 @@
 
 .image-caption {
   font-size: 14px;
-  color: #000000;
+  color: #727272;
   margin-top: 8px;
   text-align: left;
   font-weight: 200;
@@ -178,33 +179,56 @@
   margin-top: 8px;
 }
 
+/* Override JumboCode green styles with CarGurus blue for links and interactive elements */
 .visit-site-link {
-  color: #107BBC;
+  color: #0079AF;
 }
 
 .visit-site-link:hover {
-  color: #509DCB;
+  color: #005A7F;
+}
+
+.visit-site-icon {
+  color: #0079AF;
+}
+
+.summary-status:hover .visit-site-link {
+  color: #005A7F;
+}
+
+.summary-status:hover .visit-site-icon {
+  color: #005A7F;
 }
 
 .process-link-text {
-  color: #107BBC;
+  color: #0079AF;
 }
 
 .process-link:hover .process-link-text {
-  color: #509DCB;
+  color: #005A7F;
 }
 
 .impact-number {
-  color: #107BBC;
+  color: #0079AF;
 }
 
 .goal-card {
-  border-color: #107BBC;
+  border-color: #0079AF;
 }
 
 .goal-number {
-  border-color: #107BBC;
-  color: #107BBC;
+  border-color: #0079AF;
+  color: #0079AF;
+}
+
+/* Override impact pills for CarGurus */
+.impact-pill {
+  background: rgba(0, 121, 175, 0.15);
+  border: 1px solid rgba(0, 121, 175, 0.5);
+}
+
+.impact-pill-icon {
+  color: #0079AF;
 }
 
 .description-card.positive {
@@ -395,7 +419,6 @@
 /* Remove bottom padding from solution containers */
 .solution-card {
   padding-bottom: 0;
-  max-height: 615px;
   overflow: hidden;
 }
 
@@ -467,7 +490,7 @@
 .research-quote {
   background: #EBEBEB;
   border-radius: 16px;
-  border: 1px solid #107BBC;
+  border: 1px solid #0079AF;
   /* Responsive padding with clamp */
   padding: clamp(16px, 4vw, 32px) clamp(24px, 6vw, 48px);
   /* left-aligned within the container */
@@ -476,7 +499,7 @@
 }
 
 .research-quote .quote-text {
-  color: #107BBC;
+  color: #0079AF;
   font-weight: 400;
   font-size: var(--type-size-heading);
   line-height: 1.5;
@@ -512,7 +535,7 @@
 .problem-section,
 .goal-section,
 .solution-section {
-  padding-top: var(--spacing-casestudy);
+  padding-top: var(--spacing-section);
 }
 
 /* Competitive comparison row */
@@ -583,7 +606,7 @@
 }
 
 /* Accent color span for selected titles */
-.comp-accent { color: #107BBC; }
+.comp-accent { color: #0079AF; }
 
 @media (max-width: 948px) {
   .comp-row {
