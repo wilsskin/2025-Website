@@ -490,30 +490,29 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 /* Work logo images */
 img.work-logo {
   display: block;
-  max-width: 20px;
-  max-height: 20px;
   width: auto;
   height: auto;
-  min-width: 18px;
-  min-height: 18px;
   background: transparent;
 }
 
 /* Case study specific logo adjustments */
+/* JumboCode: 56x63, so height:18px means width: ~16px (but max-width: 18px allows it) */
 .work-logo.jumbocode {
   max-width: 18px;
   max-height: 18px;
-  width: 18px;
   height: 18px;
+  width: auto;
 }
 
+/* CarGurus: 84x42 (2:1 ratio), so width: 24px means height: 12px */
 .work-logo.cargurus {
   max-width: 24px;
   max-height: 18px;
   width: 24px;
-  height: 18px;
+  height: auto;
 }
 
+/* Bodega Bay: 48x48 (square) */
 .work-logo.bodegabay {
   max-width: 18px;
   max-height: 18px;
