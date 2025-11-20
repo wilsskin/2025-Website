@@ -494,6 +494,8 @@ img.work-logo {
   max-height: 20px;
   width: auto;
   height: auto;
+  min-width: 18px;
+  min-height: 18px;
   background: transparent;
 }
 
@@ -501,16 +503,22 @@ img.work-logo {
 .work-logo.jumbocode {
   max-width: 18px;
   max-height: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 .work-logo.cargurus {
   max-width: 24px;
   max-height: 18px;
+  width: 24px;
+  height: 18px;
 }
 
 .work-logo.bodegabay {
   max-width: 18px;
   max-height: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 
