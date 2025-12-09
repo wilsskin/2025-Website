@@ -593,7 +593,7 @@ img.work-logo {
 .work-preview.cargurus {
   border-color: #0578BB;
   background: #4298CA;
-  padding: 5.333% 5.333% 0 5.333%;
+  padding: 3.555% 3.555% 0 3.555%;
   box-sizing: border-box;
 }
 
@@ -615,25 +615,11 @@ img.work-logo {
 
 /* Thumbnail image - right and bottom aligned, max-width 788px, aspect ratio 788:424 */
 .thumbnail-image {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  max-width: 788px;
-  width: min(788px, 100%);
-  height: auto;
-  aspect-ratio: 788 / 424;
+  padding: 0 3.555% 0 3.555%;
   object-fit: contain;
   display: block;
   background: transparent;
   transition: transform 0.35s ease;
-}
-
-/* Responsive scaling - maintain bottom-right alignment while shrinking */
-@media (max-width: 900px) {
-  .thumbnail-image {
-    max-width: min(788px, calc(100vw * 0.876));
-    /* 788/900 = 0.876, maintain proportion of container */
-  }
 }
 
 /* real images scale by width, retain aspect ratio */
@@ -671,10 +657,7 @@ img.work-logo {
   transition: transform 0.3s ease;
 }
 
-.work-preview:hover .work-preview-placeholder,
-.work-preview:hover img {
-  transform: scale(1.02);
-}
+
 
 /* See project link matches sidebar nav styling */
 .see-project-link {
