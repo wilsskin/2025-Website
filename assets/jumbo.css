@@ -52,7 +52,7 @@
   cursor: default;
   max-width: 900px;
   width: 100%;
-  aspect-ratio: 900 / 472;
+  aspect-ratio: 900 / 475;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -61,7 +61,7 @@
 /* Case study hero containers - darker background, no border */
 .hero-image-container.case-study-hero {
   border: none;
-  background: #28A07E; /* JumboCode hover color */
+  background: #8ECAB9; /* JumboCode hover color */
 }
 
 .hero-image {
