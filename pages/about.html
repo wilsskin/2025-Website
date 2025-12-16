@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wilson Skinner - About</title>
-  <link rel="icon" type="image/png" href="../assets/media/favicon.png">
-  <link rel="preload" as="image" href="../assets/media/about/about-avatar.png">
+  <link rel="icon" type="image/png" href="../assets/media/favicon-light.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="../assets/media/favicon-dark.png" media="(prefers-color-scheme: dark)">
+  <link rel="preload" as="image" href="../assets/media/about/profile.png">
   <link rel="stylesheet" href="../assets/style.css">
   <link 
     href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" 
@@ -29,7 +30,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo" aria-label="Home">
-        <img src="../assets/media/logo.png" alt="Wilson Skinner logo"/>
+        <img src="../assets/media/logo.png" alt="Wilson Skinner logo" width="32" height="32" loading="eager" decoding="async" />
       </a>
 
       <nav class="site-nav">
@@ -41,7 +42,7 @@
       </nav>
 
       <button class="hamburger" aria-label="Menu" onclick="toggleMobileMenu()">
-        <img src="../assets/media/hamburger.svg" alt="Menu icon"/>
+        <img src="../assets/media/hamburger.svg" alt="Menu icon" width="25" height="25" />
       </button>
     </div>
   </header>
@@ -49,7 +50,7 @@
   <div class="mobile-menu-overlay" id="mobileMenuOverlay">
     <div class="mobile-menu-content">
       <button class="mobile-menu-close" onclick="toggleMobileMenu()" aria-label="Close menu">
-        <img src="../assets/media/cross.svg" alt="Close menu icon"/>
+        <img src="../assets/media/cross.svg" alt="Close menu icon" width="25" height="25" />
       </button>
       <nav>
         <ul class="mobile-menu-nav">
@@ -64,7 +65,7 @@
   <main class="about-page">
     <section class="about-hero">
       <div class="container about-hero-inner">
-        <img class="about-avatar" src="../assets/media/about/profile.png" alt="Portrait of Wilson Skinner" width="80" height="80" loading="eager" />
+        <img class="about-avatar" src="../assets/media/about/profile.png" alt="Portrait of Wilson Skinner" width="96" height="96" loading="eager" decoding="async" />
         <h1 class="about-greeting">Hey, I’m Wilson!</h1>
       </div>
     </section>
@@ -84,18 +85,18 @@
         <h3>Skills</h3>
         <div class="about-skills-grid">
           <article class="about-skill-card">
-            <img class="about-skill-icon" src="../assets/media/about/icon-rapid.svg" alt="Rapid prototyping icon" />
-            <h4>Rapid Prototyping</h4>
-            <p>Designed in Figma for 4+ years and experienced with Lovable & Cursor</p>
+            <img class="about-skill-icon" src="../assets/media/about/icon-interaction.svg" alt="Product management icon" width="28" height="28" />
+            <h4>Interaction Design</h4>
+            <p>Improved UX for 3 digital products used by thousands of users</p>
           </article>
         </article>
         <article class="about-skill-card">
-          <img class="about-skill-icon" src="../assets/media/about/icon-interaction.svg" alt="Product management icon" />
-          <h4>Interaction Design</h4>
-          <p>Improved UX for 3 digital products used by thousands of users</p>
+          <img class="about-skill-icon" src="../assets/media/about/icon-rapid.svg" alt="Rapid prototyping icon" width="28" height="28" />
+          <h4>Rapid Prototyping</h4>
+          <p>Designed in Figma for 4+ years and experienced with Lovable & Cursor</p>
         </article>
           <article class="about-skill-card">
-            <img class="about-skill-icon" src="../assets/media/about/icon-front.svg" alt="Front-end development icon" />
+            <img class="about-skill-icon" src="../assets/media/about/icon-front.svg" alt="Front-end development icon" width="28" height="28" />
             <h4>Front-End Development</h4>
             <p>Built 6 web apps using HTML/CSS and JS (including this one!)</p>
         </div>
@@ -185,10 +186,24 @@
       <div class="container about-interests-inner">
         <div class="about-interests-text">
           <h3>Interests</h3>
-          <div class="about-interests-sub">Outside of design, I love the outdoors</div>
-          <p>I enjoy skiing fresh powder, camping under the stars, and backpacking national parks.</p>
+          <div class="about-interests-sub">Outside of work, I love the outdoors
+            <p class="about-interests-text-body" style="padding-top: 8px;">I enjoy backpacking national parks, skiing powder, and sleeping in tents</p>
+          </div>
+          <div class="about-interests-photos">
+            <div class="about-interests-photo">
+              <img src="../assets/media/about/image_1.webp" alt="Skiing in fresh powder" width="768" height="768" loading="lazy" decoding="async" />
+              <div class="about-interests-caption">I've climbed the 46 tallest peaks in the Adirondack Mountains</div>
+            </div>
+            <div class="about-interests-photo">
+              <img src="../assets/media/about/image_2.webp" alt="Camping under the stars" width="768" height="768" loading="lazy" decoding="async" />
+              <div class="about-interests-caption">I grew up skiing and coached kids ages 5-10 in high school</div>
+            </div>
+            <div class="about-interests-photo">
+              <img src="../assets/media/about/image_3.webp" alt="Backpacking in a national park" width="768" height="768" loading="lazy" decoding="async" />
+              <div class="about-interests-caption">I've planned 5 western US roadtrips and visited 25+ national parks</div>
+            </div>
+          </div>
         </div>
-        <img class="about-interests-media" src="../assets/media/about/about-interests.png" alt="Wilson standing by a lake in the mountains" />
       </div>
     </section>
 
@@ -197,16 +212,16 @@
         <div class="footer-left">© 2025 Wilson Skinner</div>
         <div class="footer-right">
           <a href="mailto:w0skinner@gmail.com" class="icon-link" aria-label="Email" target="_blank">
-            <img src="../assets/media/send.svg" class="default-icon" alt="Send"/>
-            <img src="../assets/media/filled_send.svg" class="hover-icon" alt="Send filled"/>
+            <img src="../assets/media/send.svg" class="default-icon" alt="Send" width="18" height="18" />
+            <img src="../assets/media/filled_send.svg" class="hover-icon" alt="Send filled" width="18" height="18" />
           </a>
           <a href="https://github.com/wilsskin" class="icon-link" aria-label="GitHub" target="_blank">
-            <img src="../assets/media/github.svg" class="default-icon" alt="GitHub"/>
-            <img src="../assets/media/github-filled.svg" class="hover-icon" alt="GitHub filled"/>
+            <img src="../assets/media/github.svg" class="default-icon" alt="GitHub" width="18" height="18" />
+            <img src="../assets/media/github-filled.svg" class="hover-icon" alt="GitHub filled" width="18" height="18" />
           </a>
           <a href="https://www.linkedin.com/in/wilsonskinner/" class="icon-link" aria-label="LinkedIn" target="_blank">
-            <img src="../assets/media/linkedin.svg" class="default-icon" alt="LinkedIn"/>
-            <img src="../assets/media/filled_linkedin.svg" class="hover-icon" alt="LinkedIn filled"/>
+            <img src="../assets/media/linkedin.svg" class="default-icon" alt="LinkedIn" width="18" height="18" />
+            <img src="../assets/media/filled_linkedin.svg" class="hover-icon" alt="LinkedIn filled" width="18" height="18" />
           </a>
         </div>
       </div>

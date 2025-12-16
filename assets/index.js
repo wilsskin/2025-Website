@@ -65,4 +65,18 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // About interests photo captions - tap to reveal on mobile
+  if (!window.__interestsCaptionsInit) {
+    window.__interestsCaptionsInit = true;
+    document.querySelectorAll('.about-interests-photo').forEach(photo => {
+      photo.addEventListener('click', function() {
+        if (window.innerWidth <= 481) {
+          const isActive = this.classList.contains('active');
+          document.querySelectorAll('.about-interests-photo').forEach(p => p.classList.remove('active'));
+          if (!isActive) this.classList.add('active');
+        }
+      });
+    });
+  }
 });
