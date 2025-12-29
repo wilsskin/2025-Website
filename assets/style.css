@@ -28,7 +28,6 @@ body {
   --color-text-primary: #000000;
   --color-text-secondary: #727272;
   --color-border-light: #CCCCCC;
-  --color-accent: #004AAD;
   --spacing-unit: 8px;
   --side-padding: 16px;
   --radius-sm: 4px;
@@ -81,7 +80,7 @@ body {
 /* —— Shared footer —— */
 .site-footer { padding: 144px 0 12px; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; }
-.footer-left { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 300; }
+.footer-left { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 350; }
 .footer-right { display: inline-flex; gap: 24px; }
 .footer-right .icon-link { padding: 0; border: none; height: auto; }
 .footer-right .icon-link img { width: 18px; height: 18px; aspect-ratio: 1 / 1; }
@@ -95,10 +94,10 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 
 /* —— About page —— */
 .about-page h3 { font-size: 20px; font-weight: 500; line-height: 24px; color: var(--color-text-primary); }
-.about-page p { color: var(--color-text-secondary); font-weight: 300; font-size: var(--type-size-body); line-height: 1.5;}
+.about-page p { color: var(--color-text-secondary); font-weight: 350; font-size: var(--type-size-body); line-height: 1.5;}
 
 .about-hero { padding: var(--spacing-large) 0 16px; }
-.about-hero-inner { display: flex; flex-direction: column; gap: 24px; }
+.about-hero-inner { display: flex; flex-direction: column; gap: 32px; }
 .about-avatar { 
   width: 96px; 
   height: 96px; 
@@ -113,7 +112,6 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   transform: scale(1.0625); /* 85/80 = 1.0625 */
   box-shadow: var(--shadow-light);
 }
-.about-greeting { font-size: var(--type-size-title); line-height: 32px; font-weight: 600; max-width: 600px; }
 
 .about-container { display: flex; flex-direction: column; gap: 16px; }
 .about-summary .about-summary-text { max-width: 600px; }
@@ -121,8 +119,8 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 .about-skills { padding: var(--spacing-section) 0 var(--spacing-section); }
 .about-skills-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
 .about-skill-card { display: flex; flex-direction: column; gap: 4px; padding-top: 24px; }
-.about-skill-card h4 { font-size: var(--type-size-body); font-weight: 400; color: var(--color-text-primary); }
-.about-skill-card p { font-size: var(--type-size-body); font-weight: 300; }
+.about-skill-card h4 { font-size: var(--type-size-body); font-weight: 500; color: var(--color-text-primary); }
+.about-skill-card p { font-size: var(--type-size-body); font-weight: 350; }
 .about-skill-icon { width: 28px; height: 28px; aspect-ratio: 1 / 1; display: block; margin-bottom: 16px; }
 
 .about-experience { padding: 0 0 var(--spacing-section); }
@@ -148,24 +146,24 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 .about-exp-entry-link:hover .about-exp-entry::before {
   opacity: 1;
 }
-.about-exp-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-weight: 300;}
+.about-exp-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-weight: 350;}
 .about-exp-left { display: flex; align-items: center; gap: 8px; }
 .about-exp-logo { width: 17px; height: 17px; border-radius: 4px; object-fit: contain; display: block; }
 .about-exp-title { display: inline; font-size: var(--type-size-body); line-height: 150%; font-weight: 500; }
 /* Ensure proper font weights for about experience titles */
 .about-exp-title strong {
-  font-weight: 400;
+  font-weight: 500;
 }
 .about-exp-title span {
-  font-weight: 300;
+  font-weight: 350;
 }
-.about-exp-year { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 200; }
-.about-exp-desc { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 300; line-height: 130%; }
+.about-exp-year { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 350; }
+.about-exp-desc { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 350; line-height: 130%; }
 
 .about-interests { padding: 0 0 var(--spacing-section); }
 .about-interests-inner { display: flex; gap: 24px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; }
 .about-interests-text { display: flex; flex-direction: column; }
-.about-interests-text .about-interests-sub { font-size: var(--type-size-body); font-weight: 400; color: var(--color-text-primary); margin-top: 24px;  max-width: 289.33px; gap: 8px;}
+.about-interests-text .about-interests-sub { font-size: var(--type-size-body); font-weight: 500; color: var(--color-text-primary); margin-top: 24px;  max-width: 289.33px; gap: 8px;}
 
 .about-interests-photos {
   width: 100%;
@@ -208,7 +206,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   transform: translateY(6px);
   transition: opacity 0.2s ease, transform 0.2s ease;
   pointer-events: none;
-  font-weight: 300;
+  font-weight: 350;
 }
 
 .about-interests-photo:hover .about-interests-caption {
@@ -327,14 +325,14 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 /* Inactive links */
 .site-header .site-nav a:not(.active) {
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   color: var(--color-text-secondary);
 }
 
 /* Hover on non-active */
 .site-header .site-nav a:not(.active):hover {
   color: var(--color-text-primary);
-  text-shadow: 0.5px 0 0 currentColor;
+  text-shadow: 0.1px 0 0 currentColor;
   transform: scale(1.00);
 }
 
@@ -410,7 +408,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 }
 .mobile-menu-nav a {
   font-size: var(--type-size-body);
-  font-weight: 300;
+  font-weight: 350;
   color: var(--color-text-secondary);
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -419,7 +417,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 }
 .mobile-menu-nav a.active {
   color: var(--color-text-primary);
-  font-weight: 400;
+  font-weight: 500;
 }
 .mobile-menu-nav a:hover {
   color: var(--color-text-primary);
@@ -435,21 +433,28 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
+  gap: 16px;
   width: 100%;
 }
 
 
 /* Headline */
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--type-size-title);
+  font-weight: 500;
+  max-width: 600px;
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+}
+
 .hero h1 {
   position: relative;
-  width: 100%;
-  max-width: 600px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: var(--type-size-title);
   color: var(--color-text-primary);
-  line-height: 1.48;
+}
+
+h1.about {
+  line-height: 1.33; 
 }
 .hero h1 strong {
   font-weight: 600;
@@ -460,7 +465,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   width: 100%;
   max-width: 600px;
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-body);
   line-height: 24px;
   color: var(--color-text-secondary);
@@ -468,9 +473,9 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 
 /* General subtext-link hover (for use outside .subtext container) */
 .subtext-link {
-  transition: color 0.2s ease;
+  transition: color 0.2s ease out;
   text-decoration: none;
-  color: inherit;
+  color: #727272;
 
 }
 .subtext-link:hover {
@@ -483,7 +488,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   text-decoration: none;
 }
 .about-summary-text .subtext-link strong {
-  font-weight: 400;
+  font-weight: 500;
 }
 .about-summary-text .subtext-link:hover strong {
   color: #000;
@@ -494,7 +499,6 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 0 0;
 }
 
 /* Status pill */
@@ -505,7 +509,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   border-radius: 32px;
   padding: 8px 16px;
   font-size: var(--type-size-meta);
-  font-weight: 300;
+  font-weight: 350;
   color: var(--color-text-secondary);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
   position: relative;
@@ -514,7 +518,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 
 
 .status-text-wrap { position: relative; display: inline-block; line-height: 18px;}
-.status-text { font-weight: 300; line-height: 14px; }
+.status-text { font-weight: 350; line-height: 14px; }
 .status-text-link { color: inherit; text-decoration: none; }
 
 /* Icon links */
@@ -552,7 +556,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   border-radius: 8px;
   padding: 6px 12px;
   font-size: var(--type-size-meta);
-  font-weight: 300;
+  font-weight: 350;
   color: #000;
   background-color: #F2F2F2;
 }
@@ -610,7 +614,7 @@ img.work-logo {
 .work-title h3 {
   margin-left: 8px;
   font-size: var(--type-size-body);
-  font-weight: 400;
+  font-weight: 500;
   color: #727272; /* Default color */
 }
 
@@ -641,7 +645,7 @@ img.work-logo {
   color: #000;
   font-size: var(--type-size-heading);
   margin-top: 4px;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5;
 }
 
@@ -812,7 +816,7 @@ img.work-logo {
   gap: 8px;
   margin-top: 16px;
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-meta);
   color: var(--color-text-secondary);
   text-decoration: none;
@@ -828,18 +832,18 @@ img.work-logo {
   position: absolute;
   inset: 0 auto auto 0;
   visibility: hidden;
-  font-weight: 400; /* reserve width for hover weight */
+  font-weight: 500; /* reserve width for hover weight */
   white-space: nowrap;
 }
 
 .see-project-link:hover {
   color: var(--color-text-primary);
-  font-weight: 300; /* match sidebar nav hover weight */
+  font-weight: 350; /* match sidebar nav hover weight */
 }
 
 .see-project-link .arrow {
   display: inline-block;
-  font-weight: 300; /* keep arrow weight steady so it doesn't visually shift */
+  font-weight: 350; /* keep arrow weight steady so it doesn't visually shift */
   transition: transform 0.3s ease;
 }
  

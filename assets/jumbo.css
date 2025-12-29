@@ -28,12 +28,13 @@
 
 .headline {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: var(--type-size-title);
   line-height: 1.5em;
   color: var(--jumbo-text-dark);
   max-width: 600px;
   margin: 0;
+  letter-spacing: -0.025em;
 }
 
 /* Hero Image Section */
@@ -133,7 +134,7 @@
 
 .summary-text {
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-body);
   line-height: 1.5em;
   color: var(--jumbo-text-dark);
@@ -162,7 +163,7 @@
   border: 1px solid rgba(40, 160, 126, 0.5);
   border-radius: 8px;
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-meta);
   line-height: 1.5em;
   color: var(--jumbo-text-dark);
@@ -197,7 +198,7 @@
 
 .summary-meta-label {
   font-family: 'Inter', sans-serif;
-  font-weight: 200;
+  font-weight: 350;
   font-size: var(--type-size-meta);
   line-height: 1.5em;
   color: #727272;
@@ -206,7 +207,7 @@
 
 .summary-meta-value {
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-meta);
   line-height: 1.5em;
   color: var(--jumbo-text-dark);
@@ -329,7 +330,7 @@
 
 .impact-description {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: var(--type-size-body);
   line-height: 1.5em;
   color: #000000;
@@ -338,7 +339,7 @@
 
 .impact-detail {
   color: #727272;
-  font-weight: 200;
+  font-weight: 350;
 }
 /* Impact cards responsive breakpoint */
 @media (max-width: 850px) {
@@ -422,7 +423,7 @@
 
 .section-text {
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-body);
   line-height: 1.5em;
   color: #727272;
@@ -467,7 +468,7 @@
 
 .problem-title {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: var(--type-size-meta);
   line-height: 1.21em;
   color: var(--jumbo-text-dark);
@@ -476,7 +477,7 @@
 
 .problem-description {
   font-family: 'Inter', serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-meta);
   line-height: 1.5em;
   color: var(--jumbo-text-light);
@@ -558,7 +559,7 @@
 
 .description-text {
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-meta);
   line-height: 1.45em;
   color: var(--jumbo-text-dark);
@@ -611,7 +612,7 @@
 
 .goal-title {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: var(--type-size-meta);
   line-height: 1.5em;
   color: var(--jumbo-text-dark);
@@ -650,7 +651,7 @@
 
 .solution-title {
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-meta);
   line-height: 1.5em;
   letter-spacing: 0.01em;
@@ -667,7 +668,7 @@
 
 .solution-subtitle {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: var(--type-size-heading);
   line-height: 1.5em;
   color: var(--jumbo-text-dark);
@@ -676,7 +677,7 @@
 
 .solution-description {
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-body);
   line-height: 1.5em;
   color: var(--jumbo-text-light);
@@ -728,7 +729,7 @@
 
 .process-subtitle {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: var(--type-size-heading);
   line-height: 150%;
   color: var(--jumbo-text-dark);
@@ -738,7 +739,7 @@
 
 .process-tag {
   font-family: 'Inter', sans-serif;
-  font-weight: 200;
+  font-weight: 350;
   font-size: var(--type-size-meta);
   line-height: 1.6em;
   color: var(--jumbo-text-dark);
@@ -748,7 +749,7 @@
 
 .process-description {
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-body);
   line-height: 1.5em;
   color: var(--jumbo-text-light);
@@ -959,7 +960,7 @@
 
 .design-label {
   font-family: 'Proxima Nova', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-meta);
   line-height: 1em;
   color: var(--jumbo-text-dark);
@@ -1038,7 +1039,7 @@
   align-items: center;
   gap: 8px;
   font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-meta);
   color: var(--jumbo-text-light);
   text-decoration: none;
@@ -1047,7 +1048,7 @@
 
 .back-link:hover {
   color: var(--jumbo-text-dark);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .back-arrow {
@@ -1065,7 +1066,7 @@
 
 .nav-link {
   font-family: 'Inter', sans-serif;
-  font-weight: 200;
+  font-weight: 350;
   font-size: var(--type-size-meta);
   color: var(--jumbo-text-light);
   text-decoration: none;
@@ -1076,11 +1077,11 @@
 
 .nav-link:hover {
   color: var(--jumbo-text-dark);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .nav-link.active {
-  font-weight: 400;
+  font-weight: 500;
   color: var(--jumbo-text-dark);
 }
 

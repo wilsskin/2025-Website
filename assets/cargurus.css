@@ -62,7 +62,7 @@
   width: 100%;
   text-align: center;
   font-size: var(--type-size-meta);
-  font-weight: 400;
+  font-weight: 500;
   color: #000;
   margin: 0 auto;
 }
@@ -103,7 +103,7 @@
   .calc-compare-row { gap: 12px; }
   .calc-frame { max-width: 42vw; }
   .calc-frame.old { max-width: calc(42vw * 0.927); }
-  .calc-note { max-width: 220px; font-weight: 400; font-size: 12px; }
+  .calc-note { max-width: 220px; font-weight: 500; font-size: 12px; }
 }
 
 @media (max-width: 500px) {
@@ -170,7 +170,7 @@
   color: #727272;
   margin-top: 8px;
   text-align: left;
-  font-weight: 200;
+  font-weight: 350;
 }
 
 .image-caption-full {
@@ -338,7 +338,7 @@
 
 .solution-bullets li {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 350;
   color: #000000;
   line-height: 1.33;
   margin-bottom: 8px;
@@ -351,7 +351,7 @@
   position: absolute;
   left: 0;
   color: #000000;
-  font-weight: 300;
+  font-weight: 350;
 }
 
 .solution-bullets li:last-child {
@@ -399,7 +399,7 @@
 
 .solution-caption {
   font-size: var(--type-size-meta);
-  font-weight: 200;
+  font-weight: 350;
   color: #000;
   margin-top: 8px;
   text-align: left;
@@ -500,7 +500,7 @@
 
 .research-quote .quote-text {
   color: #0079AF;
-  font-weight: 400;
+  font-weight: 500;
   font-size: var(--type-size-heading);
   line-height: 1.5;
   margin: 0;
@@ -510,7 +510,7 @@
 
 .research-quote .quote-attrib {
   color: #666666;
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-meta);
   margin: 16px 0 0;
   line-height: 1.5;
@@ -563,7 +563,7 @@
 }
 
 .comp-title {
-  font-weight: 400;
+  font-weight: 500;
   font-size: var(--type-size-heading);
   line-height: 1.5;
   color: var(--cargurus-text-dark);
@@ -571,7 +571,7 @@
 }
 
 .comp-text {
-  font-weight: 300;
+  font-weight: 350;
   font-size: var(--type-size-body);
   line-height: 1.5;
   color: var(--cargurus-text-light);
@@ -598,7 +598,7 @@
 }
 
 .comp-item-desc {
-  font-weight: 400;
+  font-weight: 500;
   font-size: var(--type-size-meta);
   line-height: 1.2;
   color: #727272;
@@ -636,7 +636,7 @@
     grid-template-columns: 1fr;
   }
   .comp-item-desc { display: none; }
-  .comp-item-title { font-size: var(--type-size-meta); font-weight: 400; }
+  .comp-item-title { font-size: var(--type-size-meta); font-weight: 500; }
   .comp-accent {font-weight: 600; }
   .comp-image {
     max-width: clamp(250px, 65vw, 350px); }
