@@ -118,13 +118,13 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 
 .about-skills { padding: var(--spacing-section) 0 var(--spacing-section); }
 .about-skills-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
-.about-skill-card { display: flex; flex-direction: column; gap: 4px; padding-top: 24px; }
+.about-skill-card { display: flex; flex-direction: column; gap: 4px; padding-top: 32px; }
 .about-skill-card h4 { font-size: var(--type-size-body); font-weight: 500; color: var(--color-text-primary); }
 .about-skill-card p { font-size: var(--type-size-body); font-weight: 350; }
 .about-skill-icon { width: 28px; height: 28px; aspect-ratio: 1 / 1; display: block; margin-bottom: 16px; }
 
 .about-experience { padding: 0 0 var(--spacing-section); }
-.about-experience h3 { margin-bottom: 12px; }
+.about-experience h3 { margin-bottom: 20px; }
 .about-exp-entry-link { text-decoration: none; color: inherit; display: block; }
 .about-exp-entry { display: flex; flex-direction: column; padding: 12px 0; position: relative; cursor: pointer; }
 /* Hover halo behind content; no layout shift */
@@ -163,7 +163,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 .about-interests { padding: 0 0 var(--spacing-section); }
 .about-interests-inner { display: flex; gap: 24px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; }
 .about-interests-text { display: flex; flex-direction: column; }
-.about-interests-text .about-interests-sub { font-size: var(--type-size-body); font-weight: 500; color: var(--color-text-primary); margin-top: 24px;  max-width: 289.33px; gap: 8px;}
+.about-interests-text .about-interests-sub { font-size: var(--type-size-body); font-weight: 500; color: var(--color-text-primary); margin-top: 32px;  max-width: 289.33px; gap: 8px;}
 
 .about-interests-photos {
   width: 100%;
@@ -569,7 +569,7 @@ h1.about {
   font-size: var(--type-size-body);
   font-weight: 350;
   color: var(--color-text-secondary);
-  line-height: 1.5;
+  line-height: 1.5em;
   margin: 0;
 }
 
