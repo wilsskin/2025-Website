@@ -78,8 +78,8 @@ body {
 }
 
 /* —— Shared footer —— */
-.site-footer { padding: 144px 0 12px; }
-.footer-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+.site-footer { padding: 144px 0 24px; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; }
 .footer-left { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 350; }
 .footer-right { display: inline-flex; gap: 24px; }
 .footer-right .icon-link { padding: 0; border: none; height: auto; }
