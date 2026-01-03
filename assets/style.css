@@ -49,7 +49,7 @@ body {
   --spacing-medium: 32px;  /* 4x8 */
   --spacing-large: 64px;   /* 8x8 */
   --spacing-xlarge: 80px;  /* 10x8 */
-  --spacing-section: 120px; /* 15x8 */
+  --spacing-section: 128px; /* 15x8 */
   --spacing-casestudy: 160px; /* 20x8 - case study inter-section top padding */
 }
 
@@ -135,7 +135,8 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   bottom: 0px;
   left: -16px;
   right: -16px;
-  background: #EBEBEB;
+  background: #F0F0F0;
+  border: 1px solid #EBEBEB;
   border-radius: 8px;
   opacity: 0;
   box-shadow: 0 0 0 rgba(0,0,0,0);
@@ -585,8 +586,10 @@ h1.about {
 .process-subtitle {
   font-size: var(--type-size-heading);
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.4;
   margin: 0;
+  letter-spacing: -0.015em;
+  max-width: 600px;
 }
 
 /* enhanced preview + hover animation */

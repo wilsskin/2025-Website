@@ -25,53 +25,7 @@
 
 /* Override JumboCode green elements with Bodega Bay purple */
 .summary-status:hover .visit-site-link {
-  color: #816DB5;
-}
-
-.visit-site-icon {
   color: #6149A2;
-  transition: transform 0.3s ease, color 0.3s ease;
-  vertical-align: middle;
-}
-
-.visit-site-link {
-  color: #6149A2;
-  transition: transform 0.3s ease, color 0.3s ease;
-  vertical-align: middle;
-}
-
-.summary-status:hover .visit-site-icon {
-  transform: translate(1.5px, -1.5px);
-  color: #7964B0;
-}
-
-.impact-pill {
-  background: rgba(97, 73, 162, 0.15);
-  border: 1px solid rgba(97, 73, 162, 0.5);
-}
-
-.impact-pill-icon {
-  width: 11.31px;
-  height: 13px;
-  display: block;
-  color: #6149A2;
-  fill: none !important;
-}
-
-.impact-pill-icon path {
-  fill: none !important;
-}
-
-.impact-number {
-  color: #6149A2;
-}
-
-.process-link-text {
-  color: #6149A2;
-}
-
-.process-link:hover .process-link-text {
-  color: #7964B0;;
 }
 
 .goal-number {
@@ -81,6 +35,14 @@
 
 .goal-card {
   border-color: #6149A2;
+}
+
+.process-link-text {
+  color: #000000;
+}
+
+.process-link:hover .process-link-text {
+  color: #6149A2;
 }
 
 /* Bodega Bay comparison images - full height display */

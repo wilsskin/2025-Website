@@ -39,7 +39,8 @@
 
 /* Old vs New Calculator comparison */
 .calc-compare {
-  background: #EBEBEB;
+  background: #F0F0F0;
+  border: 1px solid #EBEBEB;
   border-radius: 16px;
   padding: 48px 45px;
 }
@@ -179,18 +180,16 @@
   margin-top: 8px;
 }
 
-/* Override JumboCode green styles with CarGurus blue for links and interactive elements */
-.visit-site-link {
-  color: #0079AF;
+/* Goals container */
+.goals-container {
+  max-width: 600px;
+  background-color: #F0F0F0;
+  border: 1px solid #EBEBEB;
+  padding: 32px;
+  border-radius: 16px;
 }
 
-.visit-site-link:hover {
-  color: #005A7F;
-}
 
-.visit-site-icon {
-  color: #0079AF;
-}
 
 .summary-status:hover .visit-site-link {
   color: #005A7F;
@@ -201,7 +200,7 @@
 }
 
 .process-link-text {
-  color: #0079AF;
+  color: #000000;
 }
 
 .process-link:hover .process-link-text {
@@ -266,7 +265,7 @@
   object-fit: cover;
   border-radius: 8px;
   display: block;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #F0F0F0;
 }
 
 /* CarGurus problem section images - different aspect ratio (870x1028) */
@@ -278,7 +277,7 @@
   object-fit: cover;
   border-radius: 8px;
   display: block;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #F0F0F0;
 }
 
 .showcase-description {
@@ -312,7 +311,8 @@
   width: 100%;
   max-width: 900px;
   padding: clamp(16px, 4vw, 40px) clamp(24px, 4vw, 48px);
-  background: #EBEBEB;
+  background: #F0F0F0;
+  border: 1px solid #EBEBEB;
   border-radius: 16px;
 }
 
@@ -488,28 +488,28 @@
 
 /* Research quote card (from Figma) */
 .research-quote {
-  background: #EBEBEB;
+  background: #F0F0F0;
   border-radius: 16px;
-  border: 1px solid #0079AF;
+  border: 1px solid #EBEBEB;
   /* Responsive padding with clamp */
-  padding: clamp(16px, 4vw, 32px) clamp(24px, 6vw, 48px);
+  padding: clamp(16px, 4vw, 32px) clamp(16px, 4vw, 32px);
   /* left-aligned within the container */
   margin-top: 32px;
-  max-width: 696px;
+  max-width: 600px;
 }
 
 .research-quote .quote-text {
-  color: #0079AF;
+  color: #727272;
   font-weight: 500;
   font-size: var(--type-size-heading);
   line-height: 1.5;
+  letter-spacing: -0.015em;
   margin: 0;
-  max-width: 600px;
   width: 100%;
 }
 
 .research-quote .quote-attrib {
-  color: #666666;
+  color: #727272;
   font-weight: 350;
   font-size: var(--type-size-meta);
   margin: 16px 0 0;
