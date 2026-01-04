@@ -1237,6 +1237,13 @@
   }
 }
 
+@media (max-width: 550px) {
+  .summary-right {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
 @media (max-width: 480px) {
   .hero-image-container {
     padding: 16px var(--spacing-small);
