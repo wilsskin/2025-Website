@@ -403,12 +403,14 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 /* Mobile nav links */
 .mobile-menu-nav {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 48px;
 }
-.mobile-menu-nav li {
-  margin-bottom: 32px;
-}
+
 .mobile-menu-nav a {
-  font-size: var(--type-size-body);
+  font-size: var(--type-size-heading);
   font-weight: 350;
   color: var(--color-text-secondary);
   text-decoration: none;
@@ -420,10 +422,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
   color: var(--color-text-primary);
   font-weight: 500;
 }
-.mobile-menu-nav a:hover {
-  color: var(--color-text-primary);
-  transform: scale(1.05);
-}
+
 
 /* 6. Hero */
 .hero {
@@ -520,7 +519,11 @@ h1.about {
 
 .status-text-wrap { position: relative; display: inline-block; line-height: 18px;}
 .status-text { font-weight: 350; line-height: 14px; }
-.status-text-link { color: inherit; text-decoration: none; }
+.status-text-link { 
+  color: inherit; 
+  text-decoration: none; 
+  transition: color .15s ease-in-out, text-shadow .15s ease-in-out;
+}
 
 /* Icon links */
 .icon-link {
@@ -549,7 +552,8 @@ h1.about {
 
 /* Bold text on hover */
 .status-pill:hover .status-text-link { 
-  color: #000; 
+  color: #000000; 
+  text-shadow: 0.1px 0 0 currentColor;
 }
 
 .tag-pill {
@@ -658,6 +662,8 @@ h1.about {
   grid-template-columns: 547fr 257fr;
   align-items: end; /* bottom align items within their cells */
   align-content: end; /* keep the entire row anchored to bottom */
+  /* Safari fix: allow grid items to size independently */
+  grid-auto-rows: min-content;
 }
 
 /* CarGurus: 3 equal columns - detect when wrapper contains thumbnail-image-3 */
@@ -688,6 +694,8 @@ h1.about {
 
 .thumbnail-image-2 {
   aspect-ratio: 257 / 475;
+  max-height: none !important;
+  height: auto !important;
 }
 
 .thumbnail-image-3 {
@@ -700,7 +708,8 @@ h1.about {
 }
 
 .thumbnail-image-3 {
-  border-radius: 24px 24px 0 0;
+  /* Scale border-radius responsively: 24px at 900px container = 2.67% */
+  border-radius: clamp(12px, 2.67cqi, 24px) clamp(12px, 2.67cqi, 24px) 0 0;
 }
 
 /* Legacy single thumbnail-image class (keep for backward compatibility) */
