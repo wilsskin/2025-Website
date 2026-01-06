@@ -42,14 +42,14 @@
   background: #F0F0F0;
   border: 1px solid #EBEBEB;
   border-radius: 16px;
-  padding: 48px 45px;
+  padding: 32px 32px;
 }
 
 .calc-compare-row {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 45px;
+  gap: 32px;
 }
 
 .calc-col {
@@ -62,13 +62,11 @@
   max-width: 270px;
   width: 100%;
   text-align: center;
-  font-size: var(--type-size-meta);
+  font-size: var(--type-size-body);
   font-weight: 500;
   color: #000;
   margin: 0 auto;
 }
-
-.calc-strong { font-weight: 600; }
 
 /* Align notes per column to match Figma: old (right), new (left) */
 .calc-compare-row .calc-col:first-child .calc-note {
@@ -82,22 +80,15 @@
 
 .calc-frame {
   width: 100%;
-  max-width: 397px; /* new: 397; old will be slightly narrower via class */
+  max-width: 508px; /* new: 508; old will be slightly narrower via class */
   height: auto;
   border-radius: 8px;
   display: block;
 }
 
-.calc-frame.old { max-width: 368px; }
+.calc-frame.old { max-width: 471px; }
 
-@media (max-width: 948px) {
-  .calc-compare { padding: 32px 24px; }
-  .calc-compare-row { gap: 24px; }
-  .calc-note { width: auto; max-width: 245px; }
-  /* Keep proportional scaling: old (368px) vs new (397px) => ~0.927 */
-  .calc-frame { max-width: 45vw; }
-  .calc-frame.old { max-width: calc(45vw * 0.927); }
-}
+
 
 @media (max-width: 600px) {
   .calc-compare { padding: 24px 16px; }
@@ -112,7 +103,7 @@
   .calc-compare-row { gap: 10px; }
   .calc-frame { max-width: 40vw; }
   .calc-frame.old { max-width: calc(40vw * 0.927); }
-  .calc-note { max-width: 200px; font-size: 12px; }
+  .calc-note { max-width: 120px; font-size: 12px; }
 }
 
 .product-showcase-image {

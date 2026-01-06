@@ -49,8 +49,9 @@
 /* Before/After images: ~1146 x 2237 (aspect ratio ~0.512) */
 .comparison-image.bbl-comparison {
   width: 100%;
-  max-width: 350px;
+  max-width: none;
   aspect-ratio: 1146 / 2237; /* Actual image aspect ratio */
+  align-self: stretch; /* Fill full column width */
 }
 
 .comparison-img.bbl-comparison-img {
