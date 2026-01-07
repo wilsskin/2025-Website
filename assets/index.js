@@ -1,6 +1,24 @@
 // main.js
 // Add any site-wide JavaScript here
 
+// First paint gate - reveal page after images load
+(function() {
+  if (document.readyState === 'complete') {
+    // Already fully loaded
+    document.documentElement.classList.add('ready');
+  } else {
+    // Wait for all resources (including images) to load
+    window.addEventListener('load', function() {
+      document.documentElement.classList.add('ready');
+    });
+    
+    // Safety timeout - show page even if some images are slow
+    setTimeout(function() {
+      document.documentElement.classList.add('ready');
+    }, 300);
+  }
+})();
+
 const RESUME_URL = 'https://drive.google.com/file/d/1qisEWYhZrLp_L30_ZaD-qxJgdMQtfmPE/view?usp=sharing';
 
 // 1) Global: hydrate resume links

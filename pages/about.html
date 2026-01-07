@@ -8,6 +8,8 @@
   <link rel="icon" type="image/png" href="../assets/media/favicon-dark.png" media="(prefers-color-scheme: dark)">
   <link rel="preload" as="image" href="../assets/media/about/profile.png">
   <link rel="stylesheet" href="../assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link 
     href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" 
     rel="stylesheet"
@@ -30,7 +32,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo" aria-label="Home">
-        <img src="../assets/media/logo.png" alt="Wilson Skinner logo" width="32" height="32" loading="eager" decoding="async" />
+        <img src="../assets/media/logo.png" alt="Wilson Skinner logo" width="32" height="32" loading="eager" decoding="sync" />
       </a>
 
       <nav class="site-nav">
@@ -65,7 +67,7 @@
   <main class="about-page">
     <section class="about-hero">
       <div class="container about-hero-inner">
-        <img class="about-avatar" src="../assets/media/about/profile.png" alt="Portrait of Wilson Skinner" width="96" height="96" loading="eager" decoding="async" />
+        <img class="about-avatar" src="../assets/media/about/profile.png" alt="Portrait of Wilson Skinner" width="96" height="96" loading="eager" decoding="sync" />
         <h1 class="about h1">Hey, I'm Wilson!</h1>
       </div>
     </section>
@@ -152,7 +154,7 @@
             </div>
             <div class="about-exp-year">2024</div>
           </div>
-          <p class="about-exp-desc">Designed an AI sales platform that automated SMS and email outreach</p>
+          <p class="about-exp-desc">Designed an AI sales platform to automate SMS and email outreach</p>
         </div>
         </a>
 
