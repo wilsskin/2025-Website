@@ -19,7 +19,7 @@
   }
 })();
 
-const RESUME_URL = 'https://drive.google.com/file/d/1qisEWYhZrLp_L30_ZaD-qxJgdMQtfmPE/view?usp=sharing';
+const RESUME_URL = 'https://drive.google.com/file/d/1NfbM-w1RAvNZbPZS0g8rHo0r04S-XuhN/view?usp=sharing';
 
 // 1) Global: hydrate resume links
 document.addEventListener('DOMContentLoaded', () => {
