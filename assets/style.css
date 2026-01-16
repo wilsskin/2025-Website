@@ -94,7 +94,7 @@ body {
 .footer-left { color: var(--color-text-secondary); font-size: var(--type-size-meta); font-weight: 350; }
 .footer-right { display: inline-flex; gap: 24px; }
 .footer-right .icon-link { padding: 0; border: none; height: auto; }
-.footer-right .icon-link img { width: 18.6px; height: 18.6px; aspect-ratio: 1 / 1; }
+.footer-right .icon-link img { width: 18px; height: 18px; aspect-ratio: 1 / 1; }
 .footer-right .icon-link:hover { transform: none; box-shadow: none; }
 
 /* Ensure the last content block before the footer has no bottom spacing */
