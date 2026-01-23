@@ -496,7 +496,7 @@
   color: #727272;
   font-weight: 500;
   font-size: var(--type-size-heading);
-  line-height: 1.5;
+  line-height: 1.33;
   letter-spacing: -0.015em;
   margin: 0;
   width: 100%;
@@ -507,7 +507,7 @@
   font-weight: 350;
   font-size: var(--type-size-meta);
   margin: 16px 0 0;
-  line-height: 1.5;
+  line-height: 1.33;
 }
 
 /* Section spacing utilities */
@@ -559,7 +559,7 @@
 .comp-title {
   font-weight: 500;
   font-size: var(--type-size-heading);
-  line-height: 1.5;
+  line-height: 1.33;
   color: var(--cargurus-text-dark);
   margin: 0;
 }
@@ -567,7 +567,7 @@
 .comp-text {
   font-weight: 350;
   font-size: var(--type-size-body);
-  line-height: 1.5;
+  line-height: 1.33;
   color: var(--cargurus-text-light);
   margin: 0;
 }
