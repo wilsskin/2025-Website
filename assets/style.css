@@ -455,7 +455,7 @@ h1 {
   font-size: var(--type-size-title);
   font-weight: 500;
   max-width: 600px;
-  line-height: 1.33;
+  line-height: 1.2;
   letter-spacing: -0.025em;
 }
 
@@ -465,7 +465,7 @@ h1 {
 }
 
 h1.about {
-  line-height: 1.33; 
+  line-height: 1.2; 
 }
 .hero h1 strong {
   font-weight: 600;
