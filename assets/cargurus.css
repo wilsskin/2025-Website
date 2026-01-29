@@ -65,6 +65,7 @@
   font-size: var(--type-size-body);
   font-weight: 500;
   color: #000;
+  line-height: 1.5;
   margin: 0 auto;
 }
 
@@ -333,7 +334,7 @@
   font-size: 16px;
   font-weight: 350;
   color: #000000;
-  line-height: 1.33;
+  line-height: 1.5;
   margin-bottom: 8px;
   position: relative;
   padding-left: 16px;
@@ -567,7 +568,7 @@
 .comp-text {
   font-weight: 350;
   font-size: var(--type-size-body);
-  line-height: 1.33;
+  line-height: 1.5;
   color: var(--cargurus-text-light);
   margin: 0;
 }
@@ -586,7 +587,7 @@
 .comp-item-title {
   font-weight: 600;
   font-size: var(--type-size-body);
-  line-height: 1.35;
+  line-height: 1.5;
   color: #000000;
   margin: 0;
 }

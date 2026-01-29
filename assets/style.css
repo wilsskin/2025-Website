@@ -105,7 +105,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 
 /* —— About page —— */
 .about-page h3 { font-size: 20px; font-weight: 500; line-height: 24px; color: var(--color-text-primary); }
-.about-page p { color: var(--color-text-secondary); font-weight: 350; font-size: var(--type-size-body); line-height: 1.33;}
+.about-page p { color: var(--color-text-secondary); font-weight: 350; font-size: var(--type-size-body); line-height: 1.5;}
 
 .about-hero { padding: var(--spacing-large) 0 16px; }
 .about-hero-inner { display: flex; flex-direction: column; gap: 32px; }
@@ -131,7 +131,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 .about-skills-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
 .about-skill-card { display: flex; flex-direction: column; gap: 4px; padding-top: 32px; }
 .about-skill-card h4 { font-size: var(--type-size-body); font-weight: 500; color: var(--color-text-primary); }
-.about-skill-card p { font-size: var(--type-size-body); font-weight: 350; }
+.about-skill-card p { font-size: var(--type-size-body); font-weight: 350; line-height: 1.5; }
 .about-skill-icon { width: 28px; height: 28px; aspect-ratio: 1 / 1; display: block; margin-bottom: 16px; }
 
 .about-experience { padding: 0 0 var(--spacing-section); }
@@ -175,7 +175,7 @@ main > section:last-of-type { padding-bottom: 0 !important; margin-bottom: 0 !im
 .about-interests { padding: 0 0 var(--spacing-section); }
 .about-interests-inner { display: flex; gap: 24px; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; }
 .about-interests-text { display: flex; flex-direction: column; }
-.about-interests-text .about-interests-sub { font-size: var(--type-size-body); font-weight: 500; color: var(--color-text-primary); margin-top: 32px;  max-width: 289.33px; gap: 8px;}
+.about-interests-text .about-interests-sub { font-size: var(--type-size-body); font-weight: 500; color: var(--color-text-primary); margin-top: 32px;  max-width: 289.33px; gap: 8px; line-height: 1.5;}
 
 .about-interests-photos {
   width: 100%;
@@ -478,7 +478,7 @@ h1.about {
   font-family: 'Inter', sans-serif;
   font-weight: 350;
   font-size: var(--type-size-body);
-  line-height: 24px;
+  line-height: 1.5;
   color: var(--color-text-secondary);
 }
 
@@ -585,7 +585,7 @@ h1.about {
   font-size: var(--type-size-body);
   font-weight: 350;
   color: var(--color-text-secondary);
-  line-height: 1.33em;
+  line-height: 1.5;
   margin: 0;
 }
 
